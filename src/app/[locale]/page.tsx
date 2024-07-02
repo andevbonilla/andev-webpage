@@ -8,7 +8,6 @@ import { Project } from "@/components/Project";
 import { Skills } from "@/components/Skills";
 import { StarsBackground } from "@/components/Stars";
 import { TypingAnimation } from "@/components/TypingAnimation";
-import { Vehicle } from "@/components/Vehicle";
 import { AngularSVG, AwsSVG, Css3SVG, Html5SVG, MongoDBSVG, NextJsSVG, NodejsSVG, ReactSVG, SocketIOSVG, TailwindSVG, WebRTCSVG } from "@/utils/IconsSvgs";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,7 +17,7 @@ export default function Home() {
     <>
 
       <Navbar lenguage={"en"} />
-      <Vehicle lenguage={"en"} />
+
       <main className='overflow-x-hidden z-20 relative'>
         <PicturesInBalloons />
         <div className='gradient-background relative'>
