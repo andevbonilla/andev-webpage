@@ -1,5 +1,30 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Navbar": {
+    "code": "CN",
+    "changeLenguage": "更改语言",
+    "projectsAsteroid": "项目",
+    "contactAsteroid": "联系方式",
+    "aboutAsteroid": "关于我",
+    "bussinessAsteroid": "业务"
+  },
+  "Occupations": {
+    "1": "软件开发者",
+    "2": "企业家",
+    "3": "大学生",
+    "4": "运动员"
+  },
+  "About": {
+    "title": "关于我",
+    "text1": "👋 你好，我是安德烈斯·博尼亚。我是一名大学生、企业家和软件开发者。我从13岁开始把编程作为爱好，并在16岁时创立了我的第一家科技公司，",
+    "text2": "。从那时起，我开发了多个项目，包括",
+    "text3": "和",
+    "text4": "我热衷于持续学习、旅行、汽车，尤其是冰淇淋。我始终在寻找新的机会来成长，并用我的技能做出贡献。"
+  },
+  "Curios-Facts": {
+    "1": "我们位于海平面上方384,400公里处，这个高度月球正在围绕地球运行。稍等片刻，您肯定会看到它。"
+  },
+  "Image-Alts": {
+    "andresTesla": "安德烈斯·博尼亚在特斯拉Roadster上",
+    "moonPicture": "月球图片"
   }
 }

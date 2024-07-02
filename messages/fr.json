@@ -1,5 +1,30 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Navbar": {
+    "code": "FR",
+    "changeLenguage": "Changer de langue",
+    "projectsAsteroid": "PROJETS",
+    "contactAsteroid": "CONTACT",
+    "aboutAsteroid": "À PROPOS DE MOI",
+    "bussinessAsteroid": "AFFAIRES"
+  },
+  "Occupations": {
+    "1": "Développeur de logiciels",
+    "2": "Entrepreneur",
+    "3": "Étudiant universitaire",
+    "4": "Athlète"
+  },
+  "About": {
+    "title": "À PROPOS DE MOI",
+    "text1": "👋 Bonjour, je suis Andrés Bonilla. Je suis étudiant universitaire, entrepreneur et développeur de logiciels. J'ai commencé à programmer comme passe-temps à l'âge de 13 ans et j'ai fondé ma première entreprise technologique, ",
+    "text2": ", à l'âge de 16 ans. Depuis lors, j'ai développé plusieurs projets, dont ",
+    "text3": " et ",
+    "text4": "J'adore apprendre continuellement, voyager, conduire des voitures et surtout manger de la crème glacée. Je suis toujours à la recherche de nouvelles opportunités pour grandir et contribuer avec mes compétences."
+  },
+  "Curios-Facts": {
+    "1": "Nous sommes à 384 400 km au-dessus du niveau de la mer, à cette altitude la lune orbite autour de la terre. Attendez un peu et vous la verrez sûrement."
+  },
+  "Image-Alts": {
+    "andresTesla": "Andrés Bonilla dans une Tesla Roadster",
+    "moonPicture": "Image de la lune"
   }
 }

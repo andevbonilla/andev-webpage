@@ -27,9 +27,11 @@ import { useTranslations } from "next-intl";
 
 export default function Home() {
 
+  const imagesALtsI18n = useTranslations("Image-Alts");
+  const curiosFactsI18n = useTranslations("Curios-Facts");
+
   const navbarI18n = useTranslations("Navbar");
   const occupationsI18n = useTranslations("Occupations");
-  const imagesALtsI18n = useTranslations("Image-Alts");
   const aboutI18n = useTranslations("About");
 
   return (
@@ -92,11 +94,12 @@ export default function Home() {
               <p className='mt-4 text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text4")}</p>
             </div>
 
-            <CuriosFact text={"We are 384,400 km above sea level, at this altitude the moon is orbiting the earth. Wait a little and you will surely see it."} />
+            <CuriosFact text={curiosFactsI18n("1")} />
+
             <div className='lg:h-[15rem] flex relative h-[8rem]'>
               <Image
                 src={require("@/assets/moon-icon.png")}
-                alt="moon picture"
+                alt={imagesALtsI18n("moonPicture")}
                 className='absolute moon'
               />
             </div>
