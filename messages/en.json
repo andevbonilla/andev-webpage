@@ -20,6 +20,12 @@
     "text3": " and ",
     "text4": "I'm passionate about continuous learning, traveling, cars, and, above all, ice cream. I'm always looking for new opportunities to grow and contribute with my skills."
   },
+  "Business": {
+    "title": "MY BUSINESS",
+    "viewButton": "View More",
+    "simplitermsDesc": "Have you ever clicked on accept privacy policy and/or terms of use without reading them because they are too long and difficult to understand? Simpliterms is an extension that summarizes the policies with a single click so you don't have to blindly accept them again.",
+    "moveteDesc": "Would you like to show your progress in the gym or in sports, or maybe share how many goals or medals you have won, among many other things? If your answer is yes, then Movete is for you. With Movete, you can create a profile where you can receive invitations to train, show your achievements and meet new people."
+  },
   "Curios-Facts": {
     "1": "We are 384,400 km above sea level, at this altitude the moon is orbiting the earth. Wait a little and you will surely see it."
   },

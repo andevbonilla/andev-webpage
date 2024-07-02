@@ -33,6 +33,7 @@ export default function Home() {
   const navbarI18n = useTranslations("Navbar");
   const occupationsI18n = useTranslations("Occupations");
   const aboutI18n = useTranslations("About");
+  const businessI18n = useTranslations("Business");
 
   return (
     <>
@@ -109,11 +110,11 @@ export default function Home() {
             <div className='w-full'>
 
               <div className='flex w-full justify-center items-center' id="business-part">
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white mt-[6rem] text-lg um:text-xl lg:mb-12'>MY BUSINESS</h2>
+                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white mt-[6rem] text-lg um:text-xl lg:mb-12'>{businessI18n("title")}</h2>
               </div>
 
+              {/* simplieterms planet */}
               <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%]'>
-
                 <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
                   <Image
                     src={require("@/assets/simpliterms-planet.png")}
@@ -127,17 +128,39 @@ export default function Home() {
                   <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Simpliterms</h3>
 
                   <p className='text-white text-left text-xl leading-10 mx-[13%] lg:mx-0 mb-8'>
-                    Have you ever clicked on accept privacy policy and/or terms of use without reading them because
-                    they are too long and difficult to understand? Simpliterms is an extension that summarizes the policies
-                    with a single click so you don&apos;t have to blindly accept them again.
+                    {businessI18n("simplitermsDesc")}
                   </p>
 
                   <div className='px-[13%] lg:px-0'>
-                    <Link className='w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all' href={"https://www.simpliterms.com/"} target='_blank'>View More</Link>
+                    <Link className='w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all' href={"https://www.simpliterms.com/"} target='_blank'>{businessI18n("viewButton")}</Link>
                   </div>
 
                 </div>
+              </div>
 
+              {/* movete planet */}
+              <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%] mt-10'>
+                <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
+                  <Image
+                    src={require("@/assets/simpliterms-planet.png")}
+                    alt="simpliterm's planet"
+                    className='absolute w-auto floating'
+                  />
+                </div>
+
+                <div className='lg:w-[60%] lg:ml-12'>
+
+                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
+
+                  <p className='text-white text-left text-xl leading-10 mx-[13%] lg:mx-0 mb-8'>
+                    {businessI18n("moveteDesc")}
+                  </p>
+
+                  <div className='px-[13%] lg:px-0'>
+                    <Link className='w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all' href={"https://info.movete.me"} target='_blank'>{businessI18n("viewButton")}</Link>
+                  </div>
+
+                </div>
               </div>
 
             </div>
