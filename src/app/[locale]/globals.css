@@ -1,3 +1,382 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media (min-width:1200px){
+  #asteroid{
+      animation-duration: 30300ms;
+  }
+  #asteroid1{
+      animation-duration: 22500ms;
+  }
+  #asteroid2{
+      animation-duration: 36100ms;
+  }
+  #asteroid3{
+      animation-duration: 36100ms;
+  }
+  #international-space-station{
+    animation-duration: 11000ms;
+  }
+}
+
+.asteroid, .asteroid1, .asteroid2, .asteroid3 {
+    will-change: transform;
+}
+
+.floating, .international-space-station, .moon, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3, .fish-group-4 {
+    will-change: transform;
+}
+
+/* stars */
+
+/* planets */
+.floating{
+    animation-name: float;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.gradient-background{
+    background: linear-gradient(180deg, rgb(15, 25, 59) 35%, rgb(147, 197, 253) 99%);
+}
+
+/* curiosity objects */
+.international-space-station{
+    animation-name: normalmove;
+    animation-duration: 6000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.moon{
+    animation-name: moonmove;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.plane1{
+    animation-name: plane1animation;
+    animation-duration: 13500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.plane2{
+    animation-name: plane2animation;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.plane3{
+    animation-name: plane3animation;
+    animation-duration: 10500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.fish-group{
+  animation-name: fishgroupanimation;
+  animation-duration: 45000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+.fish-group-2{
+  animation-name: plane1animation;
+  animation-duration: 32000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+.fish-group-3{
+  animation-name: sharkAnimation;
+  animation-duration: 25000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+
+.fish-group-4{
+  animation-name: plane1animation;
+  animation-duration: 32000ms;
+  animation-delay: 4000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+
+.asteroid{
+    background-image: url("../assets/asteroid.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-name: move;
+    animation-duration: 6300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+.asteroid1{
+    background-image: url("../assets/asteroid.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-name: move;
+    animation-duration: 9500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+.asteroid2{
+    background-image: url("../assets/asteroid.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-name: move;
+    animation-duration: 8100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.asteroid3{
+    background-image: url("../assets/asteroid.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation-name: moveLastAsteroid;
+    animation-duration: 9100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+}
+
+.stars {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    background: url("../assets/stars-background.webp") repeat top center;
+    z-index:0;
+}
+
+.no-stars {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    background: transparent; 
+    z-index:0;
+}
+
+.city{
+    width: 100%;
+}
+
+.titanic{
+    width: 100%;
+}
+
+.opacity-transition{
+    transition: opacity 0.5s ease;
+}
+
+/* water style part */
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+  overflow: hidden; /* Agregamos esto para ocultar el desenfoque que se extiende más allá del contenedor */
+}
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+
+.sea {
+  background: 
+    linear-gradient(#bfe0f4,rgba(120,220,250,0.6) 0.5%, rgba(0,20,100,1) 35%, rgb(0,0,10)), 
+    radial-gradient(rgba(200,200,250,0.9), rgba(0,0,0,0.7) 90%), 
+    linear-gradient(to right bottom, white, navy);
+  background-position: 0px 0px;
+  background-attachment: scroll, fixed, fixed;
+  filter: blur(.05rem);
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+        transform: translate(20);
+    }
+    to {
+        transform:rotate(360deg);
+        transform: translate(200);
+    }
+}
+
+@keyframes normalmove {
+  from{transform: translateX(-60rem) translateY(-6rem); scale: (1.5, 1.5);}
+  to{transform: translateX(200vw) translateY(-6rem); scale: (1.5, 1.5);}
+}
+
+@keyframes moonmove {
+      0% {
+        transform: translate(-600rem, -30rem) scale(3,3);
+      }
+      100% {
+        transform: translate(600vw, 0) scale(3,3);
+      }
+}
+
+@keyframes plane1animation {
+  from{transform: translateX(200vw) translateY(-6rem);}
+  to{transform: translateX(-30rem) translateY(-6rem);}
+}
+
+@keyframes plane2animation {
+  from{transform: translateX(200vw) translateY(0rem);}
+  to{transform: translateX(-40rem) translateY(0rem);}
+}
+
+@keyframes plane3animation {
+  from{transform: translateX(-100rem) translateY(10rem);}
+  to{transform: translateX(200vw) translateY(0rem);}
+}
+
+@keyframes fishgroupanimation {
+  from{transform: translateX(-10rem) translateY(10rem);}
+  to{transform: translateX(200vw) translateY(10rem);}
+}
+@keyframes fishgroupanimation2 {
+  from{transform: translateX(-10rem) translateY(10rem);}
+  to{transform: translateX(200vw) translateY(10rem);}
+}
+@keyframes sharkAnimation {
+  0%{transform: translateX(150vw) translateY(30rem);}
+  100%{transform: translateX(-100rem) translateY(30rem);}
+}
+
+
+@keyframes move {
+  from{transform: translateX(-10rem) rotate(300deg);}
+  to{transform: translateX(150vw) rotate(450deg);}
+}
+
+@keyframes moveLastAsteroid {
+  from{transform: translateX(-20rem) rotate(300deg) translateY(-10rem);}
+  to{transform: translateX(150vw) rotate(450deg) translateY(-10rem);}
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
+/* ballons part */
+.balloon {
+  flex: 0 0 auto; /* Evita que los globos se estiren para llenar el contenedor */
+  width: 120px;
+  height: 145px;
+  background: hsl(215, 50%, 65%);
+  border-radius: 80%;
+  position: absolute;
+  box-shadow: inset -10px -10px 0 rgba(0, 0, 0, 0.07);
+  margin: 20px 30px;
+  transform-origin: bottom center;
+}
+
+.balloon:before {
+  content: "▲";
+  font-size: 20px;
+  color: hsl(215, 30%, 50%);
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: -12px;
+}
+
+.balloon:after {
+  content: "";
+  display: inline-block;
+  top: 0;
+  position: absolute;
+  height: 200px;
+  width: 1px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.balloon:nth-child(2){ background:hsl(245,40%,65%)}
+.balloon:nth-child(2):before { color:hsl(245,40%,65%)}
+
+.balloon:nth-child(3){ background:hsl(139,50%,60%);}
+.balloon:nth-child(3):before { color:hsl(139,30%,50%);}
+
+.balloon:nth-child(4){ background:hsl(59,50%,58%)}
+.balloon:nth-child(4):before { color:hsl(59,30%,52%)}
+
+.balloon:nth-child(5){ background:hsl(23,55%,57%);}
+.balloon:nth-child(5):before { color:hsl(23,44%,46%);}
+
+@keyframes picturesBalloons {
+  0%{transform: rotate(0deg) translateY(20rem);}
+  50%{transform: rotate(20deg) translateY(-150rem);}
+  100%{transform: rotate(0deg) translateY(-300rem);}
+}
+
+@keyframes picturesBalloonsFalling {
+  0%{transform: rotate(0deg) translateY(20rem);}
+  50%{transform: rotate(20deg) translateY(-150rem);}
+  100%{transform: rotate(0deg) translateY(-300rem);}
+}
