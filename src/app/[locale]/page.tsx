@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { City } from "@/components/City";
 import { ContactForm } from "@/components/ContactForm";
 import { CuriosFact } from "@/components/CuriosFact";
@@ -8,15 +10,36 @@ import { Project } from "@/components/Project";
 import { Skills } from "@/components/Skills";
 import { StarsBackground } from "@/components/Stars";
 import { TypingAnimation } from "@/components/TypingAnimation";
-import { AngularSVG, AwsSVG, Css3SVG, Html5SVG, MongoDBSVG, NextJsSVG, NodejsSVG, ReactSVG, SocketIOSVG, TailwindSVG, WebRTCSVG } from "@/utils/IconsSvgs";
-import Image from "next/image";
-import Link from "next/link";
+import {
+  AngularSVG,
+  AwsSVG,
+  Css3SVG,
+  Html5SVG,
+  MongoDBSVG,
+  NextJsSVG,
+  NodejsSVG,
+  ReactSVG,
+  SocketIOSVG,
+  TailwindSVG,
+  WebRTCSVG
+} from "@/utils/IconsSvgs";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+
+  const navbarI18n = useTranslations("Navbar");
+
   return (
     <>
 
-      <Navbar lenguage={"en"} />
+      <Navbar
+        code={navbarI18n("code")}
+        changeLenguageText={navbarI18n("changeLenguage")}
+        projectAsteroid={navbarI18n("projectsAsteroid")}
+        contactAsteroid={navbarI18n("contactAsteroid")}
+        aboutAsteroid={navbarI18n("aboutAsteroid")}
+        bussinessAsteroid={navbarI18n("bussinessAsteroid")}
+      />
 
       <main className='overflow-x-hidden z-20 relative'>
         <PicturesInBalloons />

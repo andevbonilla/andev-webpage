@@ -8,7 +8,20 @@ import { faBars, faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
 
-export const Navbar = ({ lenguage }: any) => {
+export const Navbar = ({
+    changeLenguageText,
+    projectAsteroid,
+    contactAsteroid,
+    aboutAsteroid,
+    bussinessAsteroid,
+    code }: {
+        changeLenguageText: string,
+        projectAsteroid: string,
+        contactAsteroid: string,
+        aboutAsteroid: string,
+        bussinessAsteroid: string,
+        code: string
+    }) => {
 
     const [asteroidsMenuOpen, setAsteroidsMenuOpen] = useState(false);
     const [showLenguageMenu, setshowLenguageMenu] = useState(false);
@@ -16,16 +29,6 @@ export const Navbar = ({ lenguage }: any) => {
     const navbar: any = useRef(null)
 
     const router = useRouter();
-
-    const [texts, setTexts] = useState({
-        svgUrl: "flag-for-united-kingdom-svgrepo-com.svg",
-        LenguageName: "EN",
-        changeLenguageText: "Change Lenguage",
-        projectAsteroid: "",
-        contactAsteroid: "",
-        aboutAsteroid: "",
-        bussinessAsteroid: "",
-    });
 
     let principalUbication = 0;
     const handleViewNav = () => {
@@ -61,78 +64,6 @@ export const Navbar = ({ lenguage }: any) => {
     };
 
     useEffect(() => {
-
-        if (lenguage === "en") {
-            setTexts({
-                svgUrl: "flag-for-united-kingdom-svgrepo-com.svg",
-                LenguageName: "EN",
-                changeLenguageText: "Change Lenguage",
-                projectAsteroid: "PROJECTS",
-                contactAsteroid: "CONTACT",
-                aboutAsteroid: "ABOUT",
-                bussinessAsteroid: "BUSINESS",
-            })
-        } else if (lenguage === "es") {
-            setTexts({
-                svgUrl: "flag-for-spain-svgrepo-com.svg",
-                LenguageName: "ES",
-                changeLenguageText: "Cambiar Idioma",
-                projectAsteroid: "PROYECTOS",
-                contactAsteroid: "CONTACTO",
-                aboutAsteroid: "SOBRE MI",
-                bussinessAsteroid: "NEGOCIOS",
-            })
-        } else if (lenguage === "fr") {
-            setTexts({
-                svgUrl: "flag-for-spain-svgrepo-com.svg",
-                LenguageName: "FR",
-                changeLenguageText: "Changer de langue",
-                projectAsteroid: "PROJETS",
-                contactAsteroid: "CONTACT",
-                aboutAsteroid: "SUR MI",
-                bussinessAsteroid: "ENTREPRISE",
-            })
-        } else if (lenguage === "ch") {
-            setTexts({
-                svgUrl: "flag-for-spain-svgrepo-com.svg",
-                LenguageName: "CH",
-                changeLenguageText: "更改语言",
-                projectAsteroid: "项目",
-                contactAsteroid: "接触",
-                aboutAsteroid: "关于我",
-                bussinessAsteroid: "商业",
-            })
-        } else if (lenguage === "hi") {
-            setTexts({
-                svgUrl: "flag-for-spain-svgrepo-com.svg",
-                LenguageName: "HI",
-                changeLenguageText: "भाषा बदलें",
-                projectAsteroid: "परियोजनाओं",
-                contactAsteroid: "संपर्क",
-                aboutAsteroid: "मेरे बारे में",
-                bussinessAsteroid: "व्यापार",
-            })
-        } else if (lenguage === "ja") {
-            setTexts({
-                svgUrl: "flag-for-spain-svgrepo-com.svg",
-                LenguageName: "JA",
-                changeLenguageText: "言語の変更",
-                projectAsteroid: "プロジェクト",
-                contactAsteroid: "接触",
-                aboutAsteroid: "私について",
-                bussinessAsteroid: "仕事",
-            })
-        } else {
-            setTexts({
-                svgUrl: "flag-for-united-kingdom-svgrepo-com.svg",
-                LenguageName: "EN",
-                changeLenguageText: "Change Lenguage",
-                projectAsteroid: "PROJECTS",
-                contactAsteroid: "CONTACT",
-                aboutAsteroid: "ABOUT",
-                bussinessAsteroid: "BUSINESS",
-            })
-        }
 
         document.addEventListener('scroll', handleViewNav);
         return () => {
@@ -180,7 +111,7 @@ export const Navbar = ({ lenguage }: any) => {
 
                     <button onClick={openLenguagesMenu} type='button' className='flex items-center mr-3 lg:mr-6 cursor-pointer'>
                         <FontAwesomeIcon icon={faGlobe} size='2x' className='text-white' />
-                        <p className='text-white font-bold ml-3'>{texts.LenguageName}</p>
+                        <p className='text-white font-bold ml-3'>{code}</p>
                     </button>
 
                     <FontAwesomeIcon
@@ -199,7 +130,7 @@ export const Navbar = ({ lenguage }: any) => {
                     <div onClick={closeLenguagesMenu} className='cursor-pointer z-[1000] fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50'></div>
                     <div className='bg-white py-10 px-12 rounded z-[1001]'>
 
-                        <h2 className='font-bold text-xl mb-6'>{texts.changeLenguageText}</h2>
+                        <h2 className='font-bold text-xl mb-6'>{changeLenguageText}</h2>
 
                         <Link href={"/"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
                             <Image
@@ -279,19 +210,19 @@ export const Navbar = ({ lenguage }: any) => {
                         <div className='overflow-hidden'>
 
                             <button onClick={() => clickOnAsteroid("/#about")} className='w-[7rem] h-[7rem] flex justify-center items-center mb-8 asteroid' id='asteroid'>
-                                <p className='font-bold text-white text-2xl'>{texts.aboutAsteroid}</p>
+                                <p className='font-bold text-white text-2xl'>{aboutAsteroid}</p>
                             </button>
 
                             <button onClick={() => clickOnAsteroid("/#business-part")} className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid1' id='asteroid1'>
-                                <p className='font-bold text-white text-2xl'>{texts.bussinessAsteroid}</p>
+                                <p className='font-bold text-white text-2xl'>{bussinessAsteroid}</p>
                             </button>
 
                             <button onClick={() => clickOnAsteroid("/#projects")} className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid1' id='asteroid2'>
-                                <p className='font-bold text-white text-2xl'>{texts.projectAsteroid}</p>
+                                <p className='font-bold text-white text-2xl'>{projectAsteroid}</p>
                             </button>
 
                             <button onClick={() => clickOnAsteroid("/#contact")} className='w-[8rem] h-[8rem] flex justify-center items-center mb-12 asteroid3' id='asteroid3'>
-                                <p className='font-bold text-white text-2xl'>{texts.contactAsteroid}</p>
+                                <p className='font-bold text-white text-2xl'>{contactAsteroid}</p>
                             </button>
 
                         </div>

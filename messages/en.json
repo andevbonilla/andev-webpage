@@ -1,5 +1,10 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "Navbar": {
+    "code": "EN",
+    "changeLenguage": "Change Lenguage",
+    "projectsAsteroid": "PROJECTS",
+    "contactAsteroid": "CONTACT",
+    "aboutAsteroid": "ABOUT",
+    "bussinessAsteroid": "BUSINESS"
   }
 }
