@@ -28,6 +28,9 @@ import { useTranslations } from "next-intl";
 export default function Home() {
 
   const navbarI18n = useTranslations("Navbar");
+  const occupationsI18n = useTranslations("Occupations");
+  const imagesALtsI18n = useTranslations("Image-Alts");
+  const aboutI18n = useTranslations("About");
 
   return (
     <>
@@ -42,41 +45,51 @@ export default function Home() {
       />
 
       <main className='overflow-x-hidden z-20 relative'>
+
         <PicturesInBalloons />
+
         <div className='gradient-background relative'>
           <StarsBackground>
+
             {/* simulate the navbar height */}
             <div id="part4" className='h-16'></div>
 
             {/* presentation section */}
             <div className='md:px-[15%] lg:px-[20%] flex flex-col md:flex-row justify-center items-center h-screen px-[10%]'>
+
               <div className='mb-10 md:w-[50%]'>
+
                 <h1 className='text-white font-bold text-[1.6rem] um:text-[2.2rem] xl:text-[3rem]'>Andres Bonilla</h1>
+
                 <div className='flex text-white'>
-                  <TypingAnimation stringList={['Software Developer', 'Entrepreneur', 'Athlete', "University Student"]}
-                    wrapper="h2" />
+                  <TypingAnimation
+                    stringList={[occupationsI18n("1"), occupationsI18n("2"), occupationsI18n("3"), occupationsI18n("4")]}
+                    wrapper="h2"
+                  />
                 </div>
 
               </div>
+
               <div className='md:w-[50%] relative w-full h-[20rem] mt-[5rem] md:mb-[6rem] lg:mb-[12rem]'>
                 <Image
                   src={require("@/assets/yo-en-el-tesla.webp")}
-                  alt='Andres Bonilla in a tesla roadster'
+                  alt={imagesALtsI18n("andresTesla")}
                   width={350}
                   height={350}
                   className='absolute w-full floating'
                 />
               </div>
+
             </div>
 
             {/* about me */}
             <div className='md:px-[20%] px-[10%]'>
               <div className='flex w-full justify-center items-center' id='about'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>ABOUT ME</h2>
+                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{aboutI18n("title")}</h2>
               </div>
-              <p className='text-white text-center text-xl leading-10 text-opacity-80'>👋 Hi, I&apos;m Andrés Bonilla. I&apos;m a university student, entrepreneur, and software developer. I started programming as a hobby at the age of 13 and founded my first tech company, <a target='_blank' className='underline text-opacity-100 font-bold' href='https://fansive.netlify.app/#/login'>Fansive</a>, at 16. Since then, I&apos;ve developed several projects, including <a target='_blank' className='underline text-opacity-100 font-bold' href='https://www.simpliterms.com'>Simpliterms</a> and <a target='_blank' className='underline text-opacity-100 font-bold' href='https://info.movete.me'>Movete</a>.
+              <p className='text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text1")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://fansive.netlify.app/#/login'>Fansive</a>{aboutI18n("text2")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://www.simpliterms.com'>Simpliterms</a>{aboutI18n("text3")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://info.movete.me'>Movete</a>.
               </p>
-              <p className='mt-4 text-white text-center text-xl leading-10 text-opacity-80'> I&apos;m passionate about continuous learning, traveling, cars, and, above all, ice cream. I&apos;m always looking for new opportunities to grow and contribute with my skills.</p>
+              <p className='mt-4 text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text4")}</p>
             </div>
 
             <CuriosFact text={"We are 384,400 km above sea level, at this altitude the moon is orbiting the earth. Wait a little and you will surely see it."} />

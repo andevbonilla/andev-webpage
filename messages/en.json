@@ -6,5 +6,21 @@
     "contactAsteroid": "CONTACT",
     "aboutAsteroid": "ABOUT",
     "bussinessAsteroid": "BUSINESS"
+  },
+  "Occupations": {
+    "1": "Software Developer",
+    "2": "Entrepreneur",
+    "3": "University Student",
+    "4": "Athlete"
+  },
+  "About": {
+    "title": "ABOUT ME",
+    "text1": "👋 Hi, I'm Andrés Bonilla. I'm a university student, entrepreneur, and software developer. I started programming as a hobby at the age of 13 and founded my first tech company, ",
+    "text2": ", at 16. Since then, I've developed several projects, including ",
+    "text3": " and ",
+    "text4": "I'm passionate about continuous learning, traveling, cars, and, above all, ice cream. I'm always looking for new opportunities to grow and contribute with my skills."
+  },
+  "Image-Alts": {
+    "andresTesla": "Andres Bonilla in a Tesla roadster"
   }
 }
