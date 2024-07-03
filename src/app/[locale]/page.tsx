@@ -34,6 +34,8 @@ export default function Home() {
   const occupationsI18n = useTranslations("Occupations");
   const aboutI18n = useTranslations("About");
   const businessI18n = useTranslations("Business");
+  const skillsI18n = useTranslations("Skills");
+  const projectsI18n = useTranslations("My-Projects");
 
   return (
     <>
@@ -168,12 +170,13 @@ export default function Home() {
             {/* my skills */}
             <div className='lg:px-[30%] px-[13%] mb-14'>
               <div className='flex w-full justify-center items-center'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>SKILLS</h2>
+                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{skillsI18n("title")}</h2>
               </div>
               <Skills />
             </div>
 
-            <CuriosFact text={"At this point we are 400 kilometers above sea level. At this altitude is the International Space Station (ISS)."} />
+            <CuriosFact text={curiosFactsI18n("2")} />
+
             <div id="part3" className='flex'>
               <Image
                 src={require("@/assets/space-station-icon.png")}
@@ -187,26 +190,26 @@ export default function Home() {
             {/* my projects */}
             <div id='projects'>
               <div className='flex w-full justify-center items-center'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>MY PROJECTS</h2>
+                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{projectsI18n("title")}</h2>
               </div>
 
               <Project name={"YourDreamCar"}
-                desc={"YourDreamCar is a web page that I designed for a company that I developed with my best friend David. Which offers wrapping services, window tinting and more. #YourDreamCar"}
+                desc={projectsI18n("yourDreamCarDesc")}
                 link={"https://www.yourdreamcar.ca/"}
                 github={"https://github.com/andevbonilla/YourDreamCar"}
                 imgUrl={"yourdreamcar-interface.png"}
-                buttonText={"View Project"}
+                buttonText={projectsI18n("viewButton")}
                 iconList={[<Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <TailwindSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <NextJsSVG className={"w-[3rem] mr-3"} key={Math.random()} />
                 ]}
               />
               <Project name={"Fansive"}
-                desc={"Fansive is a startup created by me which is a platform for exclusive content. This app has all the necessary tools for content creators to offer the best content to their subscribers, such as live streaming, stories, group chats, private chats, post, file storage and much more."}
+                desc={projectsI18n("fansiveDesc")}
                 link={"https://fansive.netlify.app/"}
                 github={"https://github.com/andevbonilla/fansive-code"}
                 imgUrl={"fansive-interface.png"}
-                buttonText={"View Project"}
+                buttonText={projectsI18n("viewButton")}
                 iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <WebRTCSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <SocketIOSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -215,11 +218,11 @@ export default function Home() {
                 ]}
               />
               <Project name={"Virtual Board"}
-                desc={"Virtual Board is a web application made without using libraries that simulates a classroom board, so you can draw, erase, create figures, drag and drop, rotate and many other things. This app use trigonometry and algebra to solve some of the functionalities in the virtual board."}
+                desc={projectsI18n("virtualBoardDesc")}
                 link={"https://super-virtual-board.netlify.app/"}
                 github={"https://github.com/andevbonilla/Virtual-Board"}
                 imgUrl={"virtualboard-interface.jpg"}
-                buttonText={"View Project"}
+                buttonText={projectsI18n("viewButton")}
                 iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
@@ -227,7 +230,8 @@ export default function Home() {
               />
             </div>
 
-            <CuriosFact text={"At this point we are at an altitude of 30,000 meters, at this altitude most of today's commercial airplanes usually fly."} />
+            <CuriosFact text={curiosFactsI18n("3")} />
+
             <div id="part2" className='flex'>
               <Image
                 src={require("@/assets/vehicle7.png")}
@@ -268,7 +272,9 @@ export default function Home() {
 
           {/* my projects */}
           <div>
-            <CuriosFact text={"We are in shallow water at this depth you can find fish such as salmon, reef fish and more."} />
+
+            <CuriosFact text={curiosFactsI18n("4")} />
+
             <div className='flex'>
               <Image
                 src={require("@/assets/fish-group-1-icon.png")}
@@ -287,11 +293,11 @@ export default function Home() {
               />
             </div>
             <Project name={"FileBox"}
-              desc={"fileBox is an application created by me very similar to dropbox, google drive or similar, in which anyone can upload files, download them, create folders and many other functions."}
+              desc={projectsI18n("fileBoxDesc")}
               link={"https://filebox.netlify.app/#/login"}
               github={"https://github.com/andevbonilla/backend-fileBox"}
               imgUrl={"filebox-interface.png"}
-              buttonText={"View Project"}
+              buttonText={projectsI18n("viewButton")}
               iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <AwsSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -299,22 +305,22 @@ export default function Home() {
               ]}
             />
             <Project name={"Geekepedia"}
-              desc={"Geekipedia is a blog where you can learn how some of the most famous algorithms in computer science work, such as BFS (Breath First Search), QuickSort, Binary Search and many more."}
+              desc={projectsI18n("geekepediaDesc")}
               link={"https://andevbonilla.github.io/Geekipedia/home/Geekipedia"}
               github={"https://github.com/andevbonilla/Geekipedia"}
               imgUrl={"geekipedia-interface.png"}
-              buttonText={"View Project"}
+              buttonText={projectsI18n("viewButton")}
               iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
             <Project name={"thePokedex"}
-              desc={"thePokedex is an app with light and dark theme in which you can find and search information of all existing pokemon and you can use it on android and ios devices."}
+              desc={projectsI18n("thePokedexDesc")}
               link={"https://github.com/andevbonilla/thePokedex"}
               github={"https://github.com/andevbonilla/thePokedex"}
               imgUrl={"pokedex-interface.png"}
-              buttonText={"View Project"}
+              buttonText={projectsI18n("viewButton")}
               iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               ]}
             />

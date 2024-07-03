@@ -20,8 +20,20 @@
     "text3": " und ",
     "text4": "Ich liebe es, kontinuierlich zu lernen, zu reisen, Autos zu fahren und vor allem Eiscreme zu essen. Ich suche immer nach neuen Möglichkeiten, um zu wachsen und meine Fähigkeiten einzubringen."
   },
+  "Business": {
+    "title": "MEIN GESCHÄFT",
+    "viewButton": "Mehr anzeigen",
+    "simplitermsDesc": "Haben Sie jemals auf „Datenschutzbestimmungen und/oder Nutzungsbedingungen akzeptieren“ geklickt, ohne sie zu lesen, weil sie zu lang und schwer verständlich sind? Simpliterms ist eine Erweiterung, die die Richtlinien mit einem Klick zusammenfasst, damit Sie sie nicht mehr blind akzeptieren müssen.",
+    "moveteDesc": "Möchten Sie Ihre Fortschritte im Fitnessstudio oder im Sport zeigen oder vielleicht teilen, wie viele Tore oder Medaillen Sie gewonnen haben, neben vielen anderen Dingen? Wenn Ihre Antwort ja ist, dann ist Movete für Sie. Mit Movete können Sie ein Profil erstellen, in dem Sie Einladungen zum Training erhalten, Ihre Erfolge zeigen und neue Leute kennenlernen können."
+  },
+  "Skills": {
+    "title": "FÄHIGKEITEN"
+  },
   "Curios-Facts": {
-    "1": "Wir sind 384.400 km über dem Meeresspiegel, in dieser Höhe umkreist der Mond die Erde. Warten Sie einen Moment und Sie werden ihn sicher sehen."
+    "1": "Wir befinden uns 384.400 km über dem Meeresspiegel, in dieser Höhe umkreist der Mond die Erde. Warten Sie eine Weile und Sie werden ihn sicher sehen.",
+    "2": "An diesem Punkt befinden wir uns 400 Kilometer über dem Meeresspiegel. In dieser Höhe befindet sich die Internationale Raumstation (ISS).",
+    "3": "An diesem Punkt befinden wir uns in einer Höhe von 30.000 Metern, in dieser Höhe fliegen die meisten der heutigen Verkehrsflugzeuge.",
+    "4": "Wir befinden uns im flachen Wasser, in dieser Tiefe können Sie Fische wie Lachs, Riff-Fische und mehr finden."
   },
   "Image-Alts": {
     "andresTesla": "Andrés Bonilla in einem Tesla Roadster",

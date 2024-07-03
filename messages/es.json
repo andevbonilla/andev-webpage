@@ -20,8 +20,20 @@
     "text3": " y ",
     "text4": "Me apasiona el aprendizaje continuo, viajar, los autos y, sobre todo, el helado. Siempre estoy en busca de nuevas oportunidades para crecer y contribuir con mis habilidades."
   },
+  "Business": {
+    "title": "MI NEGOCIO",
+    "viewButton": "Ver Más",
+    "simplitermsDesc": "¿Alguna vez has hecho clic en aceptar política de privacidad y/o términos de uso sin leerlos porque son demasiado largos y difíciles de entender? Simpliterms es una extensión que resume las políticas con un solo clic para que no tengas que aceptarlas ciegamente de nuevo.",
+    "moveteDesc": "¿Te gustaría mostrar tu progreso en el gimnasio o en deportes, o tal vez compartir cuántos goles o medallas has ganado, entre muchas otras cosas? Si tu respuesta es sí, entonces Movete es para ti. Con Movete, puedes crear un perfil donde puedes recibir invitaciones para entrenar, mostrar tus logros y conocer gente nueva."
+  },
+  "Skills": {
+    "title": "HABILIDADES"
+  },
   "Curios-Facts": {
-    "1": "Estamos a 384,400 km sobre el nivel del mar, a esta altitud la luna está orbitando la tierra. Espere un poco y seguramente la verá."
+    "1": "Estamos a 384,400 km sobre el nivel del mar, a esta altitud la luna está orbitando la tierra. Espera un poco y seguramente la verás.",
+    "2": "En este punto estamos a 400 kilómetros sobre el nivel del mar. A esta altitud se encuentra la Estación Espacial Internacional (ISS).",
+    "3": "En este punto estamos a una altitud de 30,000 metros, a esta altitud vuelan la mayoría de los aviones comerciales de hoy en día.",
+    "4": "Estamos en aguas poco profundas a esta profundidad puedes encontrar peces como el salmón, peces de arrecife y más."
   },
   "Image-Alts": {
     "andresTesla": "Andrés Bonilla en un Tesla Roadster",

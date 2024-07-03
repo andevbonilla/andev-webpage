@@ -20,8 +20,20 @@
     "text3": " et ",
     "text4": "J'adore apprendre continuellement, voyager, conduire des voitures et surtout manger de la crème glacée. Je suis toujours à la recherche de nouvelles opportunités pour grandir et contribuer avec mes compétences."
   },
+  "Business": {
+    "title": "MON ENTREPRISE",
+    "viewButton": "Voir Plus",
+    "simplitermsDesc": "Avez-vous déjà cliqué sur accepter la politique de confidentialité et/ou les conditions d'utilisation sans les lire parce qu'elles sont trop longues et difficiles à comprendre ? Simpliterms est une extension qui résume les politiques en un seul clic pour que vous n'ayez plus à les accepter aveuglément.",
+    "moveteDesc": "Souhaitez-vous montrer vos progrès à la salle de sport ou dans les sports, ou peut-être partager combien de buts ou de médailles vous avez remportés, parmi beaucoup d'autres choses ? Si votre réponse est oui, alors Movete est pour vous. Avec Movete, vous pouvez créer un profil où vous pouvez recevoir des invitations à vous entraîner, montrer vos réalisations et rencontrer de nouvelles personnes."
+  },
+  "Skills": {
+    "title": "COMPÉTENCES"
+  },
   "Curios-Facts": {
-    "1": "Nous sommes à 384 400 km au-dessus du niveau de la mer, à cette altitude la lune orbite autour de la terre. Attendez un peu et vous la verrez sûrement."
+    "1": "Nous sommes à 384 400 km au-dessus du niveau de la mer, à cette altitude la lune orbite autour de la terre. Attendez un peu et vous la verrez sûrement.",
+    "2": "À ce point, nous sommes à 400 kilomètres au-dessus du niveau de la mer. À cette altitude se trouve la Station Spatiale Internationale (ISS).",
+    "3": "À ce point, nous sommes à une altitude de 30 000 mètres, à cette altitude volent la plupart des avions commerciaux d'aujourd'hui.",
+    "4": "Nous sommes dans des eaux peu profondes, à cette profondeur vous pouvez trouver des poissons tels que le saumon, les poissons de récif et plus encore."
   },
   "Image-Alts": {
     "andresTesla": "Andrés Bonilla dans une Tesla Roadster",
