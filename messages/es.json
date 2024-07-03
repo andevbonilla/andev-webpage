@@ -35,6 +35,30 @@
     "3": "En este punto estamos a una altitud de 30,000 metros, a esta altitud vuelan la mayoría de los aviones comerciales de hoy en día.",
     "4": "Estamos en aguas poco profundas a esta profundidad puedes encontrar peces como el salmón, peces de arrecife y más."
   },
+  "My-Projects": {
+    "title": "MIS PROYECTOS",
+    "yourDreamCarDesc": "YourDreamCar es una página web que diseñé para una empresa que desarrollé con mi mejor amigo David. Ofrece servicios de envoltura, tintado de ventanas y más. #YourDreamCar",
+    "fansiveDesc": "Fansive es una startup creada por mí que es una plataforma de contenido exclusivo. Esta aplicación tiene todas las herramientas necesarias para que los creadores de contenido ofrezcan el mejor contenido a sus suscriptores, como transmisiones en vivo, historias, chats grupales, chats privados, publicaciones, almacenamiento de archivos y mucho más.",
+    "virtualBoardDesc": "Virtual Board es una aplicación web hecha sin utilizar bibliotecas que simula una pizarra de aula, para que puedas dibujar, borrar, crear figuras, arrastrar y soltar, rotar y muchas otras cosas. Esta aplicación utiliza trigonometría y álgebra para resolver algunas de las funcionalidades en el tablero virtual.",
+    "fileBoxDesc": "FileBox es una aplicación creada por mí, muy similar a Dropbox, Google Drive u otros servicios similares, en la que cualquiera puede subir archivos, descargarlos, crear carpetas y muchas otras funciones.",
+    "geekepediaDesc": "Geekipedia es un blog donde puedes aprender cómo funcionan algunos de los algoritmos más famosos en informática, como BFS (Búsqueda en Anchura), QuickSort, Búsqueda Binaria y muchos más.",
+    "thePokedexDesc": "The Pokedex es una aplicación con temas claros y oscuros en la que puedes encontrar y buscar información sobre todos los Pokémon existentes y puedes usarla en dispositivos Android e iOS.",
+    "viewButton": "Ver Proyecto"
+  },
+  "Contact": {
+    "title": "CONTACTO",
+    "namePlaceholder": "Nombre",
+    "emailPlaceholder": "Correo electrónico",
+    "messagePlaceholder": "Mensaje",
+    "actionButton": "Enviar",
+    "errorTooMessages": "Has enviado demasiados mensajes",
+    "errorNameRequired": "Se requiere el nombre.",
+    "errorEmail": "El correo electrónico es inválido",
+    "errorMessage": "El mensaje debe tener al menos 10 caracteres.",
+    "sending": "Enviando...",
+    "success": "Gracias, el mensaje ha sido enviado👌",
+    "error": "Lo siento, ocurrió un error. Por favor, inténtalo de nuevo más tarde. 🤯"
+  },
   "Image-Alts": {
     "andresTesla": "Andrés Bonilla en un Tesla Roadster",
     "moonPicture": "Imagen de la luna"

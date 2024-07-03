@@ -35,6 +35,30 @@
     "3": "À ce point, nous sommes à une altitude de 30 000 mètres, à cette altitude volent la plupart des avions commerciaux d'aujourd'hui.",
     "4": "Nous sommes dans des eaux peu profondes, à cette profondeur vous pouvez trouver des poissons tels que le saumon, les poissons de récif et plus encore."
   },
+  "My-Projects": {
+    "title": "MES PROJETS",
+    "yourDreamCarDesc": "YourDreamCar est une page web que j'ai conçue pour une entreprise que j'ai développée avec mon meilleur ami David. Elle propose des services d'emballage, de teintage des fenêtres et plus encore. #YourDreamCar",
+    "fansiveDesc": "Fansive est une start-up que j'ai créée, qui est une plateforme de contenu exclusif. Cette application offre tous les outils nécessaires aux créateurs de contenu pour proposer le meilleur contenu à leurs abonnés, comme le streaming en direct, les stories, les chats de groupe, les chats privés, les publications, le stockage de fichiers et bien plus encore.",
+    "virtualBoardDesc": "Virtual Board est une application web créée sans utiliser de bibliothèques, qui simule un tableau de classe, vous permettant de dessiner, effacer, créer des formes, déplacer et déposer, faire pivoter et bien d'autres choses encore. Cette application utilise la trigonométrie et l'algèbre pour résoudre certaines fonctionnalités sur le tableau virtuel.",
+    "fileBoxDesc": "FileBox est une application que j'ai créée, très similaire à Dropbox, Google Drive ou autres, dans laquelle n'importe qui peut télécharger des fichiers, les télécharger, créer des dossiers et bien d'autres fonctions.",
+    "geekepediaDesc": "Geekipedia est un blog où vous pouvez apprendre comment fonctionnent certains des algorithmes les plus célèbres en informatique, tels que BFS (Breadth First Search), QuickSort, Binary Search et bien d'autres.",
+    "thePokedexDesc": "The Pokedex est une application avec thème clair et sombre dans laquelle vous pouvez trouver et rechercher des informations sur tous les Pokémon existants et vous pouvez l'utiliser sur des appareils Android et iOS.",
+    "viewButton": "Voir Projet"
+  },
+  "Contact": {
+    "title": "CONTACT",
+    "namePlaceholder": "Nom",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Message",
+    "actionButton": "Envoyer",
+    "errorTooMessages": "Vous avez envoyé trop de messages",
+    "errorNameRequired": "Le nom est requis.",
+    "errorEmail": "L'email est invalide",
+    "errorMessage": "Le message doit comporter au moins 10 caractères.",
+    "sending": "Envoi en cours...",
+    "success": "Merci, le message a été envoyé avec succès👌",
+    "error": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard. 🤯"
+  },
   "Image-Alts": {
     "andresTesla": "Andrés Bonilla dans une Tesla Roadster",
     "moonPicture": "Image de la lune"
