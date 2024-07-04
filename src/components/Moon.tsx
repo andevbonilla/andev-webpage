@@ -14,8 +14,7 @@ export const Moon = ({ altMoon }: { altMoon: any }) => {
             if (moonRef.current) {
                 const rect = moonRef.current.getBoundingClientRect();
                 setHeight(rect.top);
-                console.log(rect.top, "pppp")
-                if (rect.top <= 1000 || rect.top >= -800) {
+                if (rect.top < 900 && rect.top > -300) {
                     setmoonClassList("moon-moving")
                 }
             }
