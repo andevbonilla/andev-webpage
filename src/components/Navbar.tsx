@@ -130,67 +130,38 @@ export const Navbar = ({
                     <div onClick={closeLenguagesMenu} className='cursor-pointer z-[1000] fixed top-0 left-0 w-full h-screen bg-black bg-opacity-50'></div>
                     <div className='bg-white py-10 px-12 rounded z-[1001]'>
 
-                        <h2 className='font-bold text-xl mb-6'>{changeLenguageText}</h2>
+                        <h2 className='font-bold text-xl mb-3'>{changeLenguageText}</h2>
+                        <hr />
 
-                        <Link href={"/"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-united-kingdom-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>English</p>
-                        </Link>
+                        <div className='md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid grid-cols-1 gap-3 mt-3'>
+                            <Link href={"/en"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>English</p>
+                            </Link>
 
-                        <Link href={"/es"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-spain-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>Español</p>
-                        </Link>
+                            <Link href={"/es"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>Español</p>
+                            </Link>
 
-                        <Link href={"/ja"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-flag-japan-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>日本語</p>
-                        </Link>
+                            <Link href={"/ja"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>日本語</p>
+                            </Link>
 
-                        <Link href={"/fr"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-flag-st-martin-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>Français</p>
-                        </Link>
+                            <Link href={"/fr"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>Français</p>
+                            </Link>
 
-                        <Link href={"/ch"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-flag-china-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>中文 {"("}简体{")"}</p>
-                        </Link>
+                            <Link href={"/de"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>Deutsch</p>
+                            </Link>
 
-                        <Link href={"/hi"} className='text-black flex items-center mb-2 hover:bg-slate-300 hover:transition-all p-3 rounded'>
-                            <Image
-                                src={require("@/assets/flag-for-flag-india-svgrepo-com.svg")}
-                                alt='spain flag'
-                                width={40}
-                                height={40}
-                            />
-                            <p className='ml-2 text-xl'>हिंदी</p>
-                        </Link>
+                            <Link href={"/zh"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>中文 {"("}简体{")"}</p>
+                            </Link>
+
+                            <Link href={"/hi"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                                <p className='ml-2 text-xl'>हिंदी</p>
+                            </Link>
+                        </div>
 
                     </div>
                 </div>
