@@ -36,6 +36,7 @@ export default function Home() {
   const businessI18n = useTranslations("Business");
   const skillsI18n = useTranslations("Skills");
   const projectsI18n = useTranslations("My-Projects");
+  const contactI18n = useTranslations("Contact");
 
   return (
     <>
@@ -335,12 +336,24 @@ export default function Home() {
 
           <div className='px-[13%]'>
             <div className='flex w-full justify-center items-center' id='contact'>
-              <h2 className='border-b-[.5rem] pl-[1rem] pr-[.2rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>CONTACT</h2>
+              <h2 className='border-b-[.5rem] pl-[1rem] pr-[.2rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{contactI18n("title")}</h2>
             </div>
-            <ContactForm lenguage={"en"} />
+            <ContactForm
+              namePlaceholder={contactI18n("namePlaceholder")}
+              emailPlaceholder={contactI18n("emailPlaceholder")}
+              messagePlaceholder={contactI18n("messagePlaceholder")}
+              actionButton={contactI18n("actionButton")}
+              errorTooMessages={contactI18n("errorTooMessages")}
+              errorNameRequired={contactI18n("errorNameRequired")}
+              errorEmail={contactI18n("errorEmail")}
+              errorMessage={contactI18n("errorMessage")}
+              sending={contactI18n("sending")}
+              success={contactI18n("success")}
+              error={contactI18n("error")}
+            />
           </div>
 
-          <CuriosFact text={"At this point we are at 3.800 meters deep, at this depth is the remains of the Titanic and ends the content of my website."} />
+          <CuriosFact text={curiosFactsI18n("5")} />
 
           <Footer titanicAlt={"titanic in the deep of the sea"} />
 
