@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { City } from "@/components/City";
-import { ContactForm } from "@/components/ContactForm";
+import { ContactForm } from "@/components/ui/ContactForm";
 import { CuriosFact } from "@/components/CuriosFact";
-import { Footer } from "@/components/Footer";
-import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/ui/Footer";
+import { Navbar } from "@/components//ui/Navbar";
 import { PicturesInBalloons } from "@/components/Pictures";
-import { Project } from "@/components/Project";
+import { Project } from "@/components/ui/Project";
 import { Skills } from "@/components/Skills";
 import { StarsBackground } from "@/components/Stars";
 import { TypingAnimation } from "@/components/TypingAnimation";
