@@ -25,7 +25,7 @@
     will-change: transform;
 }
 
-.floating, .international-space-station, .moon, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3, .fish-group-4 {
+.floating, .international-space-station, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3, .fish-group-4 {
     will-change: transform;
 }
 
@@ -33,11 +33,7 @@
 
 /* planets */
 .floating{
-    animation-name: float;
-    animation-duration: 3000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+    animation: float 3s linear infinite;
 }
 
 .gradient-background{
@@ -46,77 +42,37 @@
 
 /* curiosity objects */
 .international-space-station{
-    animation-name: normalmove;
-    animation-duration: 6000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
-}
-
-.moon{
-    animation-name: moonmove;
-    animation-duration: 10000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+    animation: normalmove 6s linear infinite;
 }
 
 .plane1{
-    animation-name: plane1animation;
-    animation-duration: 13500ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+  animation: plane1animation 14s linear infinite;
 }
 
 .plane2{
-    animation-name: plane2animation;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+  animation: plane2animation 4s linear infinite;
 }
 
 .plane3{
-    animation-name: plane3animation;
-    animation-duration: 10500ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+  animation: plane3animation 11s linear infinite;
 }
 
 .fish-group{
-  animation-name: fishgroupanimation;
-  animation-duration: 45000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+  animation: fishgroupanimation 45s linear infinite;
 }
 
 .fish-group-2{
-  animation-name: plane1animation;
-  animation-duration: 32000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+  animation: plane1animation 32s linear infinite;
 }
 
 .fish-group-3{
-  animation-name: sharkAnimation;
-  animation-duration: 25000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+  animation: sharkAnimation 25s linear infinite;
 }
 
 
 .fish-group-4{
-  animation-name: plane1animation;
-  animation-duration: 32000ms;
   animation-delay: 4000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
+  animation: plane1animation 32s linear infinite;
 }
 
 
@@ -263,15 +219,6 @@
   to{transform: translateX(200vw) translateY(-6rem); scale: (1.5, 1.5);}
 }
 
-@keyframes moonmove {
-      0% {
-        transform: translate(-600rem, -30rem) scale(3,3);
-      }
-      100% {
-        transform: translate(600vw, 0) scale(3,3);
-      }
-}
-
 @keyframes plane1animation {
   from{transform: translateX(200vw) translateY(-6rem);}
   to{transform: translateX(-30rem) translateY(-6rem);}
@@ -380,3 +327,19 @@
   50%{transform: rotate(20deg) translateY(-150rem);}
   100%{transform: rotate(0deg) translateY(-300rem);}
 }
+
+/* moon css */
+@keyframes parabola {
+  0% { transform: translateX(-100%) translateY(-50%); }
+  100% { transform: translateX(6000%) translateY(-500%); }
+}
+
+.moon {
+  display: none;
+}
+
+.moon-moving {
+  display: flex;
+  animation: parabola 100s linear infinite;
+}
+

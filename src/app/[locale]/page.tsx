@@ -24,6 +24,7 @@ import {
   WebRTCSVG
 } from "@/utils/IconsSvgs";
 import { useTranslations } from "next-intl";
+import { Moon } from "@/components/Moon";
 
 export default function Home() {
 
@@ -100,14 +101,10 @@ export default function Home() {
 
             <CuriosFact text={curiosFactsI18n("1")} />
 
-            <div className='lg:h-[15rem] flex relative h-[8rem]'>
-              <Image
-                src={require("@/assets/moon-icon.png")}
-                alt={imagesALtsI18n("moonPicture")}
-                className='absolute moon'
-              />
-            </div>
-
+            {/* moon part */}
+            <Moon
+              altMoon={imagesALtsI18n("moonPicture")}
+            />
 
             {/* my business */}
             <div className='w-full'>
