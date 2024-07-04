@@ -61,7 +61,14 @@
     "error": "申し訳ありませんが、エラーが発生しました。後でもう一度お試しください。🤯"
   },
   "Image-Alts": {
-    "andresTesla": "アンドレス・ボニージャ、テスラ・ロードスターに乗って",
-    "moonPicture": "月の画像"
+    "andresTesla": "テスラロードスターに乗るアンドレス・ボニージャ",
+    "moonPicture": "月の写真",
+    "titanic": "海の深みに沈むタイタニック",
+    "fishes": "群れの魚たち",
+    "shark": "泳ぐサメ",
+    "airplane": "飛行機",
+    "InternationalSpaceStation": "国際宇宙ステーション",
+    "simplitermsPlanet": "シンプリタームの惑星",
+    "movetePlanet": "モベテの惑星"
   }
 }

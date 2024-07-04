@@ -62,6 +62,13 @@
   },
   "Image-Alts": {
     "andresTesla": "Andres Bonilla in a Tesla roadster",
-    "moonPicture": "Moon picture"
+    "moonPicture": "Moon picture",
+    "titanic": "titanic in the deep of the sea",
+    "fishes": "fishes in group",
+    "shark": "shark swimming",
+    "airplane": "airplane",
+    "InternationalSpaceStation": "International Space Station",
+    "simplitermsPlanet": "simpliterm's planet",
+    "movetePlanet": "movete's planet"
   }
 }

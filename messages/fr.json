@@ -61,7 +61,14 @@
     "error": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard. 🤯"
   },
   "Image-Alts": {
-    "andresTesla": "Andrés Bonilla dans une Tesla Roadster",
-    "moonPicture": "Image de la lune"
+    "andresTesla": "Andres Bonilla dans une Tesla Roadster",
+    "moonPicture": "Photo de la lune",
+    "titanic": "Titanic au fond de la mer",
+    "fishes": "Poissons en groupe",
+    "shark": "Requin nageant",
+    "airplane": "Avion",
+    "InternationalSpaceStation": "Station spatiale internationale",
+    "simplitermsPlanet": "Planète de Simpliterm",
+    "movetePlanet": "Planète de Movete"
   }
 }

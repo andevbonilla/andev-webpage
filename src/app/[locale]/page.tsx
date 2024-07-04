@@ -121,7 +121,7 @@ export default function Home() {
                 <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
                   <Image
                     src={require("@/assets/simpliterms-planet.png")}
-                    alt="simpliterm's planet"
+                    alt={imagesALtsI18n("simplitermsPlanet")}
                     className='absolute w-auto floating'
                   />
                 </div>
@@ -146,7 +146,7 @@ export default function Home() {
                 <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
                   <Image
                     src={require("@/assets/simpliterms-planet.png")}
-                    alt="simpliterm's planet"
+                    alt={imagesALtsI18n("movetePlanet")}
                     className='absolute w-auto floating'
                   />
                 </div>
@@ -181,7 +181,7 @@ export default function Home() {
             <div id="part3" className='flex'>
               <Image
                 src={require("@/assets/space-station-icon.png")}
-                alt="International Space Station"
+                alt={imagesALtsI18n("InternationalSpaceStation")}
                 className='international-space-station'
                 id='international-space-station'
               />
@@ -236,17 +236,17 @@ export default function Home() {
             <div id="part2" className='flex'>
               <Image
                 src={require("@/assets/vehicle7.png")}
-                alt="boeing 737"
+                alt={imagesALtsI18n("airplane")}
                 className='w-[17rem] h-[6rem] lg:w-[25rem] lg:h-[10rem] plane1'
               />
               <Image
                 src={require("@/assets/vehicle8.png")}
-                alt="militar airplane"
+                alt={imagesALtsI18n("airplane")}
                 className='w-[12rem] h-[6rem] lg:w-[15rem] lg:h-[8rem] plane2'
               />
               <Image
                 src={require("@/assets/airplane3-icon.png")}
-                alt="private jet"
+                alt={imagesALtsI18n("airplane")}
                 className='w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[10rem] plane3'
               />
             </div>
@@ -279,17 +279,17 @@ export default function Home() {
             <div className='flex'>
               <Image
                 src={require("@/assets/fish-group-1-icon.png")}
-                alt="yellow fishes in group"
+                alt={imagesALtsI18n("fishes")}
                 className='w-[6rem] h-[6rem] fish-group delay-300'
               />
               <Image
                 src={require("@/assets/fish-group-2-icon.png")}
-                alt="salmon fish swimming"
+                alt={imagesALtsI18n("fishes")}
                 className='w-[8rem] h-[8rem] fish-group-2'
               />
               <Image
                 src={require("@/assets/fish-group-3-icon.png")}
-                alt="shark swimming"
+                alt={imagesALtsI18n("shark")}
                 className='w-[30rem] h-[10rem] fish-group-3'
               />
             </div>
@@ -355,7 +355,7 @@ export default function Home() {
 
           <CuriosFact text={curiosFactsI18n("5")} />
 
-          <Footer titanicAlt={"titanic in the deep of the sea"} />
+          <Footer titanicAlt={imagesALtsI18n("titanic")} />
 
         </div>
 
