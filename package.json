@@ -18,7 +18,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-loader-spinner": "^6.1.6",
-    "react-toastify": "^10.0.5",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {

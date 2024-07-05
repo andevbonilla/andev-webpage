@@ -1,9 +1,8 @@
 "use client"
-import React, { FormEvent, useEffect, useRef, useState } from 'react';
+import React, { FormEvent, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { MutatingDots } from 'react-loader-spinner';
+import { ModalContact } from './ModalContact';
 
 export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorTooMessages, errorNameRequired, errorEmail, errorMessage, sending, success, error }: any) => {
 
@@ -12,6 +11,8 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
   const [messageError, setMessageError] = useState("");
   const [allowedMessages, setallowedMessages] = useState(2);
   const [sendingMessage, setSendingMessage] = useState(false);
+
+  const [openModal, setopenModal] = useState(false);
 
   const [isLoading, setIsLoading] = useState(false)
 
@@ -31,7 +32,6 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
     }
 
     if (allowedMessages <= 0) {
-      toast.error(errorTooMessages);
       return;
     }
 
@@ -82,32 +82,25 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
     }
 
     setSendingMessage(true);
+
     setallowedMessages(allowedMessages - 1);
+
     setTimeout(() => {
 
-      const newPromise = new Promise((resolve: any, reject: any) => {
-        emailjs.sendForm('service_ljreywj', 'template_12scdup', form.current, 'BDIxeZDcmcXTCdO5z')
-          .then((result: any) => {
-            setSendingMessage(false);
-            setName("");
-            setEmail("");
-            setMessage("");
-            setIsLoading(false);
-            resolve();
-          }, (error: any) => {
-            setSendingMessage(false);
-            setIsLoading(false);
-            reject();
-          });
-      })
-      toast.promise(
-        newPromise,
-        {
-          pending: sending,
-          success,
-          error
-        }
-      )
+      emailjs.sendForm('service_ljreywj', 'template_12scdup', form.current, 'BDIxeZDcmcXTCdO5z')
+        .then((result: any) => {
+          setSendingMessage(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setIsLoading(false);
+          setopenModal(true);
+        }, (error: any) => {
+          setSendingMessage(false);
+          setIsLoading(false);
+          setopenModal(true);
+        });
+
 
     }, 1000);
 
@@ -132,20 +125,14 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
         />
       </div>
 
-      <form ref={form} onSubmit={sendEmail} className={`${isLoading ? "hidden" : ""} w-full sm:px-[10%] lg:px-[20%] 2xl:px-[25%]`}>
-
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          pauseOnHover
-          theme="light"
+      {
+        true &&
+        <ModalContact
+          setopenModal={setopenModal}
         />
+      }
 
+      <form ref={form} onSubmit={sendEmail} className={`${isLoading ? "hidden" : ""} w-full sm:px-[10%] lg:px-[20%] 2xl:px-[25%]`}>
 
         <div>
 
