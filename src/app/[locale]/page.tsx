@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { City } from "@/components/City";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { CuriosFact } from "@/components/CuriosFact";
@@ -125,11 +124,12 @@ export default function Home() {
                   </p>
 
                   <div className='px-[13%] lg:px-0 flex'>
-                    <Link className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
+                    <a
+                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
                       href={"https://info.movete.me"}
                       target='_blank'>
                       {businessI18n("viewButton")}
-                    </Link>
+                    </a>
                   </div>
 
                 </div>
@@ -164,12 +164,12 @@ export default function Home() {
                   </p>
 
                   <div className='px-[13%] lg:px-0 flex'>
-                    <Link
+                    <a
                       className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
                       href={"https://simpliterms.com"}
                       target='_blank'>
                       {businessI18n("viewButton")}
-                    </Link>
+                    </a>
                   </div>
 
                 </div>

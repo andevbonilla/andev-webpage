@@ -34,7 +34,7 @@ export const PicturesInBalloons = () => {
   useEffect(() => {
 
     if (window && window.innerHeight) {
-      if (Math.abs(animationY) > window.innerHeight + 6000) {
+      if (Math.abs(animationY) > window.innerHeight + 10000) {
         setBalloons(5);
         setAnimationY(initialAnimationY);
         for (let i = 1; i <= 5; i++) {
