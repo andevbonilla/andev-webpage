@@ -39,6 +39,7 @@ export default function Home() {
   const contactI18n = useTranslations("Contact");
 
   return (
+
     <>
 
       <Navbar
@@ -89,14 +90,14 @@ export default function Home() {
             </div>
 
             {/* about me */}
-            <div className='md:px-[20%] px-[10%]'>
+            <section className='md:px-[20%] px-[10%]'>
               <div className='flex w-full justify-center items-center' id='about'>
                 <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{aboutI18n("title")}</h2>
               </div>
               <p className='text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text1")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://fansive.netlify.app/#/login'>Fansive</a>{aboutI18n("text2")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://www.simpliterms.com'>Simpliterms</a>{aboutI18n("text3")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://info.movete.me'>Movete</a>.
               </p>
               <p className='mt-4 text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text4")}</p>
-            </div>
+            </section>
 
             <CuriosFact text={curiosFactsI18n("1")} />
 
@@ -106,7 +107,7 @@ export default function Home() {
             />
 
             {/* my business */}
-            <div className='w-full'>
+            <section className='w-full'>
 
               <div className='flex w-full justify-center items-center mb-20' id="business-part">
                 <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white mt-[6rem] text-lg um:text-xl lg:mb-12'>{businessI18n("title")}</h2>
@@ -175,30 +176,30 @@ export default function Home() {
                 </div>
               </div>
 
-            </div>
+            </section>
 
             {/* my skills */}
-            <div className='lg:px-[30%] px-[13%] mb-14'>
+            <section className='lg:px-[30%] px-[13%] mb-14'>
               <div className='flex w-full justify-center items-center'>
                 <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{skillsI18n("title")}</h2>
               </div>
               <Skills />
-            </div>
+            </section>
 
             <CuriosFact text={curiosFactsI18n("2")} />
 
-            <div id="part3" className='flex'>
+            <section id="part3" className='flex'>
               <Image
                 src={require("@/assets/space-station-icon.png")}
                 alt={imagesALtsI18n("InternationalSpaceStation")}
                 className='international-space-station'
                 id='international-space-station'
               />
-            </div>
+            </section>
 
 
             {/* my projects */}
-            <div id='projects'>
+            <section id='projects'>
               <div className='flex w-full justify-center items-center'>
                 <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{projectsI18n("title")}</h2>
               </div>
@@ -238,7 +239,7 @@ export default function Home() {
                 <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
                 ]}
               />
-            </div>
+            </section>
 
             <CuriosFact text={curiosFactsI18n("3")} />
 
@@ -281,7 +282,7 @@ export default function Home() {
           </div>
 
           {/* my projects */}
-          <div>
+          <section>
 
             <CuriosFact text={curiosFactsI18n("4")} />
 
@@ -341,9 +342,9 @@ export default function Home() {
                 className='w-[30rem] h-[30rem] rotate-[75deg] -translate-x-20'
               />
             </div>
-          </div>
+          </section>
 
-          <div className='px-[13%]'>
+          <section className='px-[13%]'>
             <div className='flex w-full justify-center items-center' id='contact'>
               <h2 className='border-b-[.5rem] pl-[1rem] pr-[.2rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{contactI18n("title")}</h2>
             </div>
@@ -360,7 +361,7 @@ export default function Home() {
               success={contactI18n("success")}
               error={contactI18n("error")}
             />
-          </div>
+          </section>
 
           <CuriosFact text={curiosFactsI18n("5")} />
 
