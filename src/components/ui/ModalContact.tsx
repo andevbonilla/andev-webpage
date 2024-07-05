@@ -1,25 +1,34 @@
 "use client"
 
-export const ModalContact = ({ setopenModal }: { setopenModal: any }) => {
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+
+export const ModalContact = ({ setopenModal, type, message }: { setopenModal: any, type: number, message: string }) => {
     return (
-        <div className='fixed z-[999] left-0 top-0 flex justify-center items-center w-full h-screen'>
-            <div onClick={() => setopenModal(false)} className='cursor-pointer z-[998] absolute bg-black bg-opacity-60 w-full h-full left-0 top-0'></div>
-            <div className='z-[999] bg-white text-black rounded-lg flex p-10 flex-col w-[90%] md:w-[50%] lg:w-[40%] h-[90%] overflow-y-auto'>
 
-                <h1 className="text-red-600 font-bold text-xl">Error</h1>
+        <div className="flex items-center justify-centers w-full">
+            <div className='bg-yellow-200 text-black rounded-lg p-10 sm:mx-[10%] lg:mx-[20%] w-full'>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nostrum, eveniet impedit sint, earum sapiente unde vero, nam velit non exercitationem assumenda. A est delectus voluptatibus deserunt asperiores quas omnis!</p>
+                <div className="flex justify-between items-center">
+                    {
+                        (type === 0)
+                            ? <h1 className="text-red-600 font-bold text-xl">Error</h1>
+                            : <h1 className="text-green-600 font-bold text-xl">Success</h1>
+                    }
 
-                <button
-                    type="button"
-                    className="bg-red-600 text-white font-bold"
-                    onClick={() => setopenModal(false)}
-                >
-                    close
-                </button>
+                    <FontAwesomeIcon
+                        icon={faXmark}
+                        className="w-[1.6rem] h-[1.6rem]"
+                        onClick={() => setopenModal(false)}
+                    />
+                </div>
+
+                <p className="my-6">
+                    {message}
+                </p>
 
             </div>
-
         </div>
+
     )
 }

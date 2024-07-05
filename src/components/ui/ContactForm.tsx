@@ -6,9 +6,11 @@ import { ModalContact } from './ModalContact';
 
 export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorTooMessages, errorNameRequired, errorEmail, errorMessage, sending, success, error }: any) => {
 
+  // errors
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
+
   const [allowedMessages, setallowedMessages] = useState(2);
   const [sendingMessage, setSendingMessage] = useState(false);
 
@@ -21,6 +23,46 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
   const [message, setMessage] = useState("");
 
   const form: any = useRef(null);
+
+  const evaluateName = (e: any) => {
+    const name = e.target.value;
+    if (name.length === 0) {
+      setNameError(errorNameRequired);
+    } else {
+      setNameError("")
+    }
+    if (name.length > 50) {
+      setNameError("The name is too long!");
+    } else {
+      setNameError("")
+    }
+    setName(name);
+  }
+
+  const evaluateEmail = (e: any) => {
+    const name = e.target.value;
+    if (name.length === 0) {
+      setNameError(errorNameRequired);
+    } else {
+      setNameError("")
+    }
+    if (name.length > 50) {
+      setNameError("The name is too long!");
+    } else {
+      setNameError("")
+    }
+    setName(name);
+  }
+
+  const evaluateMessage = (e: any) => {
+    const message = e.target.value;
+    if (message.length === 0) {
+      setMessageError(errorMessage);
+    } else {
+      setMessageError("")
+    }
+    setName(message);
+  }
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
 
@@ -128,6 +170,8 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
       {
         true &&
         <ModalContact
+          type={1}
+          message=''
           setopenModal={setopenModal}
         />
       }
