@@ -109,13 +109,45 @@ export default function Home() {
             {/* my business */}
             <div className='w-full'>
 
-              <div className='flex w-full justify-center items-center' id="business-part">
+              <div className='flex w-full justify-center items-center mb-20' id="business-part">
                 <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white mt-[6rem] text-lg um:text-xl lg:mb-12'>{businessI18n("title")}</h2>
               </div>
 
-              {/* simplieterms planet */}
+              {/* movete planet */}
               <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%]'>
-                <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
+
+                <div className='lg:w-[60%]'>
+
+                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
+
+                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
+                    {businessI18n("moveteDesc")}
+                  </p>
+
+                  <div className='px-[13%] lg:px-0 flex'>
+                    <Link className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
+                      href={"https://info.movete.me"}
+                      target='_blank'>
+                      {businessI18n("viewButton")}
+                    </Link>
+                  </div>
+
+                </div>
+
+                <div className='lg:ml-12 lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
+                  <Image
+                    src={require("@/assets/simpliterms-planet.png")}
+                    alt={imagesALtsI18n("movetePlanet")}
+                    className='absolute w-auto floating'
+                  />
+                </div>
+
+              </div>
+
+              {/* simplieterms planet */}
+              <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%] mt-16'>
+
+                <div className='lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mb-16 relative w-auto mx-[13%]'>
                   <Image
                     src={require("@/assets/simpliterms-planet.png")}
                     alt={imagesALtsI18n("simplitermsPlanet")}
@@ -127,37 +159,17 @@ export default function Home() {
 
                   <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Simpliterms</h3>
 
-                  <p className='text-white text-left text-xl leading-10 mx-[13%] lg:mx-0 mb-8'>
+                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
                     {businessI18n("simplitermsDesc")}
                   </p>
 
-                  <div className='px-[13%] lg:px-0'>
-                    <Link className='w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all' href={"https://www.simpliterms.com/"} target='_blank'>{businessI18n("viewButton")}</Link>
-                  </div>
-
-                </div>
-              </div>
-
-              {/* movete planet */}
-              <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%] mt-10'>
-                <div className='lg:w-[40%] lg:mx-0 md:mx-[25%] flex items-center justify-center h-[28rem] relative w-auto mx-[13%]'>
-                  <Image
-                    src={require("@/assets/simpliterms-planet.png")}
-                    alt={imagesALtsI18n("movetePlanet")}
-                    className='absolute w-auto floating'
-                  />
-                </div>
-
-                <div className='lg:w-[60%] lg:ml-12'>
-
-                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
-
-                  <p className='text-white text-left text-xl leading-10 mx-[13%] lg:mx-0 mb-8'>
-                    {businessI18n("moveteDesc")}
-                  </p>
-
-                  <div className='px-[13%] lg:px-0'>
-                    <Link className='w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all' href={"https://info.movete.me"} target='_blank'>{businessI18n("viewButton")}</Link>
+                  <div className='px-[13%] lg:px-0 flex'>
+                    <Link
+                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
+                      href={"https://simpliterms.com"}
+                      target='_blank'>
+                      {businessI18n("viewButton")}
+                    </Link>
                   </div>
 
                 </div>

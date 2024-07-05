@@ -10,49 +10,25 @@ export const PicturesInBalloons = () => {
 
   const directionFunction = (value: any) => {
 
-    if (screen.width < 700) {
-
-      if (balloons === 5) {
-        return value - 3.6
-      }
-      if (balloons === 4) {
-        return value - 2.8
-      }
-      if (balloons === 3) {
-        return value - 1
-      }
-      if (balloons === 2) {
-        return value + 1;
-      }
-      if (balloons === 1) {
-        return value + 6;
-      }
-      if (balloons === 0) {
-        return value + 12;
-      }
-
-    } else {
-
-      if (balloons === 5) {
-        return value - 1.3
-      }
-      if (balloons === 4) {
-        return value - 1
-      }
-      if (balloons === 3) {
-        return value - 0.4
-      }
-      if (balloons === 2) {
-        return value + 1;
-      }
-      if (balloons === 1) {
-        return value + 3;
-      }
-      if (balloons === 0) {
-        return value + 6;
-      }
-
+    if (balloons === 5) {
+      return value - 1.3
     }
+    if (balloons === 4) {
+      return value - 1
+    }
+    if (balloons === 3) {
+      return value - 0.4
+    }
+    if (balloons === 2) {
+      return value + 1;
+    }
+    if (balloons === 1) {
+      return value + 3;
+    }
+    if (balloons === 0) {
+      return value + 6;
+    }
+
   }
 
   useEffect(() => {
