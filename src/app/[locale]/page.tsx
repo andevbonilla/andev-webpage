@@ -137,9 +137,9 @@ export default function Home() {
 
                 <div className='lg:ml-12 lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
                   <Image
-                    src={require("@/assets/simpliterms-planet.png")}
+                    src={require("@/assets/movete-planet.png")}
                     alt={imagesALtsI18n("movetePlanet")}
-                    className='absolute w-auto floating'
+                    className='absolute floating w-[17rem] mb-[3rem]'
                   />
                 </div>
 
