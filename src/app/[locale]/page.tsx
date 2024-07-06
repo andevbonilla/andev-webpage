@@ -131,6 +131,12 @@ export default function Home() {
                       target='_blank'>
                       {businessI18n("viewButton")}
                     </a>
+                    <a
+                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
+                      href={"https://info.movete.me"}
+                      target='_blank'>
+                      {businessI18n("viewButton")}
+                    </a>
                   </div>
 
                 </div>

@@ -23,6 +23,7 @@
   "Business": {
     "title": "MI NEGOCIO",
     "viewButton": "Ver Más",
+    "viewMyMovete": "Ver mi perfil en movete",
     "simplitermsDesc": "¿Alguna vez has hecho clic en aceptar política de privacidad y/o términos de uso sin leerlos porque son demasiado largos y difíciles de entender? Simpliterms es una extensión que resume las políticas con un solo clic para que no tengas que aceptarlas ciegamente de nuevo.",
     "moveteDesc": "¿Te gustaría mostrar tu progreso en el gimnasio o en deportes, o tal vez compartir cuántos goles o medallas has ganado, entre muchas otras cosas? Si tu respuesta es sí, entonces Movete es para ti. Con Movete, puedes crear un perfil donde puedes recibir invitaciones para entrenar, mostrar tus logros y conocer gente nueva."
   },
