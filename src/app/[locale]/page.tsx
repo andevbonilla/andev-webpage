@@ -357,7 +357,7 @@ export default function Home() {
               errorEmail={contactI18n("errorEmail")}
               errorMessage={contactI18n("errorMessage")}
               success={contactI18n("success")}
-              error={contactI18n("error")}
+              errorGlobal={contactI18n("error")}
             />
           </section>
 

@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import { MutatingDots } from 'react-loader-spinner';
 import { ModalContact } from './ModalContact';
 
-export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorNameRequired, errorEmail, errorMessage, success, error }: any) => {
+export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorNameRequired, errorEmail, errorMessage, success, errorGlobal }: any) => {
 
   // errors
   const [nameError, setNameError] = useState("");
@@ -18,6 +18,8 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
 
   // modal 
   const [openModal, setopenModal] = useState(false);
+  const [modalMessage, setmodalMessage] = useState("");
+  const [modalType, setmodalType] = useState(0);
 
 
   // form values
@@ -129,11 +131,17 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
           setMessageError("");
           //set other important variables
           setIsLoading(false);
+          // modal actions
           setopenModal(true);
+          setmodalType(1);
+          setmodalMessage(success);
         }, (error: any) => {
           setSendingMessage(false);
           setIsLoading(false);
+          // modal actions
           setopenModal(true);
+          setmodalType(0);
+          setmodalMessage(errorGlobal);
         });
 
 
@@ -163,8 +171,8 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
       {
         openModal &&
         <ModalContact
-          type={1}
-          message=''
+          type={modalType}
+          message={modalMessage}
           setopenModal={setopenModal}
         />
       }
