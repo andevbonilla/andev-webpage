@@ -126,10 +126,10 @@ export default function Home() {
 
                   <div className='px-[13%] lg:px-0 flex'>
                     <a
-                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
-                      href={"https://info.movete.me"}
+                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
+                      href={"https://movete.me/andresbonilla"}
                       target='_blank'>
-                      {businessI18n("viewButton")}
+                      {businessI18n("viewMyMovete")}
                     </a>
                     <a
                       className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
