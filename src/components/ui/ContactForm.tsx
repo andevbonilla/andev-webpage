@@ -82,6 +82,7 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
 
     e.preventDefault();
     setIsLoading(true);
+    setopenModal(false);
 
     if (sendingMessage) {
       return;
