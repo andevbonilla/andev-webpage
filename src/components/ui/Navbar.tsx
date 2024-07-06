@@ -180,19 +180,35 @@ export const Navbar = ({
                         </div>
                         <div className='overflow-hidden'>
 
-                            <button onClick={() => clickOnAsteroid("/#about")} className='w-[7rem] h-[7rem] flex justify-center items-center mb-8 asteroid' id='asteroid'>
+                            <button
+                                onClick={() => clickOnAsteroid("/#about")}
+                                className='w-[7rem] h-[7rem] flex justify-center items-center mb-8 asteroid asteroid4'
+                                id='asteroid1'
+                            >
                                 <p className='font-bold text-white text-2xl'>{aboutAsteroid}</p>
                             </button>
 
-                            <button onClick={() => clickOnAsteroid("/#business-part")} className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid1' id='asteroid1'>
+                            <button
+                                onClick={() => clickOnAsteroid("/#business-part")}
+                                className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid asteroid1'
+                                id='asteroid2'
+                            >
                                 <p className='font-bold text-white text-2xl'>{bussinessAsteroid}</p>
                             </button>
 
-                            <button onClick={() => clickOnAsteroid("/#projects")} className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid1' id='asteroid2'>
+                            <button
+                                onClick={() => clickOnAsteroid("/#projects")}
+                                className='w-[10rem] h-[10rem] flex justify-center items-center mb-12 asteroid asteroid2'
+                                id='asteroid3'
+                            >
                                 <p className='font-bold text-white text-2xl'>{projectAsteroid}</p>
                             </button>
 
-                            <button onClick={() => clickOnAsteroid("/#contact")} className='w-[8rem] h-[8rem] flex justify-center items-center mb-12 asteroid3' id='asteroid3'>
+                            <button
+                                onClick={() => clickOnAsteroid("/#contact")}
+                                className='w-[8rem] h-[8rem] flex justify-center items-center mb-12 asteroid asteroid3'
+                                id='asteroid4'
+                            >
                                 <p className='font-bold text-white text-2xl'>{contactAsteroid}</p>
                             </button>
 

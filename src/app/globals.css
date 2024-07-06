@@ -4,16 +4,16 @@
 
 
 @media (min-width:1200px){
-  #asteroid{
+  #asteroid1{
       animation-duration: 30300ms;
   }
-  #asteroid1{
+  #asteroid2{
       animation-duration: 22500ms;
   }
-  #asteroid2{
+  #asteroid3{
       animation-duration: 36100ms;
   }
-  #asteroid3{
+  #asteroid4{
       animation-duration: 36100ms;
   }
   #international-space-station{
@@ -25,11 +25,9 @@
     will-change: transform;
 }
 
-.floating, .international-space-station, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3, .fish-group-4 {
+.floating, .international-space-station, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3 {
     will-change: transform;
 }
-
-/* stars */
 
 /* planets */
 .floating{
@@ -62,64 +60,38 @@
 }
 
 .fish-group-2{
-  animation: plane1animation 32s linear infinite;
+  animation: sharkAnimation 32s linear infinite;
 }
 
 .fish-group-3{
   animation: sharkAnimation 25s linear infinite;
 }
 
-
-.fish-group-4{
-  animation-delay: 4000ms;
-  animation: plane1animation 32s linear infinite;
+.delay-1s{
+  animation-delay: 1s;
 }
 
+.delay-10s{
+  animation-delay: 10s;
+}
 
 .asteroid{
     background-image: url("../assets/asteroid.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    animation-name: move;
-    animation-duration: 6300ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
 }
 .asteroid1{
-    background-image: url("../assets/asteroid.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    animation-name: move;
-    animation-duration: 9500ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+    animation: move 9500ms linear infinite;
 }
 .asteroid2{
-    background-image: url("../assets/asteroid.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    animation-name: move;
-    animation-duration: 8100ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+    animation: move 8s linear infinite;
 }
-
 .asteroid3{
-    background-image: url("../assets/asteroid.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    animation-name: moveLastAsteroid;
-    animation-duration: 9100ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: normal;
+    animation: moveLastAsteroid 9s linear infinite;
+}
+.asteroid4{
+    animation: move 6500ms linear infinite;
 }
 
 .stars {
@@ -162,35 +134,6 @@
   min-height:100px;
   max-height:150px;
   overflow: hidden; /* Agregamos esto para ocultar el desenfoque que se extiende más allá del contenedor */
-}
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
 }
 
 .sea {
@@ -235,10 +178,6 @@
 }
 
 @keyframes fishgroupanimation {
-  from{transform: translateX(-10rem) translateY(10rem);}
-  to{transform: translateX(200vw) translateY(10rem);}
-}
-@keyframes fishgroupanimation2 {
   from{transform: translateX(-10rem) translateY(10rem);}
   to{transform: translateX(200vw) translateY(10rem);}
 }
@@ -333,11 +272,9 @@
   0% { transform: translateX(-100%) translateY(-50%); }
   100% { transform: translateX(6000%) translateY(-500%); }
 }
-
 .moon {
   display: none;
 }
-
 .moon-moving {
   display: flex;
   animation: parabola 100s linear infinite;

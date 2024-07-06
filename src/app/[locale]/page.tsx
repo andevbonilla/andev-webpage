@@ -198,7 +198,7 @@ export default function Home() {
               <Image
                 src={require("@/assets/space-station-icon.png")}
                 alt={imagesALtsI18n("InternationalSpaceStation")}
-                className='international-space-station'
+                className='international-space-station w-[35rem] mb-[2rem]'
                 id='international-space-station'
               />
             </section>
@@ -207,7 +207,7 @@ export default function Home() {
             {/* my projects */}
             <section id='projects'>
               <div className='flex w-full justify-center items-center'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{projectsI18n("title")}</h2>
+                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mb-10'>{projectsI18n("title")}</h2>
               </div>
 
               <Project name={"YourDreamCar"}
@@ -290,25 +290,35 @@ export default function Home() {
           {/* my projects */}
           <section>
 
+            {/* fishes section */}
             <CuriosFact text={curiosFactsI18n("4")} />
-
-            <div className='flex'>
+            <div className='relative'>
               <Image
                 src={require("@/assets/fish-group-1-icon.png")}
                 alt={imagesALtsI18n("fishes")}
-                className='w-[6rem] h-[6rem] fish-group delay-300'
+                className='w-[5rem] absolute top-0 fish-group'
               />
-              <Image
-                src={require("@/assets/fish-group-2-icon.png")}
-                alt={imagesALtsI18n("fishes")}
-                className='w-[8rem] h-[8rem] fish-group-2'
-              />
+              <div className="relative">
+                <Image
+                  src={require("@/assets/fish-group-2-icon.png")}
+                  alt={imagesALtsI18n("fishes")}
+                  className='w-[8rem] absolute fish-group-2'
+                />
+                <Image
+                  src={require("@/assets/fish-group-2-icon.png")}
+                  alt={imagesALtsI18n("fishes")}
+                  className='w-[8rem] absolute fish-group-2'
+                />
+              </div>
+
               <Image
                 src={require("@/assets/fish-group-3-icon.png")}
                 alt={imagesALtsI18n("shark")}
-                className='w-[30rem] h-[10rem] fish-group-3'
+                className='w-[5rem] absolute top-0 fish-group-3'
               />
             </div>
+
+
             <Project name={"FileBox"}
               desc={projectsI18n("fileBoxDesc")}
               link={"https://filebox.netlify.app/#/login"}
