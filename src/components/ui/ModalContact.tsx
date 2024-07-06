@@ -7,7 +7,7 @@ export const ModalContact = ({ setopenModal, type, message }: { setopenModal: an
     return (
 
         <div className="flex items-center justify-centers w-full">
-            <div className='bg-yellow-200 text-black rounded-lg p-10 sm:mx-[10%] lg:mx-[20%] w-full'>
+            <div className='bg-yellow-200 text-black rounded-lg p-10 sm:mx-[10%] lg:mx-[20%] xl:mx-[25%] w-full'>
 
                 <div className="flex justify-between items-center">
                     {
@@ -18,7 +18,7 @@ export const ModalContact = ({ setopenModal, type, message }: { setopenModal: an
 
                     <FontAwesomeIcon
                         icon={faXmark}
-                        className="w-[1.6rem] h-[1.6rem]"
+                        className="w-[1.6rem] h-[1.6rem] cursor-pointer"
                         onClick={() => setopenModal(false)}
                     />
                 </div>

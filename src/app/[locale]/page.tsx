@@ -353,11 +353,9 @@ export default function Home() {
               emailPlaceholder={contactI18n("emailPlaceholder")}
               messagePlaceholder={contactI18n("messagePlaceholder")}
               actionButton={contactI18n("actionButton")}
-              errorTooMessages={contactI18n("errorTooMessages")}
               errorNameRequired={contactI18n("errorNameRequired")}
               errorEmail={contactI18n("errorEmail")}
               errorMessage={contactI18n("errorMessage")}
-              sending={contactI18n("sending")}
               success={contactI18n("success")}
               error={contactI18n("error")}
             />

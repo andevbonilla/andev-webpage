@@ -52,11 +52,9 @@
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
     "actionButton": "Envoyer",
-    "errorTooMessages": "Vous avez envoyé trop de messages",
     "errorNameRequired": "Le nom est requis.",
     "errorEmail": "L'email est invalide",
     "errorMessage": "Le message doit comporter au moins 10 caractères.",
-    "sending": "Envoi en cours...",
     "success": "Merci, le message a été envoyé avec succès👌",
     "error": "Désolé, une erreur s'est produite. Veuillez réessayer plus tard. 🤯"
   },

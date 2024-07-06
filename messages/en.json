@@ -52,11 +52,9 @@
     "emailPlaceholder": "Email",
     "messagePlaceholder": "Message",
     "actionButton": "Send",
-    "errorTooMessages": "You have sent too much messages",
     "errorNameRequired": "The Name is required.",
     "errorEmail": "The email is invalid",
     "errorMessage": "The Message must have at least 10 chracters.",
-    "sending": "Sending...",
     "success": "Thank you the message has been sent👌",
     "error": "Sorry, there was an error, please try again later. 🤯"
   },

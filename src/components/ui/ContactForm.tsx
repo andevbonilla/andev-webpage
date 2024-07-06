@@ -4,64 +4,76 @@ import emailjs from '@emailjs/browser';
 import { MutatingDots } from 'react-loader-spinner';
 import { ModalContact } from './ModalContact';
 
-export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorTooMessages, errorNameRequired, errorEmail, errorMessage, sending, success, error }: any) => {
+export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlaceholder, actionButton, errorNameRequired, errorEmail, errorMessage, success, error }: any) => {
 
   // errors
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [messageError, setMessageError] = useState("");
 
+  // important to send messages
   const [allowedMessages, setallowedMessages] = useState(2);
   const [sendingMessage, setSendingMessage] = useState(false);
-
-  const [openModal, setopenModal] = useState(false);
-
   const [isLoading, setIsLoading] = useState(false)
 
+  // modal 
+  const [openModal, setopenModal] = useState(false);
+
+
+  // form values
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
   const form: any = useRef(null);
 
-  const evaluateName = (e: any) => {
-    const name = e.target.value;
+  const evaluateName = (value: string) => {
+
+    const name = value;
+
     if (name.length === 0) {
       setNameError(errorNameRequired);
-    } else {
-      setNameError("")
-    }
+    };
+
     if (name.length > 50) {
       setNameError("The name is too long!");
-    } else {
-      setNameError("")
+    };
+
+    if (name.length > 0 && name.length <= 50) {
+      setNameError("");
     }
+
     setName(name);
+
   }
 
-  const evaluateEmail = (e: any) => {
-    const name = e.target.value;
-    if (name.length === 0) {
-      setNameError(errorNameRequired);
+  const evaluateEmail = (value: string) => {
+
+    const email = value;
+    let EmailRegexValidator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    if (!EmailRegexValidator.test(email.toString().toLowerCase())) {
+      setEmailError(errorEmail);
     } else {
-      setNameError("")
-    }
-    if (name.length > 50) {
-      setNameError("The name is too long!");
-    } else {
-      setNameError("")
-    }
-    setName(name);
+      setEmailError("");
+    };
+
+    setEmail(email);
+
   }
 
-  const evaluateMessage = (e: any) => {
-    const message = e.target.value;
-    if (message.length === 0) {
+  const evaluateMessage = (value: string) => {
+
+    const message = value;
+
+    if (message.length < 10) {
       setMessageError(errorMessage);
     } else {
-      setMessageError("")
+      setMessageError("");
     }
-    setName(message);
+
+    setMessage(message);
+
   }
 
   const sendEmail = (e: FormEvent<HTMLFormElement>) => {
@@ -82,44 +94,19 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
     formData.append('email', email);
     formData.append('message', message);
 
-    const messageInfo: any = {
-      name: formData.get('name') ? formData.get("name") : '',
-      email: formData.get('email') ? formData.get("email") : '',
-      message: formData.get('message') ? formData.get("message") : '',
+    // validate all the fields
+    if (message.length === 0 || name.length === 0 || email.length === 0) {
+      setIsLoading(false);
+      return;
     }
 
-    let IfnameError = false;
-    let IfemailError = false;
-    let IfmessageError = false;
+    if (messageError !== "" || nameError !== "" || emailError !== "") {
+      setIsLoading(false);
+      return;
+    }
 
-    if (messageInfo.name?.toString() === "") {
-      setNameError(errorNameRequired);
-      IfnameError = true;
-    } else {
-      setNameError("");
-      IfnameError = false;
-    };
-
-
-    let EmailRegexValidator = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (!EmailRegexValidator.test(messageInfo.email.toString().toLowerCase())) {
-      setEmailError(errorEmail);
-      IfemailError = true;
-    } else {
-      setEmailError("");
-      IfemailError = false;
-    };
-
-
-    if (messageInfo.message?.toString() === "") {
-      setMessageError(errorMessage);
-      IfmessageError = true;
-    } else {
-      setMessageError("");
-      IfmessageError = false;
-    };
-
-    if (IfnameError || IfemailError || IfmessageError) {
+    if (allowedMessages <= 0) {
+      setIsLoading(false);
       return;
     }
 
@@ -132,9 +119,15 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
       emailjs.sendForm('service_ljreywj', 'template_12scdup', form.current, 'BDIxeZDcmcXTCdO5z')
         .then((result: any) => {
           setSendingMessage(false);
+          //set form values to empty
           setName("");
           setEmail("");
           setMessage("");
+          //set the errors to empty
+          setNameError("");
+          setEmailError("");
+          setMessageError("");
+          //set other important variables
           setIsLoading(false);
           setopenModal(true);
         }, (error: any) => {
@@ -168,7 +161,7 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
       </div>
 
       {
-        true &&
+        openModal &&
         <ModalContact
           type={1}
           message=''
@@ -185,7 +178,7 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
             placeholder={namePlaceholder}
             name='name'
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => evaluateName(e.target.value)}
             className={`${(nameError !== "") ? "border-2 border-red-500" : ""} w-full mt-8 py-3 px-4 bg-[#001c5f] text-white`}
           />
 
@@ -201,7 +194,7 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
             placeholder={emailPlaceholder}
             name='email'
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => evaluateEmail(e.target.value)}
             className={`${(emailError !== "") ? "border-2 border-red-500" : ""} w-full mt-8 py-3 px-4 bg-[#001c5f] text-white`}
           />
 
@@ -216,7 +209,7 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
             rows={"5" as any}
             placeholder={messagePlaceholder}
             value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            onChange={(e) => evaluateMessage(e.target.value)}
             className={`${(messageError !== "") ? "border-2 border-red-500" : ""} w-full mt-8 py-3 px-4 bg-[#001c5f] text-white`}>
 
           </textarea>
@@ -225,7 +218,12 @@ export const ContactForm = ({ namePlaceholder, emailPlaceholder, messagePlacehol
 
         </div>
 
-        <button type='submit' className='mt-8 w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all'>{actionButton}</button>
+        <button
+          type='submit'
+          className='mt-8 w-full flex items-center justify-center bg-yellow-200 py-4 px-5 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 transition-all'
+        >
+          {actionButton}
+        </button>
 
       </form>
 

@@ -52,11 +52,9 @@
     "emailPlaceholder": "メール",
     "messagePlaceholder": "メッセージ",
     "actionButton": "送信",
-    "errorTooMessages": "あなたは多くのメッセージを送信しました",
     "errorNameRequired": "名前は必須です。",
     "errorEmail": "メールが無効です",
     "errorMessage": "メッセージは少なくとも10文字でなければなりません。",
-    "sending": "送信中...",
     "success": "ありがとうございます、メッセージが送信されました👌",
     "error": "申し訳ありませんが、エラーが発生しました。後でもう一度お試しください。🤯"
   },

@@ -52,11 +52,9 @@
     "emailPlaceholder": "E-Mail",
     "messagePlaceholder": "Nachricht",
     "actionButton": "Senden",
-    "errorTooMessages": "Sie haben zu viele Nachrichten gesendet",
     "errorNameRequired": "Der Name ist erforderlich.",
     "errorEmail": "Die E-Mail ist ungültig",
     "errorMessage": "Die Nachricht muss mindestens 10 Zeichen enthalten.",
-    "sending": "Senden...",
     "success": "Vielen Dank, die Nachricht wurde erfolgreich gesendet👌",
     "error": "Entschuldigung, es gab einen Fehler. Bitte versuchen Sie es später erneut. 🤯"
   },

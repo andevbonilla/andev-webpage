@@ -52,11 +52,9 @@
     "emailPlaceholder": "电子邮件",
     "messagePlaceholder": "留言",
     "actionButton": "发送",
-    "errorTooMessages": "您发送了太多消息",
     "errorNameRequired": "姓名是必需的。",
     "errorEmail": "电子邮件无效",
     "errorMessage": "留言必须至少有10个字符。",
-    "sending": "发送中...",
     "success": "谢谢，消息已成功发送👌",
     "error": "抱歉，发生错误，请稍后再试。🤯"
   },
