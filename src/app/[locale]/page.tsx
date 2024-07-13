@@ -124,9 +124,9 @@ export default function Home() {
                     {businessI18n("moveteDesc")}
                   </p>
 
-                  <div className='px-[13%] lg:px-0 flex'>
+                  <div className='px-[13%] lg:px-0 flex flex-col md:flex-row'>
                     <a
-                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
+                      className='md:w-auto md:mb-0 mb-6 w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
                       href={"https://movete.me/andresbonilla"}
                       target='_blank'>
                       {businessI18n("viewMyMovete")}
@@ -249,7 +249,7 @@ export default function Home() {
 
             <CuriosFact text={curiosFactsI18n("3")} />
 
-            <div id="part2" className='flex'>
+            {/* <div id="part2" className='flex'>
               <Image
                 src={require("@/assets/vehicle7.png")}
                 alt={imagesALtsI18n("airplane")}
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
 
 
-            <div className='h-[30rem] sm:h-[40rem] md:h-[50rem] lg:h-[60rem] 2xl:h-[80rem] 3xl:h-[100rem]'></div>
+            <div className='h-[30rem] sm:h-[40rem] md:h-[50rem] lg:h-[60rem] 2xl:h-[80rem] 3xl:h-[100rem]'></div> */}
 
 
           </StarsBackground>
@@ -279,20 +279,12 @@ export default function Home() {
 
         <div className='sea overflow-hidden'>
 
-          <div className='flex h-[10rem]'>
-            <Image
-              src={require("@/assets/fish-group-1-icon.png")}
-              alt="yellow fishes in group"
-              className='w-[10rem] h-[10rem] fish-group'
-            />
-          </div>
-
           {/* my projects */}
           <section>
 
             {/* fishes section */}
             <CuriosFact text={curiosFactsI18n("4")} />
-            <div className='relative'>
+            {/* <div className='relative'>
               <Image
                 src={require("@/assets/fish-group-1-icon.png")}
                 alt={imagesALtsI18n("fishes")}
@@ -316,7 +308,7 @@ export default function Home() {
                 alt={imagesALtsI18n("shark")}
                 className='w-[5rem] absolute top-0 fish-group-3'
               />
-            </div>
+            </div> */}
 
 
             <Project name={"FileBox"}
@@ -351,11 +343,11 @@ export default function Home() {
               iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               ]}
             />
-            <div className='flex h-[18rem]'>
+            <div className='flex h-[18rem] relative'>
               <Image
                 src={require("@/assets/tentaculos.gif")}
                 alt="kraken tentaculus"
-                className='w-[30rem] h-[30rem] rotate-[75deg] -translate-x-20'
+                className='w-[30rem] h-[30rem] rotate-[90deg] absolute left-0'
               />
             </div>
           </section>
