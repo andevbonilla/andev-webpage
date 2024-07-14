@@ -25,6 +25,13 @@ import {
 import { useTranslations } from "next-intl";
 import { Moon } from "@/components/Moon";
 import { TitleSection } from "@/components/ui/TitleSection";
+import { Anton } from "next/font/google";
+
+const anton = Anton({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+})
 
 export default function Home() {
 
@@ -67,7 +74,9 @@ export default function Home() {
 
               <div className='mb-10 md:w-[50%]'>
 
-                <h1 className='text-white font-bold text-[1.6rem] um:text-[2.2rem] xl:text-[3rem]'>Andres Bonilla</h1>
+                <h1 className={`text-white font-bold text-[1.6rem] um:text-[2.2rem] xl:text-[3rem] ${anton.className}`}>
+                  Andres Bonilla
+                </h1>
 
                 <div className='flex text-white'>
                   <TypingAnimation
@@ -281,7 +290,7 @@ export default function Home() {
 
           <City />
 
-        </div>
+        </div >
 
         <div className='sea overflow-hidden'>
 
@@ -355,7 +364,7 @@ export default function Home() {
 
         </div>
 
-      </main>
+      </main >
 
 
     </>
