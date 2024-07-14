@@ -138,7 +138,7 @@
 
 .sea {
   background: 
-    linear-gradient(#bfe0f4,rgba(120,220,250,0.6) 0.5%, rgba(0,20,100,1) 35%, rgb(0,0,10)), 
+    linear-gradient(#019CC2 0.5%, rgba(0,20,100,1) 35%, rgb(0,0,10)), 
     radial-gradient(rgba(200,200,250,0.9), rgba(0,0,0,0.7) 90%), 
     linear-gradient(to right bottom, white, navy);
   background-position: 0px 0px;
