@@ -10,7 +10,7 @@ export const City = () => {
         className='hidden md:flex w-full'
       />
       <Image
-        src={require("@/assets/posible_town_mobile.webp")}
+        src={require("@/assets/posible_town.webp")}
         alt="greek town in andev page"
         className='md:hidden w-full'
       />
