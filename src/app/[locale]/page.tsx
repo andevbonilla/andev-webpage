@@ -264,28 +264,6 @@ export default function Home() {
 
             <CuriosFact text={curiosFactsI18n("3")} />
 
-            {/* <div id="part2" className='flex'>
-              <Image
-                src={require("@/assets/vehicle7.png")}
-                alt={imagesALtsI18n("airplane")}
-                className='w-[17rem] h-[6rem] lg:w-[25rem] lg:h-[10rem] plane1'
-              />
-              <Image
-                src={require("@/assets/vehicle8.png")}
-                alt={imagesALtsI18n("airplane")}
-                className='w-[12rem] h-[6rem] lg:w-[15rem] lg:h-[8rem] plane2'
-              />
-              <Image
-                src={require("@/assets/airplane3-icon.png")}
-                alt={imagesALtsI18n("airplane")}
-                className='w-[7rem] h-[7rem] lg:w-[15rem] lg:h-[10rem] plane3'
-              />
-            </div>
-
-
-            <div className='h-[30rem] sm:h-[40rem] md:h-[50rem] lg:h-[60rem] 2xl:h-[80rem] 3xl:h-[100rem]'></div> */}
-
-
           </StarsBackground>
 
           <City />
