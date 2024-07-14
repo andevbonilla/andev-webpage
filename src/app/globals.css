@@ -25,7 +25,7 @@
     will-change: transform;
 }
 
-.floating, .international-space-station, .plane1, .plane2, .plane3, .fish-group, .fish-group-2, .fish-group-3 {
+.floating, .international-space-station, .plane1, .plane2, .plane3 {
     will-change: transform;
 }
 
@@ -53,18 +53,6 @@
 
 .plane3{
   animation: plane3animation 11s linear infinite;
-}
-
-.fish-group{
-  animation: fishgroupanimation 45s linear infinite;
-}
-
-.fish-group-2{
-  animation: sharkAnimation 32s linear infinite;
-}
-
-.fish-group-3{
-  animation: sharkAnimation 25s linear infinite;
 }
 
 .delay-1s{
@@ -176,16 +164,6 @@
   from{transform: translateX(-100rem) translateY(10rem);}
   to{transform: translateX(200vw) translateY(0rem);}
 }
-
-@keyframes fishgroupanimation {
-  from{transform: translateX(-10rem) translateY(10rem);}
-  to{transform: translateX(200vw) translateY(10rem);}
-}
-@keyframes sharkAnimation {
-  0%{transform: translateX(150vw) translateY(30rem);}
-  100%{transform: translateX(-100rem) translateY(30rem);}
-}
-
 
 @keyframes move {
   from{transform: translateX(-10rem) rotate(300deg);}

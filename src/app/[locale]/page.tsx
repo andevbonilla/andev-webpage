@@ -24,6 +24,7 @@ import {
 } from "@/utils/IconsSvgs";
 import { useTranslations } from "next-intl";
 import { Moon } from "@/components/Moon";
+import { TitleSection } from "@/components/ui/TitleSection";
 
 export default function Home() {
 
@@ -91,12 +92,16 @@ export default function Home() {
 
             {/* about me */}
             <section className='md:px-[20%] px-[10%]'>
-              <div className='flex w-full justify-center items-center' id='about'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{aboutI18n("title")}</h2>
-              </div>
+
+              <TitleSection
+                text={aboutI18n("title")}
+              />
+
               <p className='text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text1")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://fansive.netlify.app/#/login'>Fansive</a>{aboutI18n("text2")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://www.simpliterms.com'>Simpliterms</a>{aboutI18n("text3")}<a target='_blank' className='underline text-opacity-100 font-bold' href='https://info.movete.me'>Movete</a>.
               </p>
+
               <p className='mt-4 text-white text-center text-xl leading-10 text-opacity-80'>{aboutI18n("text4")}</p>
+
             </section>
 
             <CuriosFact text={curiosFactsI18n("1")} />
@@ -109,9 +114,9 @@ export default function Home() {
             {/* my business */}
             <section className='w-full'>
 
-              <div className='flex w-full justify-center items-center mb-20' id="business-part">
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white mt-[6rem] text-lg um:text-xl lg:mb-12'>{businessI18n("title")}</h2>
-              </div>
+              <TitleSection
+                text={businessI18n("title")}
+              />
 
               {/* movete planet */}
               <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%]'>
@@ -186,9 +191,9 @@ export default function Home() {
 
             {/* my skills */}
             <section className='lg:px-[30%] px-[13%] mb-14'>
-              <div className='flex w-full justify-center items-center'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-12'>{skillsI18n("title")}</h2>
-              </div>
+              <TitleSection
+                text={skillsI18n("title")}
+              />
               <Skills />
             </section>
 
@@ -206,9 +211,10 @@ export default function Home() {
 
             {/* my projects */}
             <section id='projects'>
-              <div className='flex w-full justify-center items-center'>
-                <h2 className='border-b-[.5rem] pl-[1.6rem] pr-[.8rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mb-10'>{projectsI18n("title")}</h2>
-              </div>
+
+              <TitleSection
+                text={projectsI18n("title")}
+              />
 
               <Project name={"YourDreamCar"}
                 desc={projectsI18n("yourDreamCarDesc")}
@@ -280,36 +286,10 @@ export default function Home() {
         <div className='sea overflow-hidden'>
 
           {/* my projects */}
-          <section>
+          <section className="pt-10">
 
             {/* fishes section */}
             <CuriosFact text={curiosFactsI18n("4")} />
-            {/* <div className='relative'>
-              <Image
-                src={require("@/assets/fish-group-1-icon.png")}
-                alt={imagesALtsI18n("fishes")}
-                className='w-[5rem] absolute top-0 fish-group'
-              />
-              <div className="relative">
-                <Image
-                  src={require("@/assets/fish-group-2-icon.png")}
-                  alt={imagesALtsI18n("fishes")}
-                  className='w-[8rem] absolute fish-group-2'
-                />
-                <Image
-                  src={require("@/assets/fish-group-2-icon.png")}
-                  alt={imagesALtsI18n("fishes")}
-                  className='w-[8rem] absolute fish-group-2'
-                />
-              </div>
-
-              <Image
-                src={require("@/assets/fish-group-3-icon.png")}
-                alt={imagesALtsI18n("shark")}
-                className='w-[5rem] absolute top-0 fish-group-3'
-              />
-            </div> */}
-
 
             <Project name={"FileBox"}
               desc={projectsI18n("fileBoxDesc")}
@@ -353,9 +333,9 @@ export default function Home() {
           </section>
 
           <section className='px-[13%]'>
-            <div className='flex w-full justify-center items-center' id='contact'>
-              <h2 className='border-b-[.5rem] pl-[1rem] pr-[.2rem] pb-2 border-yellow-200 tracking-[.8rem] md:text-3xl font-bold text-white text-lg um:text-xl mt-[12rem] mb-10'>{contactI18n("title")}</h2>
-            </div>
+            <TitleSection
+              text={contactI18n("title")}
+            />
             <ContactForm
               namePlaceholder={contactI18n("namePlaceholder")}
               emailPlaceholder={contactI18n("emailPlaceholder")}
