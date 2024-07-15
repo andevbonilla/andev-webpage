@@ -10,14 +10,42 @@ export const City = () => {
 
   useEffect(() => {
 
+    let initialSunPosition = -100;
+    let beforeScroollPosition = 0;
+    let actualScroollPosition = 0;
+
+    // set initial position
+    // md 
+    if (window.innerWidth > 700) {
+      initialSunPosition = -400
+    };
+
+    if (sun.current) {
+      sun.current.style.top = `${initialSunPosition}px`; // Ajustar posición del sol
+    }
+
     const handleScroll = () => {
-      let scroll = window.scrollY;
-      if (cityMobile.current) cityMobile.current.style.zIndex = '990';
-      if (cityDesktop.current) cityDesktop.current.style.zIndex = '990';
-      if (sun.current) {
-        sun.current.style.zIndex = '800';
-        sun.current.style.top = `${10}px`; // Ajustar posición del sol
-      }
+
+      let sunPosition = sun.current.getBoundingClientRect();
+
+      // ig go down -> +1
+      if (sunPosition.top < 400) {
+        actualScroollPosition = window.scrollY;
+
+        if (actualScroollPosition >= beforeScroollPosition) {
+          initialSunPosition = initialSunPosition + 1
+        } else {
+          initialSunPosition = initialSunPosition - 1
+        }
+
+        beforeScroollPosition = actualScroollPosition;
+
+        if (sun.current) {
+          sun.current.style.top = `${initialSunPosition}px`; // Ajustar posición del sol
+        };
+
+      };
+
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -30,7 +58,7 @@ export const City = () => {
 
   return (
     <div className='w-full relative mt-10' id="part1">
-      <div ref={sun} className='absolute top-[0] left-[20%] w-[20rem] h-[20rem] bg-yellow-400 rounded-full z-10'></div>
+      <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
       <Image
         ref={cityDesktop}
         src={require("@/assets/town-desktop.webp")}

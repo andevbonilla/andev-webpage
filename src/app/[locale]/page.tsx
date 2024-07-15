@@ -219,7 +219,7 @@ export default function Home() {
 
 
             {/* my projects */}
-            <section id='projects'>
+            <section className="z-20" id='projects'>
 
               <TitleSection
                 text={projectsI18n("title")}
@@ -262,6 +262,7 @@ export default function Home() {
               />
             </section>
 
+            <div className="h-[5rem]"></div>
             <CuriosFact text={curiosFactsI18n("3")} />
 
           </StarsBackground>
@@ -270,7 +271,7 @@ export default function Home() {
 
         </div >
 
-        <div className='sea overflow-hidden'>
+        <div className='sea overflow-hidden z-30'>
 
           {/* my projects */}
           <section className="pt-10">
