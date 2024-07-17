@@ -74,7 +74,7 @@ export default function Home() {
 
               <div className='mb-10 md:w-[50%]'>
 
-                <h1 className={`text-white font-bold text-[1.6rem] um:text-[2.2rem] xl:text-[3rem] ${anton.className}`}>
+                <h1 className={`text-white font-bold text-[2.6rem] xl:text-[3.2rem] ${anton.className}`}>
                   Andres Bonilla
                 </h1>
 
