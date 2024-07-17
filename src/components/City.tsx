@@ -41,7 +41,7 @@ export const City = () => {
 
           } else {
 
-            if (initialSunPosition - 2 <= -400) {
+            if (initialSunPosition - 2 >= -400) {
               initialSunPosition = initialSunPosition - 2;
             }
 
