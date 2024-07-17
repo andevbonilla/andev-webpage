@@ -67,7 +67,7 @@ export default function Home() {
           <StarsBackground>
 
             {/* simulate the navbar height */}
-            <div id="part4" className='h-16'></div>
+            <div className='h-16'></div>
 
             {/* presentation section */}
             <div className='md:px-[15%] lg:px-[20%] flex flex-col md:flex-row justify-center items-center h-screen px-[10%]'>
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
 
             {/* about me */}
-            <section className='md:px-[20%] px-[10%]'>
+            <section className='md:px-[20%] px-[10%]' id="about">
 
               <TitleSection
                 text={aboutI18n("title")}
@@ -121,7 +121,7 @@ export default function Home() {
             />
 
             {/* my business */}
-            <section className='w-full'>
+            <section className='w-full' id="business-part">
 
               <TitleSection
                 text={businessI18n("title")}
@@ -208,7 +208,7 @@ export default function Home() {
 
             <CuriosFact text={curiosFactsI18n("2")} />
 
-            <section id="part3" className='flex'>
+            <section className='flex'>
               <Image
                 src={require("@/assets/space-station-icon.png")}
                 alt={imagesALtsI18n("InternationalSpaceStation")}
@@ -320,7 +320,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className='px-[13%]'>
+          <section className='px-[13%]' id="contact-form">
             <TitleSection
               text={contactI18n("title")}
             />

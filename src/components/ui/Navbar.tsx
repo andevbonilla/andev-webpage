@@ -205,7 +205,7 @@ export const Navbar = ({
                             </button>
 
                             <button
-                                onClick={() => clickOnAsteroid("/#contact")}
+                                onClick={() => clickOnAsteroid("/#contact-form")}
                                 className='w-[8rem] h-[8rem] flex justify-center items-center mb-12 asteroid asteroid3'
                                 id='asteroid4'
                             >
