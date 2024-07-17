@@ -10,15 +10,10 @@ export const City = () => {
 
   useEffect(() => {
 
-    let initialSunPosition = -100;
+    let initialSunPosition = -400;
     let beforeScroollPosition = 0;
     let actualScroollPosition = 0;
-
-    // set initial position
-    // md 
-    if (window.innerWidth > 700) {
-      initialSunPosition = -400
-    };
+    let sunPosition: any;
 
     if (sun.current) {
       sun.current.style.top = `${initialSunPosition}px`; // Ajustar posición del sol
@@ -26,22 +21,36 @@ export const City = () => {
 
     const handleScroll = () => {
 
-      let sunPosition = sun.current.getBoundingClientRect();
-
       // ig go down -> +1
-      if (sunPosition.top < 400) {
-        actualScroollPosition = window.scrollY;
 
-        if (actualScroollPosition >= beforeScroollPosition) {
-          initialSunPosition = initialSunPosition + 1
-        } else {
-          initialSunPosition = initialSunPosition - 1
-        }
 
-        beforeScroollPosition = actualScroollPosition;
+      if (sun.current) {
 
-        if (sun.current) {
+        sunPosition = sun.current.getBoundingClientRect();
+
+        if (sunPosition.top <= 400 && sunPosition.top >= -500) {
+
+          actualScroollPosition = window.scrollY;
+
+          if (actualScroollPosition >= beforeScroollPosition) {
+
+            if (initialSunPosition + 2 < 0) {
+              initialSunPosition = initialSunPosition + 2;
+            }
+
+
+          } else {
+
+            if (initialSunPosition - 2 <= -400) {
+              initialSunPosition = initialSunPosition - 2;
+            }
+
+          }
+
+          beforeScroollPosition = actualScroollPosition;
+
           sun.current.style.top = `${initialSunPosition}px`; // Ajustar posición del sol
+
         };
 
       };
