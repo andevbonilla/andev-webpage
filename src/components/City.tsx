@@ -86,7 +86,7 @@ export const City = () => {
         />
         <Image
           ref={cityDesktop}
-          src={require("@/assets/scenary.png")}
+          src={require("@/assets/scenary.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
@@ -101,7 +101,7 @@ export const City = () => {
         />
         <Image
           ref={cityDesktop}
-          src={require("@/assets/scenary.png")}
+          src={require("@/assets/scenary.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
