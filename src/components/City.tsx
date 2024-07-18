@@ -13,8 +13,6 @@ const orbitron = Press_Start_2P({
 export const City = () => {
 
   const sun: any = useRef(null);
-  const cityMobile: any = useRef(null);
-  const cityDesktop: any = useRef(null);
 
   useEffect(() => {
 
@@ -79,13 +77,11 @@ export const City = () => {
 
       <div className='hidden md:flex flex-col items-center justify-center w-full'>
         <Image
-          ref={cityDesktop}
           src={require("@/assets/monaco.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
         <Image
-          ref={cityDesktop}
           src={require("@/assets/scenary.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
@@ -93,40 +89,48 @@ export const City = () => {
       </div>
 
       <div className='md:hidden flex flex-col items-center justify-center w-full'>
+
         <Image
-          ref={cityDesktop}
           src={require("@/assets/monaco-mobile.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
-        <Image
-          ref={cityDesktop}
-          src={require("@/assets/scenary.webp")}
-          alt="greek town in andev page"
-          className='flex w-full relative z-20'
-        />
+
+        {/* the cars scenary */}
+        <div className='flex w-full relative z-20'>
+          <Image
+            src={require("@/assets/scenary.webp")}
+            alt="greek town in andev page"
+            className='flex w-full z-20'
+          />
+          <div className='absolute w-full top-0 left-0 right-0 z-30'>
+            <Image
+              src={require("@/assets/car-brabus900.png")}
+              alt="brabus 900"
+              className='absolute w-[20rem] brabus900'
+            />
+          </div>
+
+        </div>
+
+
       </div>
 
+      {/* the traffic signal */}
       <div className='w-full flex items-end justify-start absolute bottom-0 left-0 z-30'>
-
         <div className='flex flex-col items-center ml-[2rem] lg:ml-[5rem]'>
-          {/* the traffic signal */}
           <div className='bg-yellow-500 h-[13rem] w-[8rem] lg:h-[14rem] lg:w-[10rem] rounded-md flex justify-center items-center'>
             <div className='bg-yellow-500 border-[.4rem] border-black rounded-md w-[94%] h-[94%] p-4 flex flex-col justify-between items-center'>
-
               <div className='flex flex-col items-center justify-center mb-4'>
                 <h4 className='font-bold text-black'>Your</h4>
                 <h5 className='font-bold text-black'>Speed</h5>
                 <p className='font-bold text-black'>km/h</p>
               </div>
-
               <div className='bg-black bg-opacity-90 flex items-center justify-center rounded-md mb-2'>
                 <p className={`text-red-600 p-4 font-bold text-2xl lg:text-3xl ${orbitron.className}`}>090</p>
               </div>
-
             </div>
           </div>
-          {/* the the pole */}
           <div className='lg:h-[20rem] h-[10rem] w-[.8rem] bg-gray-400'></div>
         </div>
       </div>

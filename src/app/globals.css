@@ -263,3 +263,21 @@
   -moz-box-shadow: 0px 0px 57px -23px rgba(255,255,255,1);
   box-shadow: 0px 0px 57px -23px rgba(255,255,255,1);
 }
+
+/* cars css */
+@keyframes carmove {
+  0% { transform: translateX(-30rem) translateY(-6rem) }
+  100% { transform: translateX(300vw) translateY(-6rem) }
+}
+
+.gt3rs {
+  animation: carmove 100s linear infinite;
+}
+
+.brabus900 {
+  animation: carmove 5s linear infinite;
+}
+
+.x6m {
+  animation: carmove 100s linear infinite;
+}
