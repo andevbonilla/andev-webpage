@@ -279,6 +279,16 @@ export default function Home() {
             {/* fishes section */}
             <CuriosFact text={curiosFactsI18n("4")} />
 
+            <div className="">
+              <Image
+                height={200}
+                width={200}
+                alt="magicarp swimming"
+                src={require("../../assets/magicarp.gif")}
+              />
+
+            </div>
+
             <Project name={"FileBox"}
               desc={projectsI18n("fileBoxDesc")}
               link={"https://filebox.netlify.app/#/login"}
