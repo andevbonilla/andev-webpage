@@ -1,6 +1,14 @@
 "use client"
+import { Press_Start_2P } from 'next/font/google';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
+
+const orbitron = Press_Start_2P({
+  weight: ["400"],
+  style: ["normal"],
+  subsets: ["latin"],
+})
+
 
 export const City = () => {
 
@@ -72,7 +80,7 @@ export const City = () => {
       <div className='hidden md:flex flex-col items-center justify-center w-full'>
         <Image
           ref={cityDesktop}
-          src={require("@/assets/monaco.png")}
+          src={require("@/assets/monaco.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
@@ -87,7 +95,7 @@ export const City = () => {
       <div className='md:hidden flex flex-col items-center justify-center w-full'>
         <Image
           ref={cityDesktop}
-          src={require("@/assets/monaco-mobile.png")}
+          src={require("@/assets/monaco-mobile.webp")}
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
@@ -113,7 +121,7 @@ export const City = () => {
               </div>
 
               <div className='bg-black bg-opacity-90 flex items-center justify-center rounded-md mb-2'>
-                <p className='text-red-600 p-4 font-bold text-2xl lg:text-3xl'>090</p>
+                <p className={`text-red-600 p-4 font-bold text-2xl lg:text-3xl ${orbitron.className}`}>090</p>
               </div>
 
             </div>
