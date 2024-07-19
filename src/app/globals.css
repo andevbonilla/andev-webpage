@@ -265,56 +265,81 @@
 }
 
 /* cars css */
+.scenary{
+  background-image: url(../assets/scenary.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
 @keyframes ygt3rs {
-  0% { transform: translateX(5000px) }
-  100% { transform: translateX(-1000px) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes yx6m {
-  0% { transform: translateX(5000px) translateY(2.2rem) }
-  100% { transform: translateX(-1000px) translateY(2.2rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes ybugatti {
-  0% { transform: translateX(5000px) translateY(1rem) }
-  100% { transform: translateX(-1000px) translateY(1rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes ysandero {
-  0% { transform: translateX(5000px) translateY(1.9rem) }
-  100% { transform: translateX(-1000px) translateY(1.9rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes yducati {
-  0% { transform: translateX(5000px) translateY(3.5rem) }
-  100% { transform: translateX(-1000px) translateY(3.5rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes yporsche {
-  0% { transform: translateX(5000px) translateY(1.5rem) }
-  100% { transform: translateX(-1000px) translateY(1.5rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 @keyframes ybrabus {
-  0% { transform: translateX(5000px) translateY(-2.5rem) }
-  100% { transform: translateX(-1000px) translateY(-2.5rem) }
+  100% { transform: translateX(-1500px) }
 }
 
 .gt3rs {
-  animation: yporsche 5s linear infinite;
+  animation: ygt3rs 3.2s linear; 
+  position: absolute;
 }
 .brabus900 {
-  animation: ybrabus 7s linear infinite;
+  animation: ybrabus 3.9s linear; 
+  position: absolute;
 }
 .x6m {
-  animation: yx6m 4s linear infinite;
+  animation: yx6m 3.7s linear; 
+  position: absolute;
 }
 .sandero {
-  animation: ysandero 3s linear infinite;
+  animation: ysandero 10.5s linear;
+  position: absolute;
 }
 .bugatti {
-  animation: ybugatti 6s linear infinite;
+  animation: ybugatti 2.2s linear;
+  position: absolute;
 }
 .ducati {
-  animation: yducati 2s linear infinite;
+  animation: yducati 3.1s linear; 
+  position: absolute;
+}
+
+.static-gt3rs {
+  position: absolute;
+}
+.static-x6m {
+  position: absolute;
+}
+.static-bugatti {
+  position: absolute;
+}
+.static-sandero {
+  position: absolute;
+}
+.static-ducati {
+  position: absolute;
+}
+.static-brabus {
+  position: absolute;
 }
