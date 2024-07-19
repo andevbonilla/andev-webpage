@@ -2,6 +2,7 @@
 import { Press_Start_2P } from 'next/font/google';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
+import { Cars } from './ui/Cars';
 
 const orbitron = Press_Start_2P({
   weight: ["400"],
@@ -81,11 +82,7 @@ export const City = () => {
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
-        <Image
-          src={require("@/assets/scenary.webp")}
-          alt="greek town in andev page"
-          className='flex w-full relative z-20'
-        />
+        <Cars />
       </div>
 
       <div className='md:hidden flex flex-col items-center justify-center w-full'>
@@ -95,24 +92,7 @@ export const City = () => {
           alt="greek town in andev page"
           className='flex w-full relative z-20'
         />
-
-        {/* the cars scenary */}
-        <div className='flex w-full relative z-20'>
-          <Image
-            src={require("@/assets/scenary.webp")}
-            alt="greek town in andev page"
-            className='flex w-full z-20'
-          />
-          <div className='absolute w-full top-0 left-0 right-0 z-30'>
-            <Image
-              src={require("@/assets/car-brabus900.png")}
-              alt="brabus 900"
-              className='absolute w-[20rem] brabus900'
-            />
-          </div>
-
-        </div>
-
+        <Cars />
 
       </div>
 

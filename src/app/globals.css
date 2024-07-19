@@ -265,19 +265,56 @@
 }
 
 /* cars css */
-@keyframes carmove {
-  0% { transform: translateX(-30rem) translateY(-6rem) }
-  100% { transform: translateX(300vw) translateY(-6rem) }
+@keyframes ygt3rs {
+  0% { transform: translateX(5000px) }
+  100% { transform: translateX(-1000px) }
+}
+
+@keyframes yx6m {
+  0% { transform: translateX(5000px) translateY(2.2rem) }
+  100% { transform: translateX(-1000px) translateY(2.2rem) }
+}
+
+@keyframes ybugatti {
+  0% { transform: translateX(5000px) translateY(1rem) }
+  100% { transform: translateX(-1000px) translateY(1rem) }
+}
+
+@keyframes ysandero {
+  0% { transform: translateX(5000px) translateY(1.9rem) }
+  100% { transform: translateX(-1000px) translateY(1.9rem) }
+}
+
+@keyframes yducati {
+  0% { transform: translateX(5000px) translateY(3.5rem) }
+  100% { transform: translateX(-1000px) translateY(3.5rem) }
+}
+
+@keyframes yporsche {
+  0% { transform: translateX(5000px) translateY(1.5rem) }
+  100% { transform: translateX(-1000px) translateY(1.5rem) }
+}
+
+@keyframes ybrabus {
+  0% { transform: translateX(5000px) translateY(-2.5rem) }
+  100% { transform: translateX(-1000px) translateY(-2.5rem) }
 }
 
 .gt3rs {
-  animation: carmove 100s linear infinite;
+  animation: yporsche 5s linear infinite;
 }
-
 .brabus900 {
-  animation: carmove 5s linear infinite;
+  animation: ybrabus 7s linear infinite;
 }
-
 .x6m {
-  animation: carmove 100s linear infinite;
+  animation: yx6m 4s linear infinite;
+}
+.sandero {
+  animation: ysandero 3s linear infinite;
+}
+.bugatti {
+  animation: ybugatti 6s linear infinite;
+}
+.ducati {
+  animation: yducati 2s linear infinite;
 }
