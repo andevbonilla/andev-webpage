@@ -80,7 +80,12 @@ export const City = () => {
       <Image
         alt='city'
         src={require("@/assets/monaco.webp")}
-        className='w-full z-10'
+        className='w-full z-10 hidden md:flex'
+      />
+      <Image
+        alt='city'
+        src={require("@/assets/monaco-mobile.webp")}
+        className='w-full z-10 flex md:hidden'
       />
       <RaceTrack
         key={raceKey} // Usar la clave para forzar el re-render
