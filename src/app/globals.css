@@ -275,37 +275,37 @@
 
 @keyframes ygt3rs {
   0% { transform: rotate(1deg) }
-  100% { transform: translateX(-2000px) rotate(1deg)}
+  100% { transform: translateX(-1800px) rotate(1deg)}
 }
 
 @keyframes yx6m {
   0% { transform: rotate(2deg) }
-  100% { transform: translateX(-2000px) rotate(2deg) }
+  100% { transform: translateX(-1800px) rotate(2deg) }
 }
 
 @keyframes ybugatti {
-  100% { transform: translateX(-2000px)}
+  100% { transform: translateX(-1800px)}
 }
 
 @keyframes ysandero {
   0% { transform: rotate(0.5deg) }
-  100% { transform: translateX(-2000px) rotate(0.5deg) }
+  100% { transform: translateX(-1800px) rotate(0.5deg) }
 }
 
 @keyframes yducati {
   0% { transform: rotate(20deg) }
-  30% { transform: translateX(-600px) rotate(0deg) }
-  100% { transform: translateX(-2000px) rotate(0deg)}
+  30% { transform: translateX(-540px) rotate(0deg) }
+  100% { transform: translateX(-1800px) rotate(0deg)}
 }
 
 @keyframes yporsche {
   0% { transform: rotate(1deg) }
-  100% { transform: translateX(-2000px) rotate(1deg) }
+  100% { transform: translateX(-1800px) rotate(1deg) }
 }
 
 @keyframes ybrabus {
   0% { transform: rotate(1.2deg) }
-  100% { transform: translateX(-2000px) rotate(1.2deg) }
+  100% { transform: translateX(-1800px) rotate(1.2deg) }
 }
 
 .gt3rs {
