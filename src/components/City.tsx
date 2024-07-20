@@ -11,6 +11,7 @@ const indieFlower = Indie_Flower({
 });
 
 export const City = () => {
+
   const sun: any = useRef(null);
   const [gt3rsClassList, setGt3rsClassList] = useState("static-gt3rs");
   const [brabusClassList, setBrabusClassList] = useState("static-brabus");
@@ -75,34 +76,41 @@ export const City = () => {
 
   return (
     <div className='w-full relative mt-10'>
-      <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
 
-      <Image
-        alt='city'
-        src={require("@/assets/monaco.webp")}
-        className='w-full z-10 hidden md:flex'
-      />
-      <Image
-        alt='city'
-        src={require("@/assets/monaco-mobile.webp")}
-        className='w-full z-10 flex md:hidden'
-      />
-      <RaceTrack
-        key={raceKey} // Usar la clave para forzar el re-render
-        gt3rsClassList={gt3rsClassList}
-        brabusClassList={brabusClassList}
-        bugattiClassList={bugattiClassList}
-        sanderoClassList={sanderoClassList}
-        x6mClassList={x6mClassList}
-        ducatiClassList={ducatiClassList}
-      />
+      <div className='flex w-full flex-col'>
 
+        <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
+
+        <Image
+          alt='city'
+          src={require("@/assets/monaco.webp")}
+          className='w-full z-20 hidden md:flex'
+        />
+        <Image
+          alt='city'
+          src={require("@/assets/monaco-mobile.webp")}
+          className='w-full z-20 flex md:hidden'
+        />
+        <RaceTrack
+          key={raceKey} // Usar la clave para forzar el re-render
+          gt3rsClassList={gt3rsClassList}
+          brabusClassList={brabusClassList}
+          bugattiClassList={bugattiClassList}
+          sanderoClassList={sanderoClassList}
+          x6mClassList={x6mClassList}
+          ducatiClassList={ducatiClassList}
+        />
+
+      </div>
 
       {/* the traffic signal */}
       <div className='w-full flex items-end justify-start absolute bottom-0 left-0 z-30'>
         <div className='flex flex-col items-center ml-[2rem] lg:ml-[5rem]'>
           <div className='bg-yellow-500 rounded-md flex justify-center items-center'>
             <div className='bg-yellow-500 border-[.4rem] border-black rounded-md w-[94%] h-[94%] m-1 p-4 flex flex-col justify-between items-center'>
+              <div className='flex'>
+
+              </div>
               <p className={`text-white text-center font-bold text-2xl lg:text-3xl ${indieFlower.className}`}>Click me!</p>
               <div
                 onClick={restartRace}

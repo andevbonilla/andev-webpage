@@ -310,26 +310,32 @@
 
 .gt3rs {
   animation: ygt3rs 3.2s linear; 
+  animation-delay: 2000ms;
   position: absolute;
 }
 .brabus900 {
   animation: ybrabus 3.9s linear; 
+  animation-delay: 2000ms;
   position: absolute;
 }
 .x6m {
   animation: yx6m 3.7s linear; 
+  animation-delay: 2000ms;
   position: absolute;
 }
 .sandero {
   animation: ysandero 10.5s linear;
+  animation-delay: 2000ms;
   position: absolute;
 }
 .bugatti {
   animation: ybugatti 2.2s linear;
+  animation-delay: 2000ms;
   position: absolute;
 }
 .ducati {
   animation: yducati 3.1s linear; 
+  animation-delay: 2000ms;
   position: absolute;
 }
 
