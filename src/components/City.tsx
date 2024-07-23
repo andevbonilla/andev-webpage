@@ -11,23 +11,14 @@ const indieFlower = Indie_Flower({
 });
 
 export const City = () => {
-
   const sun: any = useRef(null);
-  const [gt3rsClassList, setGt3rsClassList] = useState("static-gt3rs");
-  const [brabusClassList, setBrabusClassList] = useState("static-brabus");
-  const [bugattiClassList, setBugattiClassList] = useState("static-bugatti");
-  const [sanderoClassList, setSanderoClassList] = useState("static-sandero");
-  const [x6mClassList, setX6mClassList] = useState("static-x6m");
-  const [ducatiClassList, setDucatiClassList] = useState("static-ducati");
-
-  // Estado adicional para forzar el reinicio
   const [raceKey, setRaceKey] = useState(0);
 
   useEffect(() => {
     let initialSunPosition = -400;
     let beforeScroollPosition = 0;
     let actualScroollPosition = 0;
-    let sunPosition: any;
+    let sunPosition;
 
     if (sun.current) {
       sun.current.style.top = `${initialSunPosition}px`; // Ajustar posición del sol
@@ -63,22 +54,12 @@ export const City = () => {
   }, []);
 
   const restartRace = () => {
-    setGt3rsClassList("gt3rs");
-    setBrabusClassList("brabus900");
-    setBugattiClassList("bugatti");
-    setSanderoClassList("sandero");
-    setX6mClassList("x6m");
-    setDucatiClassList("ducati");
-
-    // Forzar el reinicio de la animación
     setRaceKey(prevKey => prevKey + 1);
   };
 
   return (
     <div className='w-full relative mt-10'>
-
       <div className='flex w-full flex-col'>
-
         <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
 
         <Image
@@ -91,15 +72,7 @@ export const City = () => {
           src={require("@/assets/monaco-mobile.webp")}
           className='w-full z-20 flex md:hidden'
         />
-        <RaceTrack
-          key={raceKey} // Usar la clave para forzar el re-render
-          gt3rsClassList={gt3rsClassList}
-          brabusClassList={brabusClassList}
-          bugattiClassList={bugattiClassList}
-          sanderoClassList={sanderoClassList}
-          x6mClassList={x6mClassList}
-          ducatiClassList={ducatiClassList}
-        />
+        <RaceTrack key={raceKey} />
 
       </div>
 
@@ -108,9 +81,7 @@ export const City = () => {
         <div className='flex flex-col items-center ml-[2rem] lg:ml-[5rem]'>
           <div className='bg-yellow-500 rounded-md flex justify-center items-center'>
             <div className='bg-yellow-500 border-[.4rem] border-black rounded-md w-[94%] h-[94%] m-1 p-4 flex flex-col justify-between items-center'>
-              <div className='flex'>
-
-              </div>
+              <div className='flex'></div>
               <p className={`text-white text-center font-bold text-2xl lg:text-3xl ${indieFlower.className}`}>Click me!</p>
               <div
                 onClick={restartRace}
@@ -124,3 +95,4 @@ export const City = () => {
     </div>
   );
 }
+
