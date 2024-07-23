@@ -214,11 +214,11 @@ export default function Home() {
               text={curiosFactsI18n("2")}
             />
 
-            <section className='flex'>
+            <section className='flex relative h-[5rem]'>
               <Image
                 src={require("@/assets/space-station-icon.png")}
                 alt={imagesALtsI18n("InternationalSpaceStation")}
-                className='international-space-station w-[35rem] mb-[2rem]'
+                className='international-space-station w-[30rem]'
                 id='international-space-station'
               />
             </section>

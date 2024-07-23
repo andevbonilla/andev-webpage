@@ -25,10 +25,6 @@
     will-change: transform;
 }
 
-.floating, .international-space-station, .plane1, .plane2, .plane3 {
-    will-change: transform;
-}
-
 /* planets */
 .floating{
     animation: float 3s linear infinite;
@@ -41,6 +37,9 @@
 /* curiosity objects */
 .international-space-station{
     animation: normalmove 6s linear infinite;
+    position: absolute;
+    top: -8rem;
+    z-index: 100;
 }
 
 .plane1{
@@ -146,8 +145,8 @@
 }
 
 @keyframes normalmove {
-  from{transform: translateX(-60rem) translateY(-6rem); scale: (1.5, 1.5);}
-  to{transform: translateX(200vw) translateY(-6rem); scale: (1.5, 1.5);}
+  from{transform: translateX(-60rem)}
+  to{transform: translateX(200vw)}
 }
 
 @keyframes plane1animation {
