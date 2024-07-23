@@ -21,10 +21,6 @@
   }
 }
 
-.asteroid, .asteroid1, .asteroid2, .asteroid3 {
-    will-change: transform;
-}
-
 /* planets */
 .floating{
     animation: float 3s linear infinite;
@@ -40,26 +36,6 @@
     position: absolute;
     top: -8rem;
     z-index: 100;
-}
-
-.plane1{
-  animation: plane1animation 14s linear infinite;
-}
-
-.plane2{
-  animation: plane2animation 4s linear infinite;
-}
-
-.plane3{
-  animation: plane3animation 11s linear infinite;
-}
-
-.delay-1s{
-  animation-delay: 1s;
-}
-
-.delay-10s{
-  animation-delay: 10s;
 }
 
 .asteroid{
@@ -113,16 +89,6 @@
 
 /* water style part */
 
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-  overflow: hidden; /* Agregamos esto para ocultar el desenfoque que se extiende más allá del contenedor */
-}
-
 .sea {
   background: 
     linear-gradient(#019CC2 0.5%, rgba(0,20,100,1) 35%, rgb(0,0,10)), 
@@ -147,21 +113,6 @@
 @keyframes normalmove {
   from{transform: translateX(-60rem)}
   to{transform: translateX(200vw)}
-}
-
-@keyframes plane1animation {
-  from{transform: translateX(200vw) translateY(-6rem);}
-  to{transform: translateX(-30rem) translateY(-6rem);}
-}
-
-@keyframes plane2animation {
-  from{transform: translateX(200vw) translateY(0rem);}
-  to{transform: translateX(-40rem) translateY(0rem);}
-}
-
-@keyframes plane3animation {
-  from{transform: translateX(-100rem) translateY(10rem);}
-  to{transform: translateX(200vw) translateY(0rem);}
 }
 
 @keyframes move {
