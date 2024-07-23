@@ -15,36 +15,35 @@ export const RaceTrack = ({
         <div className='flex w-full h-[12rem] relative z-30 scenary'>
 
             <Image
-                src={require("@/assets/car-brabus900.png")}
+                src={require("@/assets/veh-brabus.svg")}
                 alt="Brabus Rocket 900"
-                className={`absolute lg:w-[16.12rem] xl:w-[18.28rem] w-[11.8rem] ${brabusClassList} bottom-[70%] xl:bottom-[60%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${brabusClassList} bottom-[75%] 2xl:bottom-[55%] right-0`}
             />
             <Image
-                src={require("@/assets/car-x6m.png")}
+                src={require("@/assets/veh-x6m.svg")}
                 alt="BMW X6M"
-                className={`absolute lg:w-[17.64rem] xl:w-[20.16rem] w-[12.6rem] ${x6mClassList} bottom-[60%] xl:bottom-[50%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${x6mClassList} bottom-[65%] 2xl:bottom-[45%] right-0`}
             />
             <Image
-                src={require("@/assets/car-sandero.png")}
+                src={require("@/assets/veh-sandero.svg")}
                 alt="Renault Sandero"
-                className={`absolute lg:w-[13.44rem] xl:w-[15.36rem] w-[9.6rem] ${sanderoClassList} bottom-[55%] xl:bottom-[45%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${sanderoClassList} bottom-[60%] 2xl:bottom-[35%] right-0`}
             />
             <Image
-                src={require("@/assets/car-bugatti.png")}
+                src={require("@/assets/veh-bugatti.svg")}
                 alt="Bugatti Chiron"
-                className={`absolute lg:w-[14.28rem] xl:w-[16.32rem] w-[10.2rem] ${bugattiClassList} bottom-[50%] xl:bottom-[40%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${bugattiClassList} bottom-[55%] 2xl:bottom-[25%] right-0`}
             />
             <Image
-                src={require("@/assets/car-gt3rs.png")}
+                src={require("@/assets/veh-porsche.svg")}
                 alt="Porsche 911 GT3 rs"
-                className={`absolute lg:w-[14.44rem] xl:w-[16.36rem] w-[10.6rem] ${gt3rsClassList} bottom-[45%] xl:bottom-[35%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${gt3rsClassList} bottom-[45%] 2xl:bottom-[15%] right-0`}
             />
             <Image
-                src={require("@/assets/bike-ducati.png")}
+                src={require("@/assets/veh-ducati.svg")}
                 alt="Ducati Streetfighter"
-                className={`absolute lg:w-[9.24rem] xl:w-[10.56rem] w-[6.6rem] ${ducatiClassList} bottom-[35%] xl:bottom-[25%] right-0`}
+                className={`absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] ${ducatiClassList} bottom-[40%] 2xl:bottom-[5%] right-0`}
             />
-
 
         </div>
     );
