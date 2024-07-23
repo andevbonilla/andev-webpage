@@ -23,7 +23,6 @@ export const RaceTrack = () => {
                 ease: "power3.inOut",
                 onUpdate: () => {
                     const progress = timeline.progress(); // Inclinación suave
-                    console.log(progress, "ooooo")
                     gsap.set(ref.current, { rotateZ: progress * 1.8 });
 
                 },
@@ -38,7 +37,7 @@ export const RaceTrack = () => {
         const animations = [
             { ref: brabusRef, duration: 7.7, delay: 0, maxSpeed: 3 },  // Ajusta maxSpeed para cada vehículo
             { ref: x6mRef, duration: 7.9, delay: 0, maxSpeed: 3 },
-            { ref: sanderoRef, duration: 14, delay: 0, maxSpeed: 2 },
+            { ref: sanderoRef, duration: 11, delay: 0, maxSpeed: 2 },
             { ref: bugattiRef, duration: 6.2, delay: 0, maxSpeed: 4 },
             { ref: gt3rsRef, duration: 7.2, delay: 0, maxSpeed: 3 },
             { ref: ducatiRef, duration: 7.4, delay: 0, maxSpeed: 3 },

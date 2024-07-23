@@ -113,7 +113,10 @@ export default function Home() {
 
             </section>
 
-            <CuriosFact text={curiosFactsI18n("1")} />
+            <CuriosFact
+              meters={"384.000"}
+              text={curiosFactsI18n("1")}
+            />
 
             {/* moon part */}
             <Moon
@@ -206,7 +209,10 @@ export default function Home() {
               <Skills />
             </section>
 
-            <CuriosFact text={curiosFactsI18n("2")} />
+            <CuriosFact
+              meters={"400"}
+              text={curiosFactsI18n("2")}
+            />
 
             <section className='flex'>
               <Image
@@ -263,7 +269,10 @@ export default function Home() {
             </section>
 
             <div className="h-[5rem]"></div>
-            <CuriosFact text={curiosFactsI18n("3")} />
+            <CuriosFact
+              meters={"300"}
+              text={curiosFactsI18n("3")}
+            />
 
           </StarsBackground>
 
@@ -277,7 +286,10 @@ export default function Home() {
           <section className="pt-10">
 
             {/* fishes section */}
-            <CuriosFact text={curiosFactsI18n("4")} />
+            <CuriosFact
+              meters={"-40"}
+              text={curiosFactsI18n("4")}
+            />
 
             <div className="">
               <Image
@@ -301,6 +313,12 @@ export default function Home() {
               <NodejsSVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
+
+            <CuriosFact
+              meters={"-200"}
+              text={curiosFactsI18n("5")}
+            />
+
             <Project name={"Geekepedia"}
               desc={projectsI18n("geekepediaDesc")}
               link={"https://andevbonilla.github.io/Geekipedia/home/Geekipedia"}
@@ -347,7 +365,10 @@ export default function Home() {
             />
           </section>
 
-          <CuriosFact text={curiosFactsI18n("5")} />
+          <CuriosFact
+            meters={"-3.800"}
+            text={curiosFactsI18n("6")}
+          />
 
           <Footer titanicAlt={imagesALtsI18n("titanic")} />
 

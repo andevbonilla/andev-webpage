@@ -7,7 +7,7 @@ import React from 'react'
 export const Footer = ({ titanicAlt }: any) => {
     return (
         <div className='titanic mt-20'>
-            <div className='flex justify-center items-center mb-24'>
+            <div className='flex justify-center items-center'>
                 <Link href={"https://www.instagram.com/andevbonilla"}
                     target='_blank'
                     title='instagram link'>
