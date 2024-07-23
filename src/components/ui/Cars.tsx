@@ -12,17 +12,20 @@ export const RaceTrack = () => {
     const ducatiRef = useRef(null);
 
     useEffect(() => {
+        const distance = -3000; // Distancia fija en píxeles para la animación
+
         const createTimeline = (ref: any, duration: any, delay: any, maxSpeed: any) => {
             const timeline = gsap.timeline({ delay });
 
             timeline.to(ref.current, {
-                x: '-150vw',
+                x: distance,
                 duration,
                 ease: "power3.inOut",
                 onUpdate: () => {
-                    const progress = timeline.progress();
-                    const tilt = Math.min(progress * 2, maxSpeed); // Inclinación menos exagerada
-                    gsap.set(ref.current, { rotateZ: tilt }); // Inclinación hacia el lado contrario
+                    const progress = timeline.progress(); // Inclinación suave
+                    console.log(progress, "ooooo")
+                    gsap.set(ref.current, { rotateZ: progress * 1.8 });
+
                 },
                 onComplete: () => {
                     gsap.set(ref.current, { x: 0, rotateZ: 0 }); // Resetear posición y rotación después de la animación
@@ -33,12 +36,12 @@ export const RaceTrack = () => {
         };
 
         const animations = [
-            { ref: brabusRef, duration: 7.7, delay: 0, maxSpeed: 1.5 },
-            { ref: x6mRef, duration: 8.2, delay: 0, maxSpeed: 1.5 },
-            { ref: sanderoRef, duration: 11, delay: 0, maxSpeed: 0.8 },
-            { ref: bugattiRef, duration: 4.4, delay: 0, maxSpeed: 2 },
-            { ref: gt3rsRef, duration: 6.4, delay: 0, maxSpeed: 1.5 },
-            { ref: ducatiRef, duration: 6.6, delay: 0, maxSpeed: 1.5 },
+            { ref: brabusRef, duration: 7.7, delay: 0, maxSpeed: 3 },  // Ajusta maxSpeed para cada vehículo
+            { ref: x6mRef, duration: 7.9, delay: 0, maxSpeed: 3 },
+            { ref: sanderoRef, duration: 14, delay: 0, maxSpeed: 2 },
+            { ref: bugattiRef, duration: 6.2, delay: 0, maxSpeed: 4 },
+            { ref: gt3rsRef, duration: 7.2, delay: 0, maxSpeed: 3 },
+            { ref: ducatiRef, duration: 7.4, delay: 0, maxSpeed: 3 },
         ];
 
         animations.forEach(({ ref, duration, delay, maxSpeed }) => {
