@@ -1,16 +1,14 @@
-import { Metadata } from 'next';
 import "../globals.css";
+import { Metadata } from 'next';
 import { Inter } from 'next/font/google'
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Andres Bonilla',
-    template: '%s | Andres Bonilla'
-  },
+  title: 'Andres Bonilla',
   description: "Hi, I'm Andres Bonilla or also known as Andev and this is my website ",
   keywords: ["andres", "bonilla", "andres bonilla", "andres camilo bonilla", "andev", "andev bonilla"]
 };
@@ -31,6 +29,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
