@@ -286,19 +286,18 @@ export default function Home() {
           <section className="pt-10">
 
             {/* fishes section */}
-            <CuriosFact
-              meters={"-40"}
-              text={curiosFactsI18n("4")}
-            />
-
-            <div className="">
+            <div className="reltive mb-[15rem]">
+              <CuriosFact
+                meters={"-40"}
+                text={curiosFactsI18n("4")}
+              />
               <Image
                 height={200}
                 width={200}
                 alt="magicarp swimming"
+                className="xl:mr-[14rem] lg:mr-[12rem] md:mr-[8rem] md:mt-[15rem] absolute right-0 top-0 mt-[21rem] mr-[4rem]"
                 src={require("../../assets/magicarp.gif")}
               />
-
             </div>
 
             <Project name={"FileBox"}
