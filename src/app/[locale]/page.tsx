@@ -282,11 +282,19 @@ export default function Home() {
 
         <div className='sea overflow-hidden z-30'>
 
+          <div className="flex w-full pt-[3rem] bg-[#002134]">
+            <Image
+              alt='cave'
+              src={require("@/assets/cave.png")}
+              className='w-full z-20 flex absolute'
+            />
+          </div>
+
           {/* my projects */}
           <section className="pt-10">
 
             {/* fishes section */}
-            <div className="reltive mb-[15rem]">
+            <div className="reltive lg:mt-[30rem] mt-[20rem]">
               <CuriosFact
                 meters={"-40"}
                 text={curiosFactsI18n("4")}
@@ -295,7 +303,7 @@ export default function Home() {
                 height={200}
                 width={200}
                 alt="magicarp swimming"
-                className="xl:mr-[14rem] lg:mr-[12rem] md:mr-[8rem] md:mt-[15rem] absolute right-0 top-0 mt-[21rem] mr-[4rem]"
+                className="xl:mr-[14rem] lg:mr-[12rem] md:mr-[8rem] md:mt-[30rem] absolute right-0 top-0 mt-[12rem] mr-[4rem]"
                 src={require("../../assets/magicarp.gif")}
               />
             </div>
@@ -338,7 +346,7 @@ export default function Home() {
               iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               ]}
             />
-            <div className='flex h-[18rem] relative'>
+            <div className='flex lg:h-[10rem] h-[18rem] relative'>
               <Image
                 src={require("@/assets/tentaculos.gif")}
                 alt="kraken tentaculus"
