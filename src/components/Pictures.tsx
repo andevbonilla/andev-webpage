@@ -120,7 +120,7 @@ export const PicturesInBalloons = () => {
         <div id="balloon5" onClick={() => deleteBalloon(5)} className="cursor-pointer balloon rotate-[10deg] -translate-y-[12rem] top-0 left-[-6rem]"></div>
       </div>
       <Image
-        src={require(`@/assets/photos.png`)}
+        src={require(`@/assets/photos.webp`)}
         alt="Me and my dog"
         className="w-auto z-[998] relative"
       />

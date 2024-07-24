@@ -32,7 +32,7 @@ export const City = () => {
           actualScroollPosition = window.scrollY;
 
           if (actualScroollPosition >= beforeScroollPosition) {
-            if (initialSunPosition + 2 < 0) {
+            if (initialSunPosition + 2 < 200) {
               initialSunPosition = initialSunPosition + 2;
             }
           } else {
@@ -54,7 +54,7 @@ export const City = () => {
   }, []);
 
   const restartRace = () => {
-    setRaceKey(prevKey => prevKey + 1);
+    setRaceKey(prevKey => prevKey + 1); // re render the component
   };
 
   return (

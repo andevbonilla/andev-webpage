@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 
 export const RaceTrack = () => {
+
     const brabusRef = useRef(null);
     const x6mRef = useRef(null);
     const sanderoRef = useRef(null);
@@ -51,37 +52,37 @@ export const RaceTrack = () => {
     return (
         <div className='flex w-full h-[12rem] relative z-30 scenary'>
             <Image
-                src={require("@/assets/veh-brabus.svg")}
+                src={require("@/assets/veh-brabus.webp")}
                 alt="Brabus Rocket 900"
                 ref={brabusRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[75%] 2xl:bottom-[55%] right-0"
             />
             <Image
-                src={require("@/assets/veh-x6m.svg")}
+                src={require("@/assets/veh-x6m.webp")}
                 alt="BMW X6M"
                 ref={x6mRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[65%] 2xl:bottom-[45%] right-0"
             />
             <Image
-                src={require("@/assets/veh-sandero.svg")}
+                src={require("@/assets/veh-sandero.webp")}
                 alt="Renault Sandero"
                 ref={sanderoRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[60%] 2xl:bottom-[35%] right-0"
             />
             <Image
-                src={require("@/assets/veh-bugatti.svg")}
+                src={require("@/assets/veh-bugatti.webp")}
                 alt="Bugatti Chiron"
                 ref={bugattiRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[55%] 2xl:bottom-[25%] right-0"
             />
             <Image
-                src={require("@/assets/veh-porsche.svg")}
+                src={require("@/assets/veh-porsche.webp")}
                 alt="Porsche 911 GT3 rs"
                 ref={gt3rsRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[45%] 2xl:bottom-[15%] right-0"
             />
             <Image
-                src={require("@/assets/veh-ducati.svg")}
+                src={require("@/assets/veh-ducati.webp")}
                 alt="Ducati Streetfighter"
                 ref={ducatiRef}
                 className="absolute w-[40vw] lg:w-[25vw] 2xl:w-[20vw] bottom-[40%] 2xl:bottom-[5%] right-0"

@@ -36,7 +36,7 @@ export const Moon = ({ altMoon }: { altMoon: any }) => {
         <div ref={moonRef} className='h-[6rem] flex relative'>
             <div className='absolute flex h-[50rem] w-[50rem]'>
                 <Image
-                    src={require("@/assets/moon-icon.png")}
+                    src={require("@/assets/moon-icon.webp")}
                     alt={altMoon}
                     className={moonClassList}
                     fill

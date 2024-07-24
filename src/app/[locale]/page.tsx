@@ -285,7 +285,7 @@ export default function Home() {
           <div className="flex w-full pt-[3rem] bg-[#002134]">
             <Image
               alt='cave'
-              src={require("@/assets/cave.png")}
+              src={require("@/assets/cave.webp")}
               className='w-full z-20 flex absolute'
             />
           </div>
