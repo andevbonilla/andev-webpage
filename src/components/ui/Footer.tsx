@@ -32,12 +32,7 @@ export const Footer = ({ titanicAlt }: any) => {
             <Image
                 src={require("@/assets/titanic.webp")}
                 alt={titanicAlt}
-                className='hidden lg:flex w-full scale-150 lg:scale-[1.4] -translate-x-6 mt-[15rem]'
-            />
-            <Image
-                src={require("@/assets/titanic-mobile.webp")}
-                alt={titanicAlt}
-                className='lg:hidden w-full scale-150 lg:scale-[1.4] -translate-x-6 mt-[15rem]'
+                className='w-full scale-150 lg:scale-[1.4] -translate-x-6 mt-[15rem]'
             />
         </div>
     )
