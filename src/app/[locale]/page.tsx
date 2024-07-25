@@ -294,7 +294,7 @@ export default function Home() {
           <section className="pt-10">
 
             {/* fishes section */}
-            <div className="reltive lg:mt-[30rem] mt-[20rem]">
+            <div className="relative lg:mt-[30rem] mt-[20rem]">
               <CuriosFact
                 meters={"-40"}
                 text={curiosFactsI18n("4")}
