@@ -37,7 +37,7 @@ export const Project = ({ name, desc, link, github, imgUrl, buttonText, iconList
         </div>
 
         <div className='flex justify-between items-center mt-10 lg:mt-5'>
-          <div className='hover:rotate-180 transition-all flex flex-col items-center'>
+          <div className='transition-all flex flex-col items-center'>
             <Link
               target='_blank'
               className='text-white font-bold text-lg'
