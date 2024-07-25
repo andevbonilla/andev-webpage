@@ -303,7 +303,7 @@ export default function Home() {
                 height={200}
                 width={200}
                 alt="magicarp swimming"
-                className="xl:mr-[14rem] lg:mr-[12rem] md:mr-[8rem] md:mt-[30rem] absolute right-0 top-0 mt-[12rem] mr-[4rem]"
+                className="xl:mr-[14rem] lg:mr-[12rem] md:mr-[8rem] absolute right-0 sm:top-[-10rem] top-[-15rem]"
                 src={require("../../assets/magicarp.gif")}
               />
             </div>
