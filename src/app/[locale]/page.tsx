@@ -160,7 +160,7 @@ export default function Home() {
 
                 <div className='lg:ml-12 lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
                   <Image
-                    src={require("@/assets/movete-planet.png")}
+                    src={require("@/assets/movete-planet.webp")}
                     alt={imagesALtsI18n("movetePlanet")}
                     className='absolute floating w-[17rem] mb-[3rem]'
                   />
@@ -173,7 +173,7 @@ export default function Home() {
 
                 <div className='lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mb-16 relative w-auto mx-[13%]'>
                   <Image
-                    src={require("@/assets/simpliterms-planet.png")}
+                    src={require("@/assets/simpliterms-planet.webp")}
                     alt={imagesALtsI18n("simplitermsPlanet")}
                     className='absolute w-auto floating'
                   />
@@ -216,7 +216,7 @@ export default function Home() {
 
             <section className='flex relative h-[5rem]'>
               <Image
-                src={require("@/assets/space-station-icon.png")}
+                src={require("@/assets/space-station-icon.webp")}
                 alt={imagesALtsI18n("InternationalSpaceStation")}
                 className='international-space-station w-[30rem]'
                 id='international-space-station'
@@ -235,7 +235,7 @@ export default function Home() {
                 desc={projectsI18n("yourDreamCarDesc")}
                 link={"https://www.yourdreamcar.ca/"}
                 github={"https://github.com/andevbonilla/YourDreamCar"}
-                imgUrl={"yourdreamcar-interface.png"}
+                imgUrl={"yourdreamcar-interface.webp"}
                 buttonText={projectsI18n("viewButton")}
                 iconList={[<Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <TailwindSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -246,7 +246,7 @@ export default function Home() {
                 desc={projectsI18n("fansiveDesc")}
                 link={"https://fansive.netlify.app/"}
                 github={"https://github.com/andevbonilla/fansive-code"}
-                imgUrl={"fansive-interface.png"}
+                imgUrl={"fansive-interface.webp"}
                 buttonText={projectsI18n("viewButton")}
                 iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <WebRTCSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -259,7 +259,7 @@ export default function Home() {
                 desc={projectsI18n("virtualBoardDesc")}
                 link={"https://super-virtual-board.netlify.app/"}
                 github={"https://github.com/andevbonilla/Virtual-Board"}
-                imgUrl={"virtualboard-interface.jpg"}
+                imgUrl={"virtualboard-interface.webp"}
                 buttonText={projectsI18n("viewButton")}
                 iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
                 <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -312,7 +312,7 @@ export default function Home() {
               desc={projectsI18n("fileBoxDesc")}
               link={"https://filebox.netlify.app/#/login"}
               github={"https://github.com/andevbonilla/backend-fileBox"}
-              imgUrl={"filebox-interface.png"}
+              imgUrl={"filebox-interface.webp"}
               buttonText={projectsI18n("viewButton")}
               iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -330,7 +330,7 @@ export default function Home() {
               desc={projectsI18n("geekepediaDesc")}
               link={"https://andevbonilla.github.io/Geekipedia/home/Geekipedia"}
               github={"https://github.com/andevbonilla/Geekipedia"}
-              imgUrl={"geekipedia-interface.png"}
+              imgUrl={"geekipedia-interface.webp"}
               buttonText={projectsI18n("viewButton")}
               iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
@@ -341,7 +341,7 @@ export default function Home() {
               desc={projectsI18n("thePokedexDesc")}
               link={"https://github.com/andevbonilla/thePokedex"}
               github={"https://github.com/andevbonilla/thePokedex"}
-              imgUrl={"pokedex-interface.png"}
+              imgUrl={"pokedex-interface.webp"}
               buttonText={projectsI18n("viewButton")}
               iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
               ]}
