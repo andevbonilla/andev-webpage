@@ -109,7 +109,7 @@ export const PicturesInBalloons = () => {
     <div
       ref={animatedImage}
       style={style}
-      className={` flex flex-col items-center justify-center fixed left-0 md:left-[5rem] lg:left-[10rem] xl:left-[15rem] bottom-[-20rem] w-[20rem] h-[25rem] z-[999]`}
+      className={`flex flex-col items-center justify-center fixed left-0 md:left-[5rem] lg:left-[10rem] xl:left-[15rem] bottom-[-20rem] w-[20rem] h-[25rem] z-[999]`}
     >
       <div className="flex z-[995] relative">
         {/* Balloons here */}
@@ -121,7 +121,7 @@ export const PicturesInBalloons = () => {
       </div>
       <Image
         src={require(`@/assets/photos.webp`)}
-        alt="Me and my dog"
+        alt="Andev photos"
         className="w-auto z-[998] relative"
       />
     </div>

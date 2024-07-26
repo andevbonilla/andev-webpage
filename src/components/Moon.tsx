@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
 
-export const Moon = ({ altMoon }: { altMoon: any }) => {
+export const Moon = ({ altMoon }: { altMoon: string }) => {
 
     const [height, setHeight] = useState(0);
     const [moonClassList, setmoonClassList] = useState("moon");

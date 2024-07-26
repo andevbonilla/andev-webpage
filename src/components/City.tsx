@@ -63,12 +63,12 @@ export const City = () => {
         <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
 
         <Image
-          alt='city'
+          alt='monaco city'
           src={require("@/assets/monaco.webp")}
           className='w-full z-20 hidden md:flex'
         />
         <Image
-          alt='city'
+          alt='monaco city for mobile'
           src={require("@/assets/monaco-mobile.webp")}
           className='w-full z-20 flex md:hidden'
         />

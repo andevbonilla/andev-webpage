@@ -1,7 +1,7 @@
 "use client"
 
-import { faXmark } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const ModalContact = ({ setopenModal, type, message }: { setopenModal: any, type: number, message: string }) => {
     return (
@@ -31,4 +31,4 @@ export const ModalContact = ({ setopenModal, type, message }: { setopenModal: an
         </div>
 
     )
-}
+};
