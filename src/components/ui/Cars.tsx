@@ -24,7 +24,7 @@ export const RaceTrack = () => {
                 ease: "power3.inOut",
                 onUpdate: () => {
                     const progress = timeline.progress(); // Inclinación suave
-                    gsap.set(ref.current, { rotateZ: progress * 1.8 });
+                    gsap.set(ref.current, { rotateZ: (progress < 0.3) ? progress * 6 : 1.8 });
 
                 },
                 onComplete: () => {
