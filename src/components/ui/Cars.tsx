@@ -36,12 +36,12 @@ export const RaceTrack = () => {
         };
 
         const animations = [
-            { ref: brabusRef, duration: 7.7, delay: 0.1, maxSpeed: 3 },  // Ajusta maxSpeed para cada vehículo
-            { ref: x6mRef, duration: 7.9, delay: 0.1, maxSpeed: 3 },
-            { ref: sanderoRef, duration: 10, delay: 0.1, maxSpeed: 1 },
-            { ref: bugattiRef, duration: 6.2, delay: 0, maxSpeed: 4 },
-            { ref: gt3rsRef, duration: 7.2, delay: 0.1, maxSpeed: 3 },
-            { ref: ducatiRef, duration: 7.4, delay: 0.1, maxSpeed: 3 },
+            { ref: brabusRef, duration: 5.7, delay: 0.2, maxSpeed: 1 },  // Ajusta maxSpeed para cada vehículo
+            { ref: x6mRef, duration: 6, delay: 0.2, maxSpeed: 1 },
+            { ref: sanderoRef, duration: 10, delay: 0, maxSpeed: 0.1 },
+            { ref: bugattiRef, duration: 3.9, delay: 0.2, maxSpeed: 1 },
+            { ref: gt3rsRef, duration: 4.92, delay: 0.2, maxSpeed: 1 },
+            { ref: ducatiRef, duration: 4.76, delay: 0.2, maxSpeed: 1 },
         ];
 
         animations.forEach(({ ref, duration, delay, maxSpeed }) => {
