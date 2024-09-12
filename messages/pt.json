@@ -8,10 +8,11 @@
     "bussinessAsteroid": "NEGÓCIOS"
   },
   "Occupations": {
-    "1": "Desenvolvedor de Software",
-    "2": "Empreendedor",
-    "3": "Estudante",
-    "4": "Atleta"
+    "yo": "Eu:",
+    "1": "Desenvolvimento de Software.",
+    "2": "Empreendedorismo.",
+    "3": "Estudando.",
+    "4": "Eu crio conteúdo."
   },
   "About": {
     "title": "SOBRE MIM",
