@@ -26,6 +26,7 @@ import { useTranslations } from "next-intl";
 import { Moon } from "@/components/Moon";
 import { TitleSection } from "@/components/ui/TitleSection";
 import { Anton } from "next/font/google";
+import InfiniteCarousel from "@/components/CarrouselUnaYMugre";
 
 const anton = Anton({
   weight: ["400"],
@@ -213,6 +214,11 @@ export default function Home() {
                 </div>
               </div>
 
+            </section>
+
+            {/* una y mugre */}
+            <section className='flex w-full mb-14'>
+              <InfiniteCarousel />
             </section>
 
             {/* my skills */}
