@@ -124,7 +124,7 @@ export default function Home() {
             />
 
             {/* my business */}
-            <section className='w-full' id="business-part">
+            <section className='w-full z-30' id="business-part">
 
               <TitleSection
                 text={businessI18n("title")}
