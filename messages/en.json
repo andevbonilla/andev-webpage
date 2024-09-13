@@ -8,12 +8,10 @@
     "bussinessAsteroid": "BUSINESS"
   },
   "Occupations": {
-    "yo": "Me:",
-    "1": "Software Development.",
-    "2": "Entrepreneurship.",
-    "3": "Studying.",
-    "4": "I create content."
-
+    "1": "Entrepreneur.",
+    "2": "Software Developer.",
+    "3": "Student.",
+    "4": "Content Creator."
   },
   "About": {
     "title": "ABOUT ME",
