@@ -22,8 +22,8 @@
   },
   "Business": {
     "title": "MES AFFAIRES",
-    "viewButton": "Voir Plus",
-    "viewMyMovete": "Voir mon profil sur Movete",
+    "viewMoreButton": "Voir plus",
+    "myProfileMovete": "Voir mon profil sur Movete",
     "simplitermsDesc": "As-tu déjà accepté des conditions d'utilisation et des politiques de confidentialité sans les lire parce qu'elles sont trop longues et ennuyeuses ? Eh bien, Simpliterms, une extension de navigateur créée par moi, te résumera ces termes avec l'IA en un seul clic. Tu sauras ce que tu acceptes en moins d'une minute.",
     "moveteDesc": "Móvete est un réseau social pour les athlètes, programmé par moi, où tu peux montrer tes réussites dans le sport ou à la gym. Crée un profil et avec un lien, tu pourras montrer au monde combien de buts tu as marqués ou combien tu soulèves au développé couché, et même recevoir des invitations pour t'entraîner de la part de ton crush. Qu'attends-tu ?"
   },

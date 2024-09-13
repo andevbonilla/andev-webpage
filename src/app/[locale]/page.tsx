@@ -133,7 +133,8 @@ export default function Home() {
               {/* movete planet */}
               <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%]'>
 
-                <div className='lg:w-[60%]'>
+                {/* when is in desktop */}
+                <div className='lg:w-[55%] lg:block hidden'>
 
                   <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
 
@@ -146,24 +147,37 @@ export default function Home() {
                       className='md:w-auto md:mb-0 mb-6 w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
                       href={"https://movete.me/andresbonilla"}
                       target='_blank'>
-                      {businessI18n("viewMyMovete")}
-                    </a>
-                    <a
-                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
-                      href={"https://info.movete.me"}
-                      target='_blank'>
-                      {businessI18n("viewButton")}
+                      {businessI18n("myProfileMovete")}
                     </a>
                   </div>
 
                 </div>
 
-                <div className='lg:ml-12 lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
+                <div className='lg:ml-12 lg:w-[45%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
                   <Image
                     src={require("@/assets/movete-planet.webp")}
                     alt={imagesALtsI18n("movetePlanet")}
-                    className='absolute floating w-[17rem] mb-[3rem]'
+                    className='absolute floating w-[18rem] mb-[3rem]'
                   />
+                </div>
+
+                {/* when is in mobile */}
+                <div className='lg:hidden'>
+
+                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
+
+                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
+                    {businessI18n("moveteDesc")}
+                  </p>
+
+                  <div className='px-[13%] lg:px-0 flex flex-col md:flex-row'>
+                    <a
+                      className='md:w-auto md:mb-0 mb-6 w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
+                      href={"https://movete.me/andresbonilla"}
+                      target='_blank'>
+                      {businessI18n("myProfileMovete")}
+                    </a>
+                  </div>
                 </div>
 
               </div>
@@ -192,7 +206,7 @@ export default function Home() {
                       className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
                       href={"https://simpliterms.com"}
                       target='_blank'>
-                      {businessI18n("viewButton")}
+                      {businessI18n("viewMoreButton")}
                     </a>
                   </div>
 

@@ -21,9 +21,9 @@
     "text4": "Sou apaixonado por aprendizado contínuo, carros, futebol, academia e, acima de tudo, sorvete. Estou sempre em busca de novas oportunidades para crescer e contribuir com minhas habilidades."
   },
   "Business": {
-    "title": "私のビジネス",
-    "viewButton": "Ver Mais",
-    "viewMyMovete": "Ver meu perfil no Movete",
+    "title": "MEUS NEGÓCIOS",
+    "viewMoreButton": "Ver Mais",
+    "myProfileMovete": "Ver meu perfil no Movete",
     "simplitermsDesc": "Alguma vez você aceitou termos de uso e políticas de privacidade sem lê-los porque são muito longos e chatos? Pois Simpliterms, uma extensão para navegadores criada por mim, resumirá esses termos com IA em apenas um clique. Informando o que você está aceitando em menos de um minuto.",
     "moveteDesc": "Móvete é uma rede social para atletas, programada por mim, onde você pode mostrar suas conquistas nos esportes ou na academia. Crie um perfil e com um link você pode mostrar ao mundo quantos gols marcou ou quanto levanta no supino e até receber convites para treinar do seu crush. O que está esperando?"
   },

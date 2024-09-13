@@ -22,8 +22,8 @@
   },
   "Business": {
     "title": "MEINE GESCHÄFTE",
-    "viewButton": "Mehr anzeigen",
-    "viewMyMovete": "Mein Profil auf Movete ansehen",
+    "viewMoreButton": "Mehr anzeigen",
+    "myProfileMovete": "Mein Profil in Movete ansehen",
     "simplitermsDesc": "Hast du schon einmal Nutzungsbedingungen und Datenschutzrichtlinien akzeptiert, ohne sie zu lesen, weil sie zu lang und langweilig sind? Simpliterms, eine von mir erstellte Browsererweiterung, fasst dir diese Bedingungen mit KI zusammen – mit nur einem Klick. So weißt du in weniger als einer Minute, was du akzeptierst.",
     "moveteDesc": "Móvete ist ein soziales Netzwerk für Sportler, das von mir programmiert wurde. Dort kannst du deine Erfolge im Sport oder im Fitnessstudio zeigen. Erstelle ein Profil und teile der Welt über einen Link mit, wie viele Tore du erzielt hast oder wie viel du beim Bankdrücken schaffst – und vielleicht bekommst du sogar eine Einladung von deinem Schwarm zum Training. Worauf wartest du?"
   },

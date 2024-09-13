@@ -22,8 +22,8 @@
   },
   "Business": {
     "title": "MY BUSINESSES",
-    "viewButton": "View More",
-    "viewMyMovete": "View my profile on Movete",
+    "viewMoreButton": "View More",
+    "myProfileMovete": "View my profile on Movete",
     "simplitermsDesc": "Have you ever accepted terms of use and privacy policies without reading them because they are too long and boring? Well, Simpliterms, a browser extension created by me, will summarize these terms with AI in just one click. Letting you know what you're agreeing to in under a minute.",
     "moveteDesc": "Móvete is a social network for athletes, programmed by me, where you can showcase your achievements in sports or at the gym. Create a profile, and with one link, show the world how many goals you've scored or how much you bench press, and even receive training invitations from your crush. What are you waiting for?"
   },
