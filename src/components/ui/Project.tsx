@@ -19,7 +19,7 @@ export const Project = ({ name, desc, link, github, imgUrl, buttonText, iconList
   return (
     <div className='mt-20 sm:mx-[15%] md:mx-[25%] lg:flex lg:mx-[15%]'>
       <Image
-        src={require(`@/assets/${imgUrl}`)}
+        src={require(`@/assets/projects/${imgUrl}`)}
         alt={name + " image mockup"}
         className='mb-4 w-full lg:w-[30rem] lg:h-10rem lg:rounded-md'
       />
