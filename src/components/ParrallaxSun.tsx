@@ -1,4 +1,5 @@
 "use client"
+import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 
 interface ParallaxSceneProps {
@@ -41,8 +42,8 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
     }, [isInView]);
 
     const sunPosition = scrollProgress * 300;
-    const balloon1X = scrollProgress * 120 - 20;
-    const balloon2X = 120 - scrollProgress * 120;
+    const balloon1X = scrollProgress * 140 - 40;
+    const balloon2X = 140 - scrollProgress * 200;
 
     const balloonY = (x: number) => {
         const normalizedX = (x + 20) / 120;
@@ -63,28 +64,36 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
 
             {/* Hot Air Balloon 1 */}
             <div
-                className="absolute w-16 h-20"
+                className="absolute w-[8rem] h-[8rem]"
                 style={{
                     left: `${balloon1X}%`,
                     top: `${balloonY(balloon1X)}%`,
                     transform: `translateY(${-scrollProgress * 10}%)`,
                 }}
             >
-                <div className="w-full h-3/4 rounded-full bg-red-500" />
-                <div className="w-3/4 h-1/4 mx-auto bg-yellow-700" />
+                <Image
+                    src={require("@/assets/globe.webp")}
+                    width={200}
+                    height={200}
+                    alt='globe of the 18 century'
+                />
             </div>
 
             {/* Hot Air Balloon 2 */}
             <div
-                className="absolute w-16 h-20"
+                className="absolute w-[10rem] h-[10rem]"
                 style={{
                     left: `${balloon2X}%`,
                     top: `${balloonY(balloon2X)}%`,
                     transform: `translateY(${-scrollProgress * 15}%)`,
                 }}
             >
-                <div className="w-full h-3/4 rounded-full bg-blue-500" />
-                <div className="w-3/4 h-1/4 mx-auto bg-yellow-700" />
+                <Image
+                    src={require("@/assets/globe.webp")}
+                    width={200}
+                    height={200}
+                    alt='globe of the 18 century'
+                />
             </div>
         </div>
     );
