@@ -1,18 +1,18 @@
 "use client"
+import Image from 'next/image';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
 interface CarouselItem {
     id: number;
-    content: string;
+    url: string;
 }
 
 const UnayMugreCarousel: React.FC = () => {
     const items: CarouselItem[] = [
-        { id: 1, content: 'Item 1' },
-        { id: 2, content: 'Item 2' },
-        { id: 3, content: 'Item 3' },
-        { id: 4, content: 'Item 4' },
-        { id: 5, content: 'Item 5' },
+        { id: 1, url: "https://www.tiktok.com/@unaymugre.fit/video/7411579850999221510" },
+        { id: 2, url: "https://www.instagram.com/p/C_bE6XTuRbn/" },
+        { id: 3, url: "https://www.youtube.com/shorts/ETKW7AxQVzs" },
+        { id: 4, url: "https://www.youtube.com/shorts/PYIZbKl-JUk" },
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);
@@ -100,14 +100,20 @@ const UnayMugreCarousel: React.FC = () => {
                                 ${!isActive && !isPrev && !isNext ? 'opacity-0 scale-0' : ''}
                             `}
                         >
-                            <div
+                            <a
+                                href={item.url}
+                                target='_blank'
                                 className={`
-                                    w-64 h-96 rounded-3xl shadow-lg flex items-center justify-center text-white text-2xl font-bold
+                                    w-[14rem] h-[25rem] rounded-3xl shadow-lg flex items-center justify-center text-white text-2xl font-bold
                                     ${isActive ? 'bg-yellow-500' : 'bg-yellow-700'}
                                 `}
                             >
-                                {item.content}
-                            </div>
+                                <Image
+                                    src={require(`../../src/assets/unaymugre/video${item.id}UnaYMugre.webp`)}
+                                    alt='video of una y mugre'
+                                    className='h-full'
+                                />
+                            </a>
                         </div>
                     );
                 })}
