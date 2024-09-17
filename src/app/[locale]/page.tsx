@@ -26,7 +26,10 @@ import { useTranslations } from "next-intl";
 import { Moon } from "@/components/Moon";
 import { TitleSection } from "@/components/ui/TitleSection";
 import { Anton } from "next/font/google";
-import InfiniteCarousel from "@/components/CarrouselUnaYMugre";
+import UnayMugreCarousel from "@/components/CarrouselUnaYMugre";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const anton = Anton({
   weight: ["400"],
@@ -43,6 +46,7 @@ export default function Home() {
   const occupationsI18n = useTranslations("Occupations");
   const aboutI18n = useTranslations("About");
   const businessI18n = useTranslations("Business");
+  const unaymugreI18n = useTranslations("UnaYMugre");
   const skillsI18n = useTranslations("Skills");
   const projectsI18n = useTranslations("My-Projects");
   const contactI18n = useTranslations("Contact");
@@ -217,9 +221,33 @@ export default function Home() {
             </section>
 
             {/* una y mugre */}
-            <section className='flex w-full mb-14'>
-              <InfiniteCarousel />
+            <section className='md:px-[20%] px-[10%]'>
+              <TitleSection
+                text={unaymugreI18n("title")}
+              />
+              <p className="text-center text-white text-opacity-90 text-lg">{unaymugreI18n("desc")}</p>
+              <UnayMugreCarousel />
+
+              <div className='flex justify-center items-center'>
+                <Link href={"https://www.instagram.com/mugre.fit/reels/"}
+                  target='_blank'
+                  title='instagram of Uña Y Mugre'>
+                  <FontAwesomeIcon icon={faInstagram} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                </Link>
+                <Link href={"https://www.tiktok.com/@unaymugre.fit"}
+                  target='_blank'
+                  title='tiktok of Uña Y Mugre'>
+                  <FontAwesomeIcon icon={faTiktok} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                </Link>
+                <Link href={"https://www.youtube.com/@U%C3%B1ayMugreFIT"}
+                  target='_blank'
+                  title='youtube of Uña Y Mugre'>
+                  <FontAwesomeIcon icon={faYoutube} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                </Link>
+              </div>
+
             </section>
+
 
             {/* my skills */}
             <section className='lg:px-[30%] px-[13%] mb-14'>
@@ -275,17 +303,6 @@ export default function Home() {
                 <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />
                 ]}
               />
-              <Project name={"Virtual Board"}
-                desc={projectsI18n("virtualBoardDesc")}
-                link={"https://super-virtual-board.netlify.app/"}
-                github={"https://github.com/andevbonilla/Virtual-Board"}
-                imgUrl={"virtualboard-interface.webp"}
-                buttonText={projectsI18n("viewButton")}
-                iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
-                ]}
-              />
             </section>
 
             <div className="h-[5rem]"></div>
@@ -328,16 +345,15 @@ export default function Home() {
               />
             </div>
 
-            <Project name={"FileBox"}
-              desc={projectsI18n("fileBoxDesc")}
-              link={"https://filebox.netlify.app/#/login"}
-              github={"https://github.com/andevbonilla/backend-fileBox"}
-              imgUrl={"filebox-interface.webp"}
+            <Project name={"Virtual Board"}
+              desc={projectsI18n("virtualBoardDesc")}
+              link={"https://super-virtual-board.netlify.app/"}
+              github={"https://github.com/andevbonilla/Virtual-Board"}
+              imgUrl={"virtualboard-interface.webp"}
               buttonText={projectsI18n("viewButton")}
-              iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-              <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-              <AwsSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-              <NodejsSVG className={"w-[3rem] mr-3"} key={Math.random()} />
+              iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
 
@@ -357,13 +373,16 @@ export default function Home() {
               <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
-            <Project name={"thePokedex"}
-              desc={projectsI18n("thePokedexDesc")}
-              link={"https://github.com/andevbonilla/thePokedex"}
-              github={"https://github.com/andevbonilla/thePokedex"}
-              imgUrl={"pokedex-interface.webp"}
+            <Project name={"FileBox"}
+              desc={projectsI18n("fileBoxDesc")}
+              link={"https://filebox.netlify.app/#/login"}
+              github={"https://github.com/andevbonilla/backend-fileBox"}
+              imgUrl={"filebox-interface.webp"}
               buttonText={projectsI18n("viewButton")}
-              iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              <AwsSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+              <NodejsSVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
             <div className='flex lg:h-[10rem] h-[18rem] relative'>
