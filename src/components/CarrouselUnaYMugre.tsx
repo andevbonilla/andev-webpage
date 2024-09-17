@@ -1,4 +1,6 @@
 "use client"
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 
@@ -104,10 +106,11 @@ const UnayMugreCarousel: React.FC = () => {
                                 href={item.url}
                                 target='_blank'
                                 className={`
-                                    w-[14rem] h-[25rem] rounded-3xl shadow-lg flex items-center justify-center text-white text-2xl font-bold
+                                    w-[14rem] h-[25rem] rounded-3xl shadow-lg flex relative items-center justify-center text-white text-2xl font-bold
                                     ${isActive ? 'bg-yellow-500' : 'bg-yellow-700'}
                                 `}
                             >
+                                <FontAwesomeIcon icon={faPlay} className='absolute text-white w-[3.2rem] h-[3.2rem] opacity-80' />
                                 <Image
                                     src={require(`../../src/assets/unaymugre/video${item.id}UnaYMugre.webp`)}
                                     alt='video of una y mugre'

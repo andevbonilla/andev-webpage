@@ -38,6 +38,10 @@
     "5": "Profondeur où commence la zone crépusculaire dans l'océan, où la lumière du soleil diminue considérablement.",
     "6": "Profondeur approximative de l'épave du Titanic dans l'Atlantique Nord."
   },
+  "UnaYMugre": {
+      "title": "Ongle et saleté",
+      "desc": "Ongle et saleté est un projet que j'ai créé avec mon ami Kevin où nous téléchargeons des vidéos amusantes et motivantes liées au monde du fitness. Voici quelques vidéos que nous avons faites."
+  },
   "My-Projects": {
     "title": "MES PROJETS",
     "yourDreamCarDesc": "YourDreamCar est une page web que j'ai conçue pour une entreprise que j'ai développée avec mon meilleur ami David. Elle propose des services d'emballage, de teintage des fenêtres et plus encore. #YourDreamCar",
