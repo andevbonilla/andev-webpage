@@ -22,13 +22,8 @@ export const RaceTrack = () => {
                 x: distance,
                 duration,
                 ease: "power3.inOut",
-                onUpdate: () => {
-                    const progress = timeline.progress(); // Inclinación suave
-                    gsap.set(ref.current, { rotateZ: (progress < 0.3) ? progress * 6 : 1.8 });
-
-                },
                 onComplete: () => {
-                    gsap.set(ref.current, { x: 0, rotateZ: 0 }); // Resetear posición y rotación después de la animación
+                    gsap.set(ref.current, { x: 0 }); // Resetear posición y rotación después de la animación
                 }
             });
 
