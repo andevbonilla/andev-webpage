@@ -3,6 +3,8 @@ import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { RaceTrack } from './ui/Cars';
 import { Indie_Flower } from "next/font/google";
+import ParallaxScene from './ParrallaxSun';
+import { CuriosFact } from './CuriosFact';
 
 const indieFlower = Indie_Flower({
   weight: ["400"],
@@ -10,7 +12,7 @@ const indieFlower = Indie_Flower({
   subsets: ["latin"],
 });
 
-export const City = () => {
+export const City = ({ curiosfactText }: any) => {
   const sun: any = useRef(null);
   const [raceKey, setRaceKey] = useState(0);
 
@@ -59,8 +61,14 @@ export const City = () => {
 
   return (
     <div className='w-full relative mt-10'>
+      <ParallaxScene />
+      <CuriosFact
+        meters={"300"}
+        text={curiosfactText}
+      />
+
       <div className='flex w-full flex-col'>
-        <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div>
+        {/* <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div> */}
 
         <Image
           alt='monaco city'

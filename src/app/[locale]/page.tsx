@@ -306,14 +306,9 @@ export default function Home() {
             </section>
 
             <div className="h-[5rem]"></div>
-            <CuriosFact
-              meters={"300"}
-              text={curiosFactsI18n("3")}
-            />
-
           </StarsBackground>
 
-          <City />
+          <City curiosfactText={curiosFactsI18n("3")} />
 
         </div >
 
