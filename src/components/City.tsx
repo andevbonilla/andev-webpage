@@ -67,7 +67,7 @@ export const City = ({ curiosfactText }: any) => {
         text={curiosfactText}
       />
 
-      <div className='flex w-full flex-col'>
+      <div className='flex w-full flex-col z-30'>
         {/* <div ref={sun} className='lg:w-[25rem] lg:h-[25rem] absolute left-[15%] w-[18rem] h-[18rem] bg-yellow-400 rounded-full z-10 sun'></div> */}
 
         <Image

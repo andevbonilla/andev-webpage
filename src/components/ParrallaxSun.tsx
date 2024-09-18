@@ -41,9 +41,9 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isInView]);
 
-    const sunPosition = scrollProgress * 300;
-    const balloon1X = scrollProgress * 140 - 40;
-    const balloon2X = 140 - scrollProgress * 200;
+    const sunPosition = (window.innerWidth > 1000) ? (scrollProgress * 80) : (scrollProgress * 300);
+    const balloon1X = (window.innerWidth > 1000) ? (scrollProgress * 100 - 40) : (scrollProgress * 140 - 40);
+    const balloon2X = (window.innerWidth > 1000) ? (140 - scrollProgress * 100) : (140 - scrollProgress * 200);
 
     const balloonY = (x: number) => {
         const normalizedX = (x + 20) / 120;
@@ -54,7 +54,7 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
         <div ref={sceneRef} className="relative" style={{ height }}>
             {/* Sun */}
             <div
-                className="absolute left-1/2 h-[8rem] w-[8rem] rounded-full bg-yellow-400 z-10"
+                className="absolute left-1/2 lg:w-[20rem] lg:h-[20rem] h-[8rem] w-[8rem] rounded-full bg-yellow-400 z-10"
                 style={{
                     transform: `translate(-50%, ${sunPosition}%)`,
                     boxShadow: '0 0 50px rgba(255, 215, 0, 0.7)',
@@ -64,7 +64,7 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
 
             {/* Hot Air Balloon 1 */}
             <div
-                className="absolute w-[8rem] h-[8rem]"
+                className="absolute lg:w-[18rem] lg:h-[18rem] w-[8rem] h-[8rem] z-20"
                 style={{
                     left: `${balloon1X}%`,
                     top: `${balloonY(balloon1X)}%`,
@@ -81,7 +81,7 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
 
             {/* Hot Air Balloon 2 */}
             <div
-                className="absolute w-[10rem] h-[10rem]"
+                className="absolute lg:w-[20rem] lg:h-[20rem] w-[10rem] h-[10rem] z-20"
                 style={{
                     left: `${balloon2X}%`,
                     top: `${balloonY(balloon2X)}%`,
