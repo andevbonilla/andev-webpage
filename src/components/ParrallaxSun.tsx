@@ -7,11 +7,17 @@ interface ParallaxSceneProps {
 }
 
 const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
+
     const [scrollProgress, setScrollProgress] = useState(0);
     const sceneRef = useRef<HTMLDivElement>(null);
     const [isInView, setIsInView] = useState(false);
 
+    const sunPosition = (scrollProgress * 90);
+    const balloon1X = (scrollProgress * 100 - 40);
+    const balloon2X = (140 - scrollProgress * 100);
+
     useEffect(() => {
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsInView(entry.isIntersecting);
@@ -29,7 +35,6 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
     useEffect(() => {
         const handleScroll = () => {
             if (!sceneRef.current || !isInView) return;
-
             const rect = sceneRef.current.getBoundingClientRect();
             const scrollPercentage = 1 - (rect.bottom / (rect.height * 8));
             setScrollProgress(Math.max(0, Math.min(1, scrollPercentage)));
@@ -40,10 +45,6 @@ const ParallaxScene: React.FC<ParallaxSceneProps> = ({ height = '10vh' }) => {
 
         return () => window.removeEventListener('scroll', handleScroll);
     }, [isInView]);
-
-    const sunPosition = (window.innerWidth > 1000) ? (scrollProgress * 80) : (scrollProgress * 300);
-    const balloon1X = (window.innerWidth > 1000) ? (scrollProgress * 100 - 40) : (scrollProgress * 140 - 40);
-    const balloon2X = (window.innerWidth > 1000) ? (140 - scrollProgress * 100) : (140 - scrollProgress * 200);
 
     const balloonY = (x: number) => {
         const normalizedX = (x + 20) / 120;
