@@ -281,7 +281,7 @@ export default function Home() {
 
               <Project name={"YourDreamCar"}
                 desc={projectsI18n("yourDreamCarDesc")}
-                link={"https://www.yourdreamcar.ca/"}
+                link={"https://your-dream-car.vercel.app/"}
                 github={"https://github.com/andevbonilla/YourDreamCar"}
                 imgUrl={"yourdreamcar-interface.webp"}
                 buttonText={projectsI18n("viewButton")}
