@@ -28,12 +28,13 @@ import UnayMugreCarousel from "@/components/CarrouselUnaYMugre";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { BussinessCard } from "@/components/ui/BussinessCard";
 
 const anton = Anton({
   weight: ["400"],
   style: ["normal"],
   subsets: ["latin"],
-})
+});
 
 export default function Home() {
 
@@ -43,10 +44,11 @@ export default function Home() {
 
   const navbarI18n = useTranslations("Navbar");
   const aboutI18n = useTranslations("About");
-  const businessI18n = useTranslations("Business");
   const unaymugreI18n = useTranslations("UnaYMugre");
   const projectsI18n = useTranslations("My-Projects");
   const contactI18n = useTranslations("Contact");
+
+  const businessI18n = useTranslations("Business");
 
   return (
 
@@ -136,87 +138,33 @@ export default function Home() {
                 text={businessI18n("title")}
               />
 
-              {/* movete planet */}
-              <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%]'>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-[10%]">
+                <BussinessCard
+                  desc={businessI18n("Fansive")}
+                  name={"Fansive"}
+                  status={"red"}
+                  statusName={"Discontinued"}
+                  visitTranslation={businessI18n("visit")}
+                  link={"https://fansive.netlify.app/"}
+                />
 
-                {/* when is in desktop */}
-                <div className='lg:w-[55%] lg:block hidden'>
+                <BussinessCard
+                  desc={businessI18n("Simpliterms")}
+                  name={"Simpliterms"}
+                  status={"green"}
+                  statusName={"Active"}
+                  visitTranslation={businessI18n("visit")}
+                  link={"https://www.simpliterms.com/"}
+                />
 
-                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
-
-                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
-                    {businessI18n("moveteDesc")}
-                  </p>
-
-                  <div className='px-[13%] lg:px-0 flex flex-col md:flex-row'>
-                    <a
-                      className='md:w-auto md:mb-0 mb-6 w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
-                      href={"https://movete.me/andresbonilla"}
-                      target='_blank'>
-                      {businessI18n("myProfileMovete")}
-                    </a>
-                  </div>
-
-                </div>
-
-                <div className='lg:ml-12 lg:w-[45%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mt-14 relative w-auto mx-[13%]'>
-                  <Image
-                    src={require("@/assets/movete-planet.webp")}
-                    alt={imagesALtsI18n("movetePlanet")}
-                    className='absolute floating w-[18rem] mb-[3rem]'
-                  />
-                </div>
-
-                {/* when is in mobile */}
-                <div className='lg:hidden'>
-
-                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Movete</h3>
-
-                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
-                    {businessI18n("moveteDesc")}
-                  </p>
-
-                  <div className='px-[13%] lg:px-0 flex flex-col md:flex-row'>
-                    <a
-                      className='md:w-auto md:mb-0 mb-6 w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all mr-4'
-                      href={"https://movete.me/andresbonilla"}
-                      target='_blank'>
-                      {businessI18n("myProfileMovete")}
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* simplieterms planet */}
-              <div className='w-auto lg:flex lg:justify-between lg:items-center lg:mx-[16%] mt-16'>
-
-                <div className='lg:w-[40%] lg:mx-0 lg:h-[28rem] md:mx-[25%] flex items-center justify-center h-[20rem] mb-16 relative w-auto mx-[13%]'>
-                  <Image
-                    src={require("@/assets/simpliterms-planet.webp")}
-                    alt={imagesALtsI18n("simplitermsPlanet")}
-                    className='absolute w-auto floating'
-                  />
-                </div>
-
-                <div className='lg:w-[60%] lg:ml-12'>
-
-                  <h3 className='font-bold text-2xl text-white mx-[13%] lg:mx-0 mb-[2rem]'>Simpliterms</h3>
-
-                  <p className='text-white text-left text-lg text-opacity-90 leading-10 mx-[13%] lg:mx-0 mb-8'>
-                    {businessI18n("simplitermsDesc")}
-                  </p>
-
-                  <div className='px-[13%] lg:px-0 flex'>
-                    <a
-                      className='md:w-auto w-full text-center bg-yellow-200 py-3 px-6 text-lg font-bold text-[#0F193B] hover:bg-yellow-300 hover:scale-110 transition-all'
-                      href={"https://simpliterms.com"}
-                      target='_blank'>
-                      {businessI18n("viewMoreButton")}
-                    </a>
-                  </div>
-
-                </div>
+                <BussinessCard
+                  desc={businessI18n("Movete")}
+                  name={"Movete"}
+                  status={"blue"}
+                  statusName={"On hold"}
+                  visitTranslation={businessI18n("visit")}
+                  link={"https://info.movete.me/"}
+                />
               </div>
 
             </section>
@@ -271,6 +219,18 @@ export default function Home() {
                 text={projectsI18n("title")}
               />
 
+              <Project name={"Virtual Board"}
+                desc={projectsI18n("virtualBoardDesc")}
+                link={"https://super-virtual-board.netlify.app/"}
+                github={"https://github.com/andevbonilla/Virtual-Board"}
+                imgUrl={"virtualboard-interface.webp"}
+                buttonText={projectsI18n("viewButton")}
+                iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+                <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
+                <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
+                ]}
+              />
+
               <Project name={"YourDreamCar"}
                 desc={projectsI18n("yourDreamCarDesc")}
                 link={"https://your-dream-car.vercel.app/"}
@@ -282,19 +242,7 @@ export default function Home() {
                 <NextJsSVG className={"w-[3rem] mr-3"} key={Math.random()} />
                 ]}
               />
-              <Project name={"Fansive"}
-                desc={projectsI18n("fansiveDesc")}
-                link={"https://fansive.netlify.app/"}
-                github={"https://github.com/andevbonilla/fansive-code"}
-                imgUrl={"fansive-interface.webp"}
-                buttonText={projectsI18n("viewButton")}
-                iconList={[<AngularSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <WebRTCSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <SocketIOSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <NodejsSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-                <MongoDBSVG className={"w-[3rem] mr-3"} key={Math.random()} />
-                ]}
-              />
+
             </section>
 
             <div className="h-[5rem]"></div>
@@ -332,23 +280,6 @@ export default function Home() {
               />
             </div>
 
-            <Project name={"Virtual Board"}
-              desc={projectsI18n("virtualBoardDesc")}
-              link={"https://super-virtual-board.netlify.app/"}
-              github={"https://github.com/andevbonilla/Virtual-Board"}
-              imgUrl={"virtualboard-interface.webp"}
-              buttonText={projectsI18n("viewButton")}
-              iconList={[<ReactSVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-              <Html5SVG className={"w-[3rem] mr-3"} key={Math.random()} />,
-              <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
-              ]}
-            />
-
-            <CuriosFact
-              meters={"-200"}
-              text={curiosFactsI18n("5")}
-            />
-
             <Project name={"Geekepedia"}
               desc={projectsI18n("geekepediaDesc")}
               link={"https://andevbonilla.github.io/Geekipedia/home/Geekipedia"}
@@ -360,6 +291,12 @@ export default function Home() {
               <Css3SVG className={"w-[3rem] mr-3"} key={Math.random()} />
               ]}
             />
+
+            <CuriosFact
+              meters={"-200"}
+              text={curiosFactsI18n("5")}
+            />
+
             <Project name={"FileBox"}
               desc={projectsI18n("fileBoxDesc")}
               link={"https://filebox.netlify.app/#/login"}

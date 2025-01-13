@@ -16,10 +16,10 @@
   },
   "Business": {
     "title": "MES AFFAIRES",
-    "viewMoreButton": "Voir plus",
-    "myProfileMovete": "Voir mon profil sur Movete",
-    "simplitermsDesc": "As-tu déjà accepté des conditions d'utilisation et des politiques de confidentialité sans les lire parce qu'elles sont trop longues et ennuyeuses ? Eh bien, Simpliterms, une extension de navigateur créée par moi, te résumera ces termes avec l'IA en un seul clic. Tu sauras ce que tu acceptes en moins d'une minute.",
-    "moveteDesc": "Móvete est un réseau social pour les athlètes, programmé par moi, où tu peux montrer tes réussites dans le sport ou à la gym. Crée un profil et avec un lien, tu pourras montrer au monde combien de buts tu as marqués ou combien tu soulèves au développé couché, et même recevoir des invitations pour t'entraîner de la part de ton crush. Qu'attends-tu ?"
+    "visit": "Visiter",
+    "Movete": "Lien pour montrer vos réalisations dans n'importe quel sport et connecter avec d'autres.",
+    "Fansive": "Plateforme de contenu exclusif par abonnement via des canaux privés avec chats, streams, vidéos, etc.",
+    "Simpliterms": "Extension Google qui vous informe en un clic de ce que vous acceptez dans les termes de n'importe quel site web à l'aide de l'IA."
   },
   "Curios-Facts": {
     "1": "Hauteur à laquelle la Lune orbite autour de la Terre.",
