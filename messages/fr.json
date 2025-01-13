@@ -7,12 +7,6 @@
     "aboutAsteroid": "À PROPOS DE MOI",
     "bussinessAsteroid": "AFFAIRES"
   },
-  "Occupations": {
-    "1": "Entrepreneur.",
-    "2": "Développeur de logiciels.",
-    "3": "Étudiant.",
-    "4": "Créateur de contenu."
-  },
   "About": {
     "title": "À PROPOS DE MOI",
     "text1": "👋 Bonjour, je suis Andrés Bonilla. Je suis étudiant universitaire, entrepreneur et développeur de logiciels. J'ai commencé à programmer comme passe-temps à l'âge de 13 ans et j'ai fondé ma première entreprise technologique, ",
@@ -26,9 +20,6 @@
     "myProfileMovete": "Voir mon profil sur Movete",
     "simplitermsDesc": "As-tu déjà accepté des conditions d'utilisation et des politiques de confidentialité sans les lire parce qu'elles sont trop longues et ennuyeuses ? Eh bien, Simpliterms, une extension de navigateur créée par moi, te résumera ces termes avec l'IA en un seul clic. Tu sauras ce que tu acceptes en moins d'une minute.",
     "moveteDesc": "Móvete est un réseau social pour les athlètes, programmé par moi, où tu peux montrer tes réussites dans le sport ou à la gym. Crée un profil et avec un lien, tu pourras montrer au monde combien de buts tu as marqués ou combien tu soulèves au développé couché, et même recevoir des invitations pour t'entraîner de la part de ton crush. Qu'attends-tu ?"
-  },
-  "Skills": {
-    "title": "COMPÉTENCES"
   },
   "Curios-Facts": {
     "1": "Hauteur à laquelle la Lune orbite autour de la Terre.",
@@ -74,5 +65,8 @@
     "InternationalSpaceStation": "Station spatiale internationale",
     "simplitermsPlanet": "Planète de Simpliterm",
     "movetePlanet": "Planète de Movete"
+  },
+  "Brief-Desc": {
+    "desc": "Je crée des entreprises, des logiciels et du contenu"
   }
 }

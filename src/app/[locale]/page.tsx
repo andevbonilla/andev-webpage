@@ -6,9 +6,7 @@ import { Footer } from "@/components/ui/Footer";
 import { Navbar } from "@/components//ui/Navbar";
 import { PicturesInBalloons } from "@/components/Pictures";
 import { Project } from "@/components/ui/Project";
-import { Skills } from "@/components/Skills";
 import { StarsBackground } from "@/components/Stars";
-import { TypingAnimation } from "@/components/TypingAnimation";
 import {
   AngularSVG,
   AwsSVG,
@@ -41,13 +39,12 @@ export default function Home() {
 
   const imagesALtsI18n = useTranslations("Image-Alts");
   const curiosFactsI18n = useTranslations("Curios-Facts");
+  const briefDesc = useTranslations("Brief-Desc");
 
   const navbarI18n = useTranslations("Navbar");
-  const occupationsI18n = useTranslations("Occupations");
   const aboutI18n = useTranslations("About");
   const businessI18n = useTranslations("Business");
   const unaymugreI18n = useTranslations("UnaYMugre");
-  const skillsI18n = useTranslations("Skills");
   const projectsI18n = useTranslations("My-Projects");
   const contactI18n = useTranslations("Contact");
 
@@ -75,32 +72,36 @@ export default function Home() {
             <div className='h-16'></div>
 
             {/* presentation section */}
-            <div className='md:px-[15%] lg:px-[20%] flex flex-col md:flex-row justify-center items-center h-screen px-[10%]'>
+            <div className='lg:flex-row flex flex-col justify-between items-start h-[84vh] px-[15%]'>
 
-              <div className='mb-10 md:w-[50%]'>
+              <div className='hidden lg:flex lg:flex-col lg:justify-end lg:h-[90%]'>
+
+                <p className="text-white text-[1.3rem] xl:text-[1.6rem] text-opacity-80">{briefDesc("desc")}</p>
+
+                <h1 className={`text-white font-bold text-[1rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.1rem] xl:text-[4.5rem] ${anton.className}`}>
+                  Andres Bonilla
+                </h1>
+
+              </div>
+
+              <div className="flex flex-col justify-center items-center w-[100%] lg:ml-[3rem] lg:w-auto lg:h-[100%]">
+                <Image
+                  src={require("@/assets/me.webp")}
+                  alt={imagesALtsI18n("andresTesla")}
+                  className='w-[20rem] xl:w-[24rem] floating border-[1.5rem] border-white border-b-[4rem] mt-[10vh]'
+                />
+              </div>
+
+              <div className="flex flex-col items-start justify-start lg:hidden">
+
+                <p className="text-white text-[1.3rem] text-opacity-80">{briefDesc("desc")}</p>
 
                 <h1 className={`text-white font-bold text-[2.6rem] xl:text-[3.2rem] ${anton.className}`}>
                   Andres Bonilla
                 </h1>
 
-                <div className='flex text-white'>
-                  <TypingAnimation
-                    stringList={[occupationsI18n("1"), occupationsI18n("2"), occupationsI18n("3"), occupationsI18n("4")]}
-                    wrapper="h2"
-                  />
-                </div>
-
               </div>
 
-              <div className='md:w-[50%] relative w-full h-[20rem] mt-[5rem] md:mb-[6rem] lg:mb-[12rem]'>
-                <Image
-                  src={require("@/assets/yo-en-el-tesla.webp")}
-                  alt={imagesALtsI18n("andresTesla")}
-                  width={350}
-                  height={350}
-                  className='absolute w-full floating'
-                />
-              </div>
 
             </div>
 
@@ -246,15 +247,6 @@ export default function Home() {
                 </Link>
               </div>
 
-            </section>
-
-
-            {/* my skills */}
-            <section className='lg:px-[30%] px-[13%] mb-14'>
-              <TitleSection
-                text={skillsI18n("title")}
-              />
-              <Skills />
             </section>
 
             <CuriosFact

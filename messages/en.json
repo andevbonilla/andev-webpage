@@ -7,12 +7,6 @@
     "aboutAsteroid": "ABOUT",
     "bussinessAsteroid": "BUSINESS"
   },
-  "Occupations": {
-    "1": "Entrepreneur.",
-    "2": "Software Developer.",
-    "3": "Student.",
-    "4": "Content Creator."
-  },
   "About": {
     "title": "ABOUT ME",
     "text1": "👋 Hi, I'm Andrés Bonilla. I'm a university student, entrepreneur, and software developer. I started programming as a hobby at the age of 13 and founded my first tech company, ",
@@ -26,9 +20,6 @@
     "myProfileMovete": "View my profile on Movete",
     "simplitermsDesc": "Have you ever accepted terms of use and privacy policies without reading them because they are too long and boring? Well, Simpliterms, a browser extension created by me, will summarize these terms with AI in just one click. Letting you know what you're agreeing to in under a minute.",
     "moveteDesc": "Móvete is a social network for athletes, programmed by me, where you can showcase your achievements in sports or at the gym. Create a profile, and with one link, show the world how many goals you've scored or how much you bench press, and even receive training invitations from your crush. What are you waiting for?"
-  },
-  "Skills": {
-    "title": "SKILLS"
   },
   "Curios-Facts": {
     "1": "Height at which the Moon orbits the Earth.",
@@ -74,5 +65,8 @@
     "InternationalSpaceStation": "International Space Station",
     "simplitermsPlanet": "simpliterm's planet",
     "movetePlanet": "movete's planet"
+  },
+  "Brief-Desc": {
+    "desc": "I create companies, software, and content"
   }
 }
