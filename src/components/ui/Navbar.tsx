@@ -109,7 +109,7 @@ export const Navbar = ({
 
                 <div className='flex items-center'>
 
-                    <button onClick={openLenguagesMenu} type='button' className='flex items-center mr-3 lg:mr-6 cursor-pointer'>
+                    <button onClick={openLenguagesMenu} type='button' className='flex items-center mr-3 lg:mr-6 cursor-pointer hover:text-[#DFDFDF] transition-all duration-150'>
                         <FontAwesomeIcon icon={faGlobe} size='2x' className='text-white' />
                         <p className='text-white font-bold ml-3'>{code}</p>
                     </button>
@@ -117,7 +117,7 @@ export const Navbar = ({
                     <FontAwesomeIcon
                         onClick={openAsteroidsMenu}
                         icon={faBars}
-                        className='text-white cursor-pointer'
+                        className='text-white cursor-pointer hover:text-[#DFDFDF] transition-all duration-150'
                         size='2x'
                     />
                 </div>

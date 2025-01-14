@@ -141,8 +141,9 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-[10%]">
                 <BussinessCard
                   desc={businessI18n("Fansive")}
-                  name={"Fansive"}
+                  imgUrl={"fansive-logo.webp"}
                   status={"red"}
+                  name={"Fansive"}
                   statusName={"Discontinued"}
                   visitTranslation={businessI18n("visit")}
                   link={"https://fansive.netlify.app/"}
@@ -150,8 +151,9 @@ export default function Home() {
 
                 <BussinessCard
                   desc={businessI18n("Simpliterms")}
-                  name={"Simpliterms"}
+                  imgUrl={"simpliterms-logo.webp"}
                   status={"green"}
+                  name={"Simpliterms"}
                   statusName={"Active"}
                   visitTranslation={businessI18n("visit")}
                   link={"https://www.simpliterms.com/"}
@@ -159,8 +161,9 @@ export default function Home() {
 
                 <BussinessCard
                   desc={businessI18n("Movete")}
-                  name={"Movete"}
+                  imgUrl={"movete-logo.webp"}
                   status={"blue"}
+                  name={"Movete"}
                   statusName={"On hold"}
                   visitTranslation={businessI18n("visit")}
                   link={"https://info.movete.me/"}
@@ -178,20 +181,20 @@ export default function Home() {
               <UnayMugreCarousel />
 
               <div className='flex justify-center items-center'>
-                <Link href={"https://www.instagram.com/mugre.fit/reels/"}
+                <Link href={"https://www.instagram.com/mugre.fit/"}
                   target='_blank'
                   title='instagram of Uña Y Mugre'>
-                  <FontAwesomeIcon icon={faInstagram} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                  <FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
                 </Link>
-                <Link href={"https://www.tiktok.com/@unaymugre.fit"}
+                <Link href={"https://www.tiktok.com/@mugre.fit"}
                   target='_blank'
                   title='tiktok of Uña Y Mugre'>
-                  <FontAwesomeIcon icon={faTiktok} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                  <FontAwesomeIcon icon={faTiktok} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
                 </Link>
                 <Link href={"https://www.youtube.com/@U%C3%B1ayMugreFIT"}
                   target='_blank'
                   title='youtube of Uña Y Mugre'>
-                  <FontAwesomeIcon icon={faYoutube} className='text-white md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
+                  <FontAwesomeIcon icon={faYoutube} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[2.5rem] md:h-[2.5rem] w-[2rem] h-[2rem] mx-7' />
                 </Link>
               </div>
 

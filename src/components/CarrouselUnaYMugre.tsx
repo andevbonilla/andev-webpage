@@ -11,10 +11,10 @@ interface CarouselItem {
 
 const UnayMugreCarousel: React.FC = () => {
     const items: CarouselItem[] = [
-        { id: 1, url: "https://www.tiktok.com/@unaymugre.fit/video/7411579850999221510" },
-        { id: 2, url: "https://www.instagram.com/p/C_bE6XTuRbn/" },
-        { id: 3, url: "https://www.youtube.com/shorts/ETKW7AxQVzs" },
-        { id: 4, url: "https://www.youtube.com/shorts/PYIZbKl-JUk" },
+        { id: 1, url: "https://www.tiktok.com/@mugre.fit" },
+        { id: 2, url: "https://www.instagram.com/mugre.fit/" },
+        { id: 3, url: "https://www.youtube.com/@U%C3%B1ayMugreFIT" },
+        { id: 4, url: "https://www.youtube.com/@U%C3%B1ayMugreFIT" },
     ];
 
     const [activeIndex, setActiveIndex] = useState(0);

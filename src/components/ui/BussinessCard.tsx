@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import React from 'react';
 
-export const BussinessCard = ({ link, status, name, desc, statusName, visitTranslation }: any) => {
+export const BussinessCard = ({ link, status, imgUrl, desc, name, statusName, visitTranslation }: any) => {
 
     const statusClasses: any = {
         red: 'bg-red-100 text-red-600',
@@ -9,7 +10,7 @@ export const BussinessCard = ({ link, status, name, desc, statusName, visitTrans
     };
 
     return (
-        <div className="relative bg-white p-6 rounded-lg shadow-lg border border-gray-200 flex flex-col justify-between">
+        <div className="relative bg-white p-7 rounded-lg shadow-lg border border-gray-200 flex flex-col justify-between">
             {status && statusClasses[status] && (
                 <div
                     className={`absolute top-4 right-4 px-3 py-1 text-sm font-medium rounded-full ${statusClasses[status]}`}
@@ -17,7 +18,11 @@ export const BussinessCard = ({ link, status, name, desc, statusName, visitTrans
                     {statusName}
                 </div>
             )}
-            <h3 className="text-lg font-semibold text-gray-800 mb-2">{name}</h3>
+            <Image
+                src={require(`@/assets/business/${imgUrl}`)}
+                alt={name + " image mockup"}
+                className='w-[8rem] mb-[1rem]'
+            />
             <p className="text-gray-600 mb-4">{desc}</p>
             {link && (
                 <div className="mt-6">
@@ -25,7 +30,7 @@ export const BussinessCard = ({ link, status, name, desc, statusName, visitTrans
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="block text-center bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+                        className="block transition-all duration-150 text-center bg-yellow-200 text-[#0F193B] font-bold py-3 px-4 rounded-lg hover:bg-yellow-300"
                     >
                         {visitTranslation} {name}
                     </a>

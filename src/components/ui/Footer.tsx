@@ -11,22 +11,22 @@ export const Footer = ({ titanicAlt }: any) => {
                 <Link href={"https://www.instagram.com/andevbonilla"}
                     target='_blank'
                     title='instagram link'>
-                    <FontAwesomeIcon icon={faInstagram} className='text-white md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
+                    <FontAwesomeIcon icon={faInstagram} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
                 </Link>
                 <Link href={"https://twitter.com/andevbonilla"}
                     target='_blank'
                     title='twitter link'>
-                    <FontAwesomeIcon icon={faTwitter} className='text-white md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
+                    <FontAwesomeIcon icon={faTwitter} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
                 </Link>
                 <Link href={"https://www.linkedin.com/in/andevbonilla"}
                     target='_blank'
                     title='linkedin link'>
-                    <FontAwesomeIcon icon={faLinkedin} className='text-white md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
+                    <FontAwesomeIcon icon={faLinkedin} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem] mr-12' />
                 </Link>
                 <Link href={"https://github.com/andevbonilla"}
                     target='_blank'
                     title='github link'>
-                    <FontAwesomeIcon icon={faGithub} className='text-white md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem]' />
+                    <FontAwesomeIcon icon={faGithub} className='text-white hover:text-[#DFDFDF] transition-all duration-150 md:w-[3rem] md:h-[3rem] w-[2.5rem] h-[2.5rem]' />
                 </Link>
             </div>
             <Image
