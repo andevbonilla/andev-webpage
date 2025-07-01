@@ -113,17 +113,25 @@ export const PicturesInBalloons = () => {
     >
       <div className="flex z-[995] relative">
         {/* Balloons here */}
-        <div id="balloon1" onClick={() => deleteBalloon(1)} className="cursor-pointer balloon top-0 right-0 rotate-[5deg] -translate-y-[21rem]"></div>
-        <div id="balloon2" onClick={() => deleteBalloon(2)} className="cursor-pointer balloon top-0 right-0 rotate-[23deg] translate-x-[3.3rem] -translate-y-[15rem]"></div>
-        <div id="balloon3" onClick={() => deleteBalloon(3)} className="cursor-pointer balloon top-0 right-0 -translate-y-[17rem]"></div>
-        <div id="balloon4" onClick={() => deleteBalloon(4)} className="cursor-pointer balloon top-0 right-0 rotate-[-10deg] -translate-x-[2rem] -translate-y-[19rem]"></div>
-        <div id="balloon5" onClick={() => deleteBalloon(5)} className="cursor-pointer balloon top-0 right-0 rotate-[-20deg] -translate-x-[3rem] -translate-y-[15rem]"></div>
+        <div id="balloon1" onClick={() => deleteBalloon(1)} className="cursor-crosshair balloon top-0 right-0 rotate-[5deg] -translate-y-[21rem]"></div>
+        <div id="balloon2" onClick={() => deleteBalloon(2)} className="cursor-crosshair balloon top-0 right-0 rotate-[23deg] translate-x-[3.3rem] -translate-y-[15rem]"></div>
+        <div id="balloon3" onClick={() => deleteBalloon(3)} className="cursor-crosshair balloon top-0 right-0 -translate-y-[17rem]"></div>
+        <div id="balloon4" onClick={() => deleteBalloon(4)} className="cursor-crosshair balloon top-0 right-0 rotate-[-10deg] -translate-x-[2rem] -translate-y-[19rem]"></div>
+        <div id="balloon5" onClick={() => deleteBalloon(5)} className="cursor-crosshair balloon top-0 right-0 rotate-[-20deg] -translate-x-[3rem] -translate-y-[15rem]"></div>
       </div>
-      <Image
-        src={require(`@/assets/me-cartoon.png`)}
-        alt="Andev photos"
-        className="z-[998] relative w-[14rem]"
-      />
+      {balloons === 0 ? (
+        <Image
+          src={require(`@/assets/me-cartoon-scared.webp`)}
+          alt="Andev photos"
+          className="z-[998] relative w-[13rem]"
+        />
+      ) : (
+        <Image
+          src={require(`@/assets/me-cartoon.webp`)}
+          alt="Andev photos"
+          className="z-[998] relative w-[13rem]"
+        />
+      )}
     </div>
   );
 };

@@ -88,7 +88,7 @@ export default function Home() {
 
               <div className="flex flex-col justify-center items-center w-[100%] lg:ml-[3rem] lg:w-auto lg:h-[100%]">
                 <Image
-                  src={require("@/assets/me.PNG")}
+                  src={require("@/assets/me.webp")}
                   alt={imagesALtsI18n("andresTesla")}
                   className='w-[20rem] xl:w-[24rem] floating border-[1.5rem] border-white border-b-[4rem] mt-[10vh]'
                 />
