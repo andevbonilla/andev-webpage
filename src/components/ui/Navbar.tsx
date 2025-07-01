@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faGlobe, faXmark } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +29,7 @@ export const Navbar = ({
     const navbar: any = useRef(null)
 
     const router = useRouter();
+    const pathname = usePathname();
 
     let principalUbication = 0;
     const handleViewNav = () => {
@@ -134,31 +135,31 @@ export const Navbar = ({
                         <hr />
 
                         <div className='md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid grid-cols-1 gap-3 mt-3'>
-                            <Link href={"/en"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/en" className={`text-black flex items-center ${pathname.startsWith('/en') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>English</p>
                             </Link>
 
-                            <Link href={"/es"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/es" className={`text-black flex items-center ${pathname.startsWith('/es') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>Español</p>
                             </Link>
 
-                            <Link href={"/ja"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/ja" className={`text-black flex items-center ${pathname.startsWith('/ja') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>日本語</p>
                             </Link>
 
-                            <Link href={"/fr"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/fr" className={`text-black flex items-center ${pathname.startsWith('/fr') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>Français</p>
                             </Link>
 
-                            <Link href={"/de"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/de" className={`text-black flex items-center ${pathname.startsWith('/de') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>Deutsch</p>
                             </Link>
 
-                            <Link href={"/zh"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
-                                <p className='ml-2 text-xl'>中文 {"("}简体{")"}</p>
+                            <Link href="/zh" className={`text-black flex items-center ${pathname.startsWith('/zh') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
+                                <p className='ml-2 text-xl'>中文</p>
                             </Link>
 
-                            <Link href={"/hi"} className='text-black flex items-center hover:bg-slate-300 hover:transition-all px-1 py-3 rounded'>
+                            <Link href="/hi" className={`text-black flex items-center ${pathname.startsWith('/hi') ? 'bg-slate-300' : 'hover:bg-slate-300'} hover:transition-all px-1 py-3 rounded`}>
                                 <p className='ml-2 text-xl'>हिंदी</p>
                             </Link>
                         </div>
