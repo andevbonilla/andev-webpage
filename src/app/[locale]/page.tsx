@@ -1,12 +1,34 @@
+// Next.js core imports
 import Image from "next/image";
-import { City } from "@/components/City";
+import Link from "next/link";
+
+// Next.js built-in components
+import { useTranslations } from "next-intl";
+
+// Custom fonts
+import { Anton } from "next/font/google";
+
+// Font Awesome imports
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+// UI Components
+import { BussinessCard } from "@/components/ui/BussinessCard";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { CuriosFact } from "@/components/CuriosFact";
 import { Footer } from "@/components/ui/Footer";
-import { Navbar } from "@/components//ui/Navbar";
-import { PicturesInBalloons } from "@/components/Pictures";
+import { Navbar } from "@/components/ui/Navbar";
 import { Project } from "@/components/ui/Project";
+import { TitleSection } from "@/components/ui/TitleSection";
+
+// Feature Components
+import { City } from "@/components/City";
+import { Moon } from "@/components/Moon";
+import { PicturesInBalloons } from "@/components/Pictures";
 import { StarsBackground } from "@/components/Stars";
+import UnayMugreCarousel from "@/components/CarrouselUnaYMugre";
+
+// SVG Icons
 import {
   AngularSVG,
   AwsSVG,
@@ -16,19 +38,8 @@ import {
   NextJsSVG,
   NodejsSVG,
   ReactSVG,
-  SocketIOSVG,
   TailwindSVG,
-  WebRTCSVG
 } from "@/utils/IconsSvgs";
-import { useTranslations } from "next-intl";
-import { Moon } from "@/components/Moon";
-import { TitleSection } from "@/components/ui/TitleSection";
-import { Anton } from "next/font/google";
-import UnayMugreCarousel from "@/components/CarrouselUnaYMugre";
-import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram, faTiktok, faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { BussinessCard } from "@/components/ui/BussinessCard";
 
 const anton = Anton({
   weight: ["400"],
