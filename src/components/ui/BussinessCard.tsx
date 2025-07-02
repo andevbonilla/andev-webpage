@@ -1,7 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
 
-export const BussinessCard = ({ link, status, imgUrl, desc, name, statusName, visitTranslation }: any) => {
+interface BussinessCardProps {
+  link?: string;
+  status?: 'red' | 'green' | 'blue';
+  imgUrl: string;
+  desc: string;
+  name: string;
+  statusName?: "Discontinued" | "Active" | "On hold";
+  visitTranslation: string;
+}
+
+export const BussinessCard = ({ link, status, imgUrl, desc, name, statusName, visitTranslation }: BussinessCardProps) => {
 
     const statusClasses: any = {
         red: 'bg-red-100 text-red-600',
